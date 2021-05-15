@@ -1,0 +1,846 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+<title>Intro Menciones I: Clase 2</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<!-- General and theme style sheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/css/zenburn.css">
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+}
+
+</script>
+
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Loading the mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: false }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
+
+<!-- Get Font-awesome from cdn -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">-->
+
+
+        <style type="text/css">
+            .container{
+                        display: flex;
+                      }
+            .col{
+                      flex: 1;
+                }
+            .reveal section p {
+                      display: inline-block;
+                      font-size: 0.6em;
+                      line-height: 1.2em;
+                      vertical-align: top;
+                      text-align: left;
+            }
+            .reveal section li {
+                      font-size: 0.6em;
+            }
+            .reveal section td {
+                      font-size: 0.6em;
+            }
+            .reveal section img {
+                      border: none;
+            }
+        </style>
+
+	</head>
+	<body>
+			<div class="reveal">
+			<div class="slides">
+
+               <section><h3>Una historia breve de la computación</h3>
+               </section>
+
+<section><h4>Computadores</h4>
+<p>Antiguamente, un <i>computador</i> era una persona que realizaba <i>computaciones</i>.</p>
+<figure>
+<img src="class2_images/human_computers.jpg" width=500>
+</figure>
+</section>
+
+<section><h4>Computadores</h4>
+<div class="container">
+<div class="col">
+<figure>
+<img src="class2_images/figuras_ocultas.jpg" height=300>
+</figure>
+</div>
+<div class="col">
+<figure>
+<img src="class2_images/Hidden-figures.jpg" height=300>
+</figure>
+</div>
+</div>
+</section>
+
+<section><h4>Máquinas de computación</h4>
+<div class="container">
+<div class="col">
+<ul><li> Hoy en día "computador" se refiere a una máquina (una herramienta) que usamos para resolver problemas.</li>
+<li>Tipicamente estos problemas son problemas lógicos, y muy estructurados.</li>
+<li>Con el desarrollo de "inteligencia artificial" los computadores pueden resolver problemas más "reales".</li></ul>
+</div>
+<div class="col">
+<figure>
+<img src="class2_images/computer.jpg">
+</figure>
+</div>
+</div>
+</section>
+
+<section><h4>Computación en tiempos antiguos</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Distintas <span style="color: red">máquinas de cálculo</span> han sido desarrolladas desde tiempos muy antiguos para ayudar a los humanos a calcular.</li>
+<li>El <span style="color: blue">ábaco</span> fue utilizado por los Babilonios hace 4000 años.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/abacus.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>Regla de cálculo y logaritmos</h4>
+<div class="container">
+<div class="col">
+<div class="container">
+<div class="col">
+<img src="class2_images/logarithms.jpg" height=400>
+</div>
+<div class="col">
+<img src="class2_images/slide_rule2.jpg" height=400>
+</div>
+</div>
+</div>
+<div class="col">
+<ul>
+<li>El matemático escoces John Napier (1550-1617) descubrió el concepto del "logaritmo" en el siglo XVII.</li>
+<li>Permitió la transformación de la multiplicación en adición, una operación mucho más fácil.</li>
+<li>Las reglas de cálculo son simples aparatos mecánicos que utilizan logaritmos para ayudar con multiplicaciones difíciles (y otros cálculos).</li>
+<li>Antes del desarrollo de los computadores digitales, eran de uso común en ingeniería y ciencia.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section><h4>Calculadora mecánica</h4>
+<img src="class2_images/pascals_machine.jpg">
+<p>Inventada por el matemático frances Blaise Pascal (1623-1662), cuando tenía 20 años.</p>
+</section>
+
+<section><h4>Uno de los primeros computadores</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>El inventor y erudito inglés Charles Babbage (1791-1871), despues de construir una calculadora mecánica llamada <i>the difference engine</i> (el motor de diferencias), diseñó una máquina <span style="color: red">programable</span> de propósito general.</li>
+<li>Sería llamada <i>the analytical engine</i> (el motor analítico).</li>
+<li>Pero nunca fue construida durante su vida...</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/analytical_engine.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>Una de las primeras programadoras</h4>
+<div class="container">
+<div class="col">
+<img src="class2_images/ada_lovelace.jpg" width=300>
+</div>
+<div class="col">
+<ul>
+<li>La matemática inglesa Ada Lovelace (1815-1852) concibió una secuencia de instrucciones que la máquina de Babbage podía seguir para completar un cálculo.</li>
+<li>Es decir, ella redactó un <i>programa computacional</i>.</li>
+<li>Por eso, ahora Ada Lovelace es considerada la primera programadora.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section><h4>De máquinas mecánicas a máquinas eléctricas...</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Herman Hollerith (1860-1929), estadounidense, construyó una de las primeras máquinas electromecánicas para contar.</li>
+<li>Fue usada en el census de 1890.</li>
+<li>Él comercializó su invención y la empresa que fundó eventualmente se convirtió en una parte de IBM.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/hollerith.jpg" height=400>
+</div>
+</div>
+</section>
+
+<section><h4>Computación con circuitos eléctricos</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Claude Shannon (1916-2001): matematicó, ingeniero eléctrico y criptógrafo.</li>
+<li>Escribió su <i>tesis de Magister</i> cuando tenía 21 años (en 1937) demostrando que una secuencia de interruptores electricos pueden simular cualquier relación logica o númerica.</li>
+<li>Su trabajo es la base de la computación digital y el diseño de circuitos digitales!</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/shannon.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>El primer computador digital</h4>
+<ul>
+<li>Aunque fue desarrollada en secreto durante la Segunda Guerra Mundial, la máquina <i>Colossus</i>, construida en el Reino Unido (UK), fue el primer computador digital.</li>
+<li>Diseñada por el ingeniero Tommy Flowers, con ayuda del matemático y fundador de la informática, Alan Turing.</li>
+<li>Muchas ideas teóricas sobre la computación fueron descubiertas por Turin.</li>
+</ul>
+<div class="container">
+<div class="col">
+<img src="class2_images/colossus.jpg" height=300>
+</div>
+<div class="col">
+<img src="class2_images/flowers.jpg" height=300>
+</div>
+<div class="col">
+<img src="class2_images/turing.jpg" height=300>
+</div>
+</div>
+</section>
+
+<section><h4>Máquinas de Turing</h4>
+<img src="class2_images/turing_machine.jpg" height=500>
+</section>
+
+<section><h4>Máquinas de Turing</h4>
+<ul>
+<li>La máquina de Turing puede simular la lógica de cualquier algoritmo.</li>
+<li>Este es un concepto abstracto, con implicaciones profundas en <span style="color: red">lógica</span>, <span style="color: red">matemática</span> y <span style="color: red">computación</span>.</li>
+</ul>
+</section>
+
+<section><h4>ENIAC</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Revelado al publico en febrero 14 1946, construido en la Universidad de Pennsylvania en los Estados Unidos.</li>
+<li><i>Colossus</i> era un secreto durante muchos años. Por eso, frecuentemente ENIAC está nombrado el primer computador programable digital, en el mundo.</li>
+<li>Usado en el cálculo de tablas de fuego de artillería y usado en pruebas (teóricas) de armas termonucleares (i.e. bombas de hidrogeno).</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/eniac.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>Informática</h4>
+<ul>
+<li>El desarrollo de los computadores <span style="color: red">programables</span>, dio a luz a la <i>informática</i>.</li>
+<li>Pero, acuerdense que la "programación" de estos computadores implicaba cambiar fisicamente las posiciones de cables y interruptores!</li>
+</ul>
+</section>
+
+<section><h4>Avances tecnológicos</h4>
+<ul>
+<li>Todos los computadores usan <i>interruptores electrónicos</i>.
+<li>Colossus y ENIAC usaban <i>tubos de vacio</i>.
+<li>Estos fueron reemplazados por <i>transistores</i> en los 50 y los principios de los 60.
+<li>Circuitos integrados fueron desarrollados en los 70.
+<li>Finalmente, a mediados de los 70, el microprocesador fue desarrollado (que tiene <i>billones</i> de transistores).
+</ul>
+<div class="container">
+<div class="col">
+<img src="class2_images/vacuum_tubes.jpg" height=170>
+</div>
+<div class="col">
+<img src="class2_images/transistors.jpg" height=170>
+</div>
+<div class="col">
+<img src="class2_images/integrated_circuit.jpg" height=170>
+</div>
+<div class="col">
+<img src="class2_images/microprocessor.jpg" height=170>
+</div>
+</div>
+</section>
+
+<section><h4>Hoy en día</h4>
+<div class="container">
+<div class="col">
+<img src="class2_images/smartphones.jpg" height=200>
+</div>
+<div class="col">
+<img src="class2_images/laptop.png" height=200>
+</div>
+<div class="col">
+<img src="class2_images/tablet.jpg" height=200>
+</div>
+</div>
+</section>
+
+<section><h4>La diferencia importante</h4>
+<div class="container">
+<div class="col">
+<figure>
+<img src="class2_images/abacus.jpg" height=300>
+<caption><span style="color: blue">No es programable</span></caption>
+</figure>
+</div>
+<div class="col">
+<figure>
+<img src="class2_images/laptop.png" height=300>
+<caption><span style="color: red">Programable</span></caption>
+</figure>
+</div>
+</div>
+</section>
+
+<section><h3>El diseño básico de los computadores</h3></section>
+
+<section><h4>La idea básica</h4>
+<ul>
+<li>Los computadores modernos son dispositivos que usan un numero muy muy grande de pequeños interruptores electricos para hacer operaciones lógicas.</li>
+<li>No han cambiado su diseño fundamental desde los primeros computadores programables fueron desarrollados en los 40 y 50.</li>
+</ul>
+</section>
+
+<section><h4>¿Qué son las operaciones lógicas?</h4>
+<p>Hay 3 operaciones lógicas básicas: <b>AND</b>, <b>OR</b> y <b>NOT</b>. Son operadores que actuan en valores Booleanos (verdad o falso, <b>TRUE</b> o <b>FALSE</b>).</p>
+<ul>
+<li>($x$ <b>AND</b> $y$) = <b>TRUE</b> (verdad) solamente cuando ambos son <b>TRUE</b> (verdad).</li>
+<li>($x$ <b>OR</b> $y$) = <b>TRUE</b> (verdad) solamente cuando $x$ = <b>TRUE</b>, $y$ = <b>TRUE</b>, o ambos.</li>
+<li>(<b>NOT</b> $x$) = <b>TRUE</b> (verdad) cuando $x$ = <b>FALSE</b> (falso).</li>
+</ul>
+</section>
+
+<section><h4>Las operaciones lógicas</h4>
+<p>De hecho hay otras operaciones lógicas, pero estas 3 son las más básicas. Se puede combinar estas operaciones para construir cualquier operación matemática.</p>
+</section>
+
+<section><h4>La representación de las operaciones lógicas en circuítos eléctricos</h4>
+<p>Por ejemplo, la operación de <b>AND</b>:</p>
+<figure>
+<img src="class2_images/and_gate.gif">
+</figure>
+</section>
+
+<section><h4>La representación de las operaciones lógicas en circuítos eléctricos</h4>
+<ul>
+<li>Los procesadores en un computador (los <i>chips</i>) contienen laminas de silicio, en el que los circuitos están grabados (se llaman <i>circuítos integrados</i>).</li>
+<li>El hecho de que los computadores no ocupan un cuarto entero hoy en día es por los avances tecnológicos en fabricación de los chips, no por un cambio fundamental del diseño de los circuitos.</li>
+</ul>
+<div class="container">
+<div class="col">
+<img src="class2_images/intel_chip.png" height=300>
+</div>
+<div class="col">
+<img src="class2_images/integrated_circuit.jpg" height=300>
+</div>
+</div>
+</section>
+
+<section><h4>Arquitectura de un computador</h4>
+<ul>
+<li>Sabemos que podemos representar operaciones lógicas por circuítos electrónicos (<i>circuítos lógicos</i>).</li>
+<li>Además, podemos combinar estas operaciones lógicas para representar cualquier cálculo lógico (es decir, cualquier algoritmo bien diseñado).</li>
+<li>Entonces, un computador con millones y millones de circuítos lógicos en un <i>chip</i> de silicio puede (en principio) calcular cualquier cosa.</li>
+</ul>
+</section>
+
+<section><h4>Arquitectura de un computador</h4>
+<ul>
+<li>Pero... como construimos un computador útil que podemos usar?</li>
+<li>Vimos el esquema abstracto de Turing de un computador programable. Pero tal esquema es poco práctico para ayudar en la contrucción de un computador real.</li>
+<li>Necesitamos un esquema (o una <i>arquitectura</i>) que corresponde a una máquina útil: con entradas, salidas, almacenamiento, etc.</li>
+<li>La arquitectura que <b>todos</b> los computadores modernos usan se llama la arquitectura de <i>von Neumann</i>.</li>
+</ul>
+</section>
+
+<section><h4>Arquitectura de von Neumann</h4>
+<div class="container">
+<div class="col">
+<p>John von Neumann fue un matemático húngaro que contribuyó a muchos áreas: en la matemática, la informática, la física y la estadística.</p>
+</div>
+<div class="col">
+<img src="class2_images/neumann.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>La arquitectura de von Neumann</h4>
+<div class="container">
+<div class="col">
+<img src="class2_images/von_neumann_arch.jpg">
+</div>
+<div class="col">
+<ul>
+<li>Unidad central de procesamiento (Central Processing Unit - CPU)</li>
+<li>Memoria principal (Random Access Memory - RAM)</li>
+<li>Dispositivos de entrada/salida</li>
+<li>Almacenamiento (disco duro)</li>
+<li>Circuitos de comunicación (<i>bus</i>).</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section><h4>CPU</h4>
+<div class="container">
+<div class="col">
+<img src="class2_images/von_neumann_cpu.jpg" height=300>
+</div>
+<div class="col">
+<ul>
+<li>Unidad de control: dirige el sistema para ejecutar instrucciones de programas almacenados.</li>
+<li>Unidad de aritmética/lógica: ejecuta instrucciones aritméticas y lógicas.</li>
+<li>Registros: áreas de almacenamiento temporal, controlados por la unidad de control.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section><h4>CPU: registros</h4>
+<p>No son parte de la memoria normal. Son componentes adicionales muy rapidos. Hay varios tipos:</p>
+<ul>
+<li>Acumulador: registro que recoge los resultados de cálculos.</li>
+<li>Registro de direcciones: almacena la \textit{dirección en memoria} de una instrucción o datos.</li>
+<li>Registro de almacenamiento: almacena temporalmente datos tomados de la memoria o destinados a la memoria.</li>
+</ul>
+</section>
+
+<section><h4>Memoria</h4>
+<div class="container">
+<div class="col">
+<p>RAM, la memoria principal, almacenamiento primario.</p>
+<ul>
+<li>Solamente almacena datos utilizados por un programa de forma temporal.</li>
+<li>Los datos y las instrucciones se trasladadan desde un dispositivo de entrada o un disco duro a la memoria a través de la <i>unidad de control</i>.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/memoriaRAM.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>Almacenamiento secundario</h4>
+<div class="container">
+<div class="col">
+<p>Disco duro, DVD, cinta magnetica...</p>
+<ul>
+<li>Almacenamiento permanente.</li>
+<li>Los datos y las instrucciones se guardan incluso cuando se apaga el computador.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/secondary_storage.png">
+</div>
+</div>
+</section>
+
+
+<section><h3>Como funciona el computador</h3></section>
+
+<section><h4>Números binarios</h4>
+Los computadores no usan números decimales, como nosotros, sino <span style="color: red">números binarios</span>.
+</section>
+
+<section><h4>Sistemas de numeración</h4>
+<ul>
+<li>El sistema <i>decimal</i> existía en la India hace al menos 1500 años.</li>
+<li>Es un sistema de numeración posicional de base-10.</li>
+<li>Eso signifíca que las cantidades se representan utilizando las potencias del número diez.</li>
+<li>La civilización Maya usaba un sistema de numeración de <i>base-20</i>!</li>
+</ul>
+<div class="container">
+<div class="col">
+<img src="class2_images/decimal_system.png" height=250>
+</div>
+<div class="col">
+<img src="class2_images/mayan.jpg" height=250>
+</div>
+</div>
+</section>
+
+<section><h4>Sistemas de numeración</h4>
+<ul>
+<li>El sistema <i>binario</i>, utilizado en computación, tiene base-2.</li>
+<li>En binario, las cantidades se representan usando las potencias del número dos.</li>
+</ul>
+<p>Números binarios</p>
+<table>
+<tr><td>$\ldots$</td><td>$2^4$</td><td>$2^3$</td><td>$2^2$</td><td>$2^1$</td><td>$2^0$</td></tr>
+<tr><td>$\ldots$</td><td>$16$</td><td>$8$</td><td>$4$</td><td>$2$</td><td>$1$</td></tr>
+
+<tr><td>$\ldots$</td><td>$0$</td><td>$1$</td><td>$0$</td><td>$1$</td><td>$0$</td><td> = $10$</td></tr>
+</table></p>
+</section>
+
+<section><h4>Números binarios en la computación</h4>
+<ul>
+<li>En el computador toda la información, procesamiento, etc. ocurre con números binarios.</li>
+<li>Se puede entender por qué, pensando en los interruptores eléctricos (que son los componentes básicos de los <i>chips</i>).</li>
+<li>Un interruptor tiene dos estados: encendido (<i>on</i>) o apagado (<i>off</i>).</li>
+<li>Este corresponde al sistema binario: $1$ corresponde a encendido, $0$ corresponde a apagado. Podemos combinar los estados de varios interruptores para formar números binarios más grandes.</li>
+</ul>
+</section>
+
+<section><h4>Números binarios en la computación</h4>
+<ul>
+<li>Un solo $1$ o $0$, en jerga informática, se llama un <span style="color: red">bit</span>.</li>
+<li>Un conjunto de $8$ bits se conoce como un <span style="color: green">byte</span>.</li>
+<li>Un conjunto de $1024$ bytes se conoce como un <span style="color: blue">kilobyte</span>, etc.</li>
+</ul>
+</section>
+
+<section><h4>El procesador central: CPU</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>El núcleo de un computador es su <span style="color: red">CPU: central processing unit</span>.</li>
+<li>El CPU tiene números binarios (pulsos eléctricos) como entradas y otros números binarios como salidas, que se puede usar como nuevas entradas o guardados en la memoria.</li>
+<li>Se dice que el CPU ejecuta <i>instrucciones</i> (en forma de números binarios) que vienen de un programa.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/intel_chip.png">
+</div>
+</div>
+</section>
+
+<section><h4>Un ciclo de máquina (machine cycle)</h4>
+<img src="class2_images/machinecycle.png" height=400>
+</section>
+
+<section><h4>Ciclo de reloj (clock cycle)</h4>
+<p>Las <i>sub-instrucciones</i> que se ejecutan durante un <i>ciclo de máquina</i> demoran al menos un <i>ciclo de reloj (clock cycle)</i>.</p>
+<img src="class2_images/ciclo_reloj.png">
+</section>
+
+<section><h4>Ciclo de reloj (clock cycle)</h4>
+<ul>
+<li>El reloj interno de un CPU sincroniza las operaciones, y marca el número de ciclos por segundo.</li>
+<li>Si un CPU tiene una <i>frecuencia</i> del reloj de $2,8$ Ghz, significa que éste ejecuta $2,8$ billones de ciclos por segundo!</i>
+</ul>
+</section>
+
+<section><h4>Ejecución de un programa</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Un programa entero puede consistir de miles y miles de instrucciones.</li>
+<li>Los CPUs modernos usan varios trucos para poder a ejecutar varias instrucciones a la vez.</li>
+<li>También pueden ejecutar millones de instrucciones por segundo.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/codigomaquina.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>La memoria</h4>
+<ul>
+<li>Es necesario guardar las instrucciones antes de mandarlas al CPU. También necesitamos guardar las salidas del CPU.</li>
+<li>Por eso, necesitamos <span style="color:red">memoria</span>.</li>
+<li>Como vimos antes, un computador tiene dos tipos principales de memoria:</li>
+<ul>
+<li>Memoria primaria: RAM</li>
+<li>Memoria secundaria: disco duro</li>
+</ul>
+</ul>
+</section>
+
+<section><h4>La memoria</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Se puede imaginar la memoria de un computador como muchas cajitas.</li>
+<li>En cada cajita se puede almacenar un bit de información (es decir, un $0$ o $1$).</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/image006.png">
+</div>
+</div>
+</section>
+
+<section><h4>La memoria</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Las ubicaciones en memoria donde los datos o instrucciones se almacenan tienen <i>direcciones</i>, como las casas.</li>
+<li>Estas direcciones también son números binarios.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/image006.png">
+</div>
+</div>
+</section>
+
+<section><h4>Operación básica del computador</h4>
+<ul>
+<li>Tipicamente tenemos un programa en el disco duro (memoria secundaria).</li>
+<li>Cuando ejecutamos el programa, cargamos datos a la memoria primaria (RAM).</li>
+<li>El CPU luego lee los datos en RAM como instrucciones para ejecutar el programa.</li>
+<li>Las salidas de estas operaciones están guardados en RAM otra vez, o a veces guardamos los resultados permanentamente en el disco duro.</li>
+</ul>
+</section>
+
+<section><h3>¿El futuro?</h3></section>
+
+<section><h4>La ley de Moore</h4>
+<div class="container">
+<div class="col">
+<p>La Ley de Moore dice que el número de transistores en un microprocesador se duplica aproximadamente cada dos años.</p>
+</div>
+<div class="col">
+<img src="class2_images/moorelaw.png">
+</div>
+</div>
+</section>
+
+<section><h4>La ley de Moore</h4>
+<ul>
+<li>En la actualidad, el número no se duplica tan rapidamente.</li>
+<li>La evolución reciente de la tecnología de microprocesador indica que la duplicación de la cantidad de transistores ocurre cada 2.5 años.</li>
+<li>Eventualmente será imposible poner más circuitos en el silicio, y la tecnología de microprocesador no avanzará más.</li>
+</ul>
+</section>
+
+<section><h4>Limitaciones fundamentales: energía y comunicación</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Con una frecuencia de reloj más alta, hay mucho más consumo de energía.</li>
+<li>Los CPUs necesitan enfriamiento!</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/power_cpu.png">
+</div>
+</div>
+</section>
+
+<section><h4>Limitaciones fundamentales: energía y comunicación</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Los datos deben ser trasladados de un lugar a otro (i.e. del procesador a la memoria).</li>
+<li>El tiempo para esta comunicación tiene limitaciones: aún si lo datos pudiesen viajar a la velocidad de la luz, con un procesador funcionando a 5GHz los datos tardarían más en llegar que el tiempo que toma un ciclo del reloj.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class2_images/cpu.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>Computación cuántica</h4>
+<ul>
+<li>Los computadores cuánticos usan <i>qubits</i> de información, en vez de los <i>bits</i> de los computadores normales. Un qubit no tiene un valor definido hasta que sea <span style="color: red">medido</span>.
+<li>¿Solamente un uso limitado a aplicaciones especializadas? Requieren enfriamiento a temperaturas cerca de <i>cero absoluto</i> para evitar ruido térmico.
+</ul>
+<div class="container">
+<div class="col">
+<img src="class2_images/quantumcomputing.jpg">
+</div>
+<div class="col">
+<img src="class2_images/bloch_sphere.png">
+</div>
+</div>
+</section>
+
+<section><h4>Supercomputadores</h4>
+<div class="container">
+<div class="col">
+<p>La desaceleración de la Ley de Moore se puede combatir con el uso de varios procesadores: <i>paralelismo</i>. Los supercomputadores hoy en día tienen miles de procesadores. Incluso las laptops y desktops tienen procesadores multinúcleo (<i>multicore</i>) ahora.</p>
+</div>
+<div class="col">
+<img src="class2_images/supercomputer.jpg">
+</div>
+</div>
+</section>
+
+<section><h3>Computación paralela</h3></section>
+
+<section><h4>Conceptos básicos</h4>
+<p>Computación en serie</p>
+<ul>
+<li>Tradicionalmente un algoritmo se implementa como un flujo en serie de instrucciones.</li>
+<li>Las instrucciones se ejecutan en una unidad central de procesamiento.</li>
+<li>Sólo puede ejecutarse una instrucción a la vez.</li>
+</ul>
+</section>
+
+<section><h4>Conceptos básicos</h4>
+<p>Computación paralela</p>
+<ul>
+<li>Utiliza simultáneamente múltiples elementos de procesamiento.</li>
+<li>Necesita la separación del problema (y el algoritmo) en partes independientes.</li>
+<li>Cada elemento de procesamiento ejecuta su parte del algoritmo de manera simultánea con los otros.</li>
+<li>Los elementos de procesamiento pueden ser:</li>
+<ul>
+<li>Núcleos individuales en procesadores multinúcleos</li>
+<li>Procesadores individuales en múltiples computadores</li>
+</ul>
+</ul>
+</section>
+
+<section><h4>Arquitecturas</h4>
+<div class="container">
+<div class="col">
+<img src="class2_images/supercompu.jpeg" height=350>
+</div>
+<div class="col">
+<img src="class2_images/cluster_back.jpg" height=350>
+</div>
+</div>
+</section>
+
+<section><h4>Arquitecturas</h4>
+<div class="container">
+<div class="col">
+<figure>
+<img src="class2_images/coprocessor.png" height=300>
+<caption><p>Coprocesadores (Intel Xeon Phi)</p></caption>
+</figure>
+</div>
+<div class="col">
+<figure>
+<img src="class2_images/nvidia_tesla.jpg" height=300>
+<caption><p>NVIDIA tarjeta gráfica (con GPU)</p></caption>
+</figure>
+</div>
+</div>
+</section>
+
+<section><h4>Coprocesador</h4>
+<img src="class2_images/xeon_phi.jpg">
+</section>
+
+<section><h4>GPU</h4>
+<img src="class2_images/nvidia_arc_big.png" height=400>
+</section>
+
+<section><h4>Resumen</h4>
+<ul>
+<li>El diseño básico de los computadores modernos no ha cambiado desde los años 40.</li>
+<li>Con avances tecnológicas podemos poner millones y millones de circuítos lógicos en los <i>chips</i>.</li>
+<li>Aunque los procesadores modernos son muy rápidos, tienen límites físicos que tenemos que enfrentar.</li>
+<li>La computación paralela (multiples CPU, GPU) ayuda muchisimo en evitar estos problemas.</li>
+</ul>
+</section>
+
+
+			</div>
+		</div>
+
+<script>
+
+require(
+    {
+      // it makes sense to wait a little bit when you are loading
+      // reveal from a cdn in a slow connection environment
+      waitSeconds: 15
+    },
+    [
+      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
+    ],
+
+    function(head, Reveal){
+
+        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+
+            transition: "slide",
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js" }
+            ]
+        });
+
+        var update = function(event){
+          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
+            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
+          }
+        };
+
+        Reveal.addEventListener('slidechanged', update);
+
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
+
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
+
+    }
+
+);
+</script>
+	</body>
+</html>
