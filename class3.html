@@ -1,0 +1,652 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+<title>Intro Menciones I: Clase 3</title>
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+
+<!-- General and theme style sheets -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/white.css" id="theme">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/css/zenburn.css">
+<!-- Theme used for syntax highlighting of code -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/css/monokai.css">-->
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+}
+
+</script>
+
+<!--[if lt IE 9]>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
+<![endif]-->
+
+<!-- Loading the mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: false }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration -->
+
+<!-- Get Font-awesome from cdn -->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">-->
+
+
+        <style type="text/css">
+            .container{
+                        display: flex;
+                      }
+            .col{
+                      flex: 1;
+                }
+            .reveal section p {
+                      display: inline-block;
+                      font-size: 0.6em;
+                      line-height: 1.2em;
+                      vertical-align: top;
+                      text-align: left;
+            }
+            .reveal section li {
+                      font-size: 0.6em;
+            }
+            .reveal section td {
+                      font-size: 0.6em;
+            }
+            .reveal section img {
+                      border: none;
+            }
+        </style>
+
+	</head>
+	<body>
+			<div class="reveal">
+			<div class="slides">
+
+<section><h3>Programación y lenguajes</h3></section>
+
+<section><h4>Introducción</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>En la clase anterior aprendimos del <i>hardware</i> que necesitamos para computación científica</li>
+<li>Ahora veremos como dar las instrucciones para hacer una tarea computacional: necesitamos <i>software</i>.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class3_images/software.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>Programación</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Podemos dar instrucciones a un computador por el uso de un <i>programa de computador</i>.</li>
+<li>Este es la diferencia más importante (y más útil) entre un computador programable y una máquina cálculadora.</li>
+<li>Hay muchos <i>lenguajes de programación</i>, e.g. Python, C, Java, etc.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class3_images/programming.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>¿Qué es un programa de computador?</h4>
+<div class="container">
+<div class="col">
+<img src="class3_images/code.jpg">
+</div>
+<div class="col">
+<ul>
+<li>Un programa es un conjunto de instrucciones que dice al computador qué hacer, para llegar a un resultado.</li>
+<li>Un programa es una realización de un <i>algoritmo</i>.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section><h4>¿Qué es un algoritmo?</h4>
+<ul>
+<li>Un algoritmo es simplemente un conjunto de instrucciones, como una <span style="color:red">receta</span>.</li>
+<li>Podemos escribir una receta en castellano o en inglés: el <span style="color:blue">proceso</span> es el mismo.</li>
+<li>Los algoritmos son <i>independientes</i> del lenguaje de programación.</li>
+</ul>
+<div class="container">
+<div class="col">
+<img src="class3_images/receta1.png", height=300>
+</div>
+<div class="col">
+<img src="class3_images/recipe.jpg", height=300>
+</div>
+</div>
+</section>
+
+<section><h4>La importancia de los algoritmos</h4>
+<ul>
+<li>Los principales avances en la computación (después del desarrollo de computadores programables) han sido en el área de algoritmos.</li>
+<li>Veremos mucho más sobre algoritmos en la próxima clase.</li>
+</ul>
+</section>
+
+<section><h3>Tipos de lenguaje de programación</h3></section>
+
+<section><h4>El lenguaje de los computadores</h4>
+<div class="container">
+<div class="col">
+<img src="class3_images/binary.jpg">
+</div>
+<div class="col">
+<ul>
+<li>Vimos en la clase anterior que los computadores procesan información en binario.</li>
+<li>Por lo tanto, las instrucciones que componen el programa (la realización del algoritmo) deben ser en binario.</li>
+<li>Entonces, ¿tenemos que escribir muchos $0$ y $1$ para programar un computador...?</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section><h4>Lenguajes de programación</h4>
+<ul>
+<li>Escribimos programas en <i>lenguajes de programación</i> (como las recetas en castellano, inglés, etc.).</li>
+<li>Hay muchos lenguajes de varios tipos.</li>
+<li>Una clasificación básica de los lenguajes tiene que ver con su nivel de <i>abstracción</i>.</li>
+</ul>
+</section>
+
+<section><h4>Abstracción</h4>
+<img src="class3_images/abstraccion.png">
+</section>
+
+<section><h4>Abstracción</h4>
+<p>"Abstracción" se refiere a la "distancia" entre las instrucciones binarias que usa el computador y los comandos escrito por el usuario en el programa.</p>
+<ul>
+<li>Lenguajes de bajo nivel: poca abstracción.</li>
+<li>Lenguajes de alto nivel: mucha abstracción.</li>
+</ul>
+</section>
+
+<section><h4>Lenguajes de bajo nivel</h4>
+<ul>
+<li>Lenguajes de <i>bajo nivel</i> tienen muy poca abstracción.</li>
+<li><span style="color:blue">Código de máquina</span>: el nivel más bajo, cero abstracción, comandos en binario.</li>
+<li><span style="color:blue">Lenguaje ensamblador</span>: nivel muy bajo, reemplaza el binario por palabras de lenguaje natural. Todavía corresponde al nivel de las instrucciones del CPU.</li>
+</ul>
+<div class="container">
+<div class="col">
+<img src="class3_images/binaryCode.png", height=250>
+</div>
+<div class="col">
+<img src="class3_images/assembler.jpg", height=250>
+</div>
+</div>
+</section>
+
+<section><h4>Lenguajes de alto nivel</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Lenguajes de alto nivel usan mucho más abstracción, los comandos están en lenguaje natural.</li>
+<li>No hay control directo de las instrucciones del CPU.</li>
+<li>El flujo de un programa está estructurado en una forma que tiene sentido para los humanos.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class3_images/c_ejemplo.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>Traducción de lenguajes de alto nivel</h4>
+<p>¿Cómo podemos "traducir" de un lenguaje de alto nivel al binario de código de máquina? Hay dos métodos:</p>
+<ul>
+<li>Interpretación
+<li>Compilación
+</ul>
+</section>
+
+<section><h4>Interpretación</h4>
+<ul>
+<li><i>Interpretación</i>: usa un <span style="color:red">interprete</span> para procesar las instrucciones del programa y traducirlas a código máquina línea por línea durante la ejecución.</li>
+<li>Muy flexible, y podemos usar el interprete en "tiempo real" para dar comandos uno tras otro.</li>
+<li>Desventaja: ejecución es lenta.</li>
+<li><span style="color:blue">Python</span> es un lenguaje <i>interpretado</i>.</li>
+</ul>
+</section>
+
+<section><h4>Interpretación</h4>
+<img src="class3_images/interpreted.png">
+</section>
+
+<section><h4>Compilación</h4>
+<ul>
+<li><i>Compilación</i>: usa un <span style="color:red">compilador</span> para convertir las instrucciones del programa a código máquina.</li>
+<li>Ventaja: se convierte todo el programa a código máquina antes de la ejecución, así que el programa se ejecuta mucho más rapidamente.</li>
+<li>Desventaja: hay que dar más información a un compilador que a un interprete. Es menos flexible en ese sentido.</li>
+<li>Hay muchos lenguajes <i>compilados</i> como <span style="color:blue">C</span>, <span style="color:blue">Java</span>, etc.</li>
+</ul>
+</section>
+
+<section><h4>Compilación</h4>
+<img src="class3_images/compiled.png">
+</section>
+
+<section><h3>Paradigmas de programación</h3></section>
+
+<section><h4>Paradigmas de programación</h4>
+<ul>
+<li>Hay diferentes "estilos" de programación, o "paradigmas".</li>
+<li>No son diferencias superficiales en el programa, sino formas fundamentalmente diferente de organizar la lógica y estructura de un programa.</li>
+</ul>
+</section>
+
+<section><h4>Programación de procedimiento</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>También se llama <i>programación imperativa</i>.</li>
+<li>Las instrucciones están ejecutadas en el órden en que aparecen en el código.</li>
+<li>Es la paradigma más conocida y más común en computación científica.</li>
+<li>Lenguajes que usan esta paradigma: Python, C, Fortran</li>
+</ul>
+</div>
+<div class="col">
+<img src="class3_images/imperative_programming.png">
+</div>
+</div>
+</section>
+
+<section><h4>Programación funcional</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Los datos (variables) y las instrucciones están organizados en funciones.</li>
+<li>El trabajo del programa está hecho por cadenas de funciones.</li>
+<li>Es una paradigma que está creciendo en popularidad, pero no es muy común en computación científica.</li>
+<li>Lenguajes: Scala, Haskell, Lisp</li>
+</ul>
+</div>
+<div class="col">
+<img src="class3_images/functional_programming.png">
+</div>
+</div>
+</section>
+
+<section><h4>Programación orientada a objetos, POO (<i>Object Oriented Programming</i>)</h4>
+<img src="class3_images/poo.jpg">
+</section>
+
+<section><h4>Programación orientada a objetos</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Los datos (variables) y las instrucciones están organizados en "objetos" abstractos.</li>
+<li>La funcionalidad del programa viene de las "interacciones" de los objetos.</li>
+<li>Una paradigma muy común en programación profesional y a veces es útil en computación científica.</li>
+<li>Lenguajes: Java, C++, Python</li>
+</ul>
+</div>
+<div class="col">
+<img src="class3_images/objectOriented.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>Programación paralela</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>No es exactamente una "paradigma" sino una forma de escribir un programa que puede aprovechar de muchos CPUs y/o GPUs.</li>
+<li>Veremos más sobre programación paralela en Clase 5.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class3_images/parallelProblem.png">
+</div>
+</div>
+</section>
+
+<section><h3>Lenguajes de programación</h3></section>
+
+<section><h4>Python</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Propiedades: propósito general, <i>interpretado</i>.</li>
+<li>Es un lenguaje muy popular, utilizado por muchas organizaciones y en la academia. Es uno de los lenguajes más populares en <i>data science</i>.</li>
+<li>Python apareció, por primera vez, en 1991, y ahora es el cuarto lenguaje de programación más utilizado.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class3_images/python.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>Python</h4>
+<p><pre class="python"><code>import numpy as np
+def suma(a,n):
+    suma = 0
+    for i in range(n):
+        for j in range(n):
+            suma += a[i,j]
+    return suma
+n = 100
+b = np.random((n,n))
+resultado = suma(b,n)
+print(resultado)</code></pre></p>
+</section>
+
+<section><h4>C</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li>Propiedades: propósito general, <i>compilado</i>.</li>
+<li>C es un lenguaje <i>imperativo</i>.</li>
+<li>Diseñado para proporcionar acceso directo a las funciones basicas de la computadora (i.e. la memoria), y para tener una correspondencia cercana al código máquina. Se ha utilizado para escribir sistemas operativos (Windows, Mac, Linux).</li>
+<li>Apareció originalmente en 1972, y es el segundo lenguaje más utilizado en el mundo.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class3_images/C.png">
+</div>
+</div>
+</section>
+
+<section><h4>C</h4>
+<p><pre><code>#include&ltstdio.h&gt
+#include&ltstdlib.h&gt
+
+float suma(float** arr, int n);
+void random_array(float** arr, int n);
+
+float suma(float** arr, int n){
+    float suma = 0;
+    int i,j;
+    for (i=0; i &lt n; i++){
+        for (j=0; j &lt n; j++){
+            suma += arr[i][j];
+        }
+    }
+    return suma;
+}
+
+void random_array(float** arr, int n){
+    int i, j;
+    srand(time(NULL));
+    for(i=0; i &lt n; i++){
+        for(j=0; j &lt n; j++){
+            arr[i][j] = (float)rand()/(float)RAND_MAX;
+        }
+    }
+}
+
+int main(){
+    int n = 100, i;
+    float **b;
+    float resultado;
+
+    b = malloc(n * sizeof *b);
+    for (i=0; i &lt n; i++){
+        b[i] = malloc(n * sizeof *b[i]);
+    }
+    random_array(b, n);
+    resultado = suma(b, n);
+    printf("%f\n",resultado);
+
+    for (i=0; i &lt n; i++){
+        free(b[i]);
+    }
+    free(b);
+}</code></pre></p>
+</section>
+
+<section><h4>Cython</h4>
+<ul>
+<li>Un lenguaje que extiende Python.</li>
+<li>Con Cython se puede escribir programas con el sintaxsis de Python, pero con la rapidez de C.</li>
+</ul>
+<div class="container">
+<div class="col">
+<img src="class3_images/Cython.png">
+</div>
+<div class="col">
+<img src="class3_images/cython_code.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>Otra forma de acelerar Python</h4>
+<div class="container">
+<div class="col">
+<ul>
+<li><b>Numba</b>: un módulo para Python que <i>compila</i> partes del programa a código de máquina.</li>
+</ul>
+</div>
+<div class="col">
+<img src="class3_images/numba.png">
+</div>
+</div>
+</section>
+
+<section><h4>C++</h4>
+<ul>
+<li>Propiedades: propósito general, <i>compilado</i>.</li>
+<li>C++ es una extensión de C, que incluye la capacidad de programación <i>orientada a objetos</i> (object-oriented programming) y <i>genérica</i> (generic programming).</li>
+<li>Apareció originalmente en 1983, y ha sido ampliamente utilizado en el desarrollo de software comercial. Es el tercer lenguaje más utilizado en el mundo.</li>
+</ul>
+<div class="container">
+<div class="col">
+<img src="class3_images/cpp.jpeg">
+</div>
+<div class="col">
+<img src="class3_images/Hello_World_C++.png">
+</div>
+</div>
+</section>
+
+<section><h4>Java</h4>
+<ul>
+<li>Propiedades: propósito general, <i>compilado</i>.</li>
+<li>Tiene una sintaxsis similar a C++, aunque Java está completamente <i>orientada a objetos</i>.</li>
+<li>Diseñado con el fin de obtener maxima <i>portabilidad</i>, i.e. para que un programa escrito en Java pueda usarse en cualquier plataforma.</li>
+<li>Ampliamente utilizado para desarrollar aplicaciones en el Internet de cliente-servidor.</li>
+<li>Es el lenguaje más utilizado en el mundo!</li>
+</ul>
+<div class="container">
+<div class="col">
+<img src="class3_images/java.png">
+</div>
+<div class="col">
+<img src="class3_images/java_hello_world.jpg">
+</div>
+</div>
+</section>
+
+<section><h4>Fortran</h4>
+<ul>
+<li>Propiedades: propósito general, <i>compilado</i>. Su nombre viene de <i>FORmula TRANslation</i>.</li>
+<li>Una ventaja de los programas de Fortran es que son muy rápidos. Además, Fortran tiene capacidades muy útiles para la manipulación de vectores y matrices.</li>
+<li>Tiene muy poco uso fuera de la computación científica.</li>
+<li>Apareció originalmente en 1957, la versión más reciente (Fortran 2008) salió en 2010.</li>
+</ul>
+<div class="container">
+<div class="col">
+<img src="class3_images/fortran.jpeg", height=250>
+</div>
+<div class="col">
+<img src="class3_images/fortran_hello_world.png", height=250>
+</div>
+</div>
+</section>
+
+<section><h4>Dos lenguajes más especializados</h4>
+<ul>
+<li><b>R</b>: de gran utilidad para el análisis estadístico de datos. Es muy popular en las ciencias biológicas, y la <i>ciencia de datos</i> en general.</li>
+<li><b>IDL</b>: Interactive Data Language. Se usa bastante en astronomía, ciencias atmosféricas y imagen médica. Hay que pagar para la licencia.</li>
+</ul>
+<div class="container">
+<div class="col">
+<img src="class3_images/R-Programming.png", height=250>
+</div>
+<div class="col">
+<img src="class3_images/idl.jpg", height=250>
+</div>
+</div>
+</section>
+
+<section><h4>Lenguajes nuevos</h4>
+<ul>
+<li><b>Julia</b>: diseñado para computación numérica y científica de alto rendimiento, pero todavía de propósito muy general. La idea es tener un lenguaje fácil de usar como Python, pero rápido como C. Bastante nuevo (está en versión 1.4.2).</li>
+<li><b>Scala</b>: basado en Java, pero con caracteristicas adicionales, tipo <i>programación funcional</i>.</li>
+<li><b>Rust</b>: algunas similitudes con C/C++, programación imperativa y funcional. Diseñado para programación de sistemas, pero de uso general.</li>
+</ul>
+<div class="container">
+<div class="col">
+<img src="class3_images/julia.png", height=100>
+</div>
+<div class="col">
+<img src="class3_images/scala.png", height=100>
+</div>
+<div class="col">
+<img src="class3_images/rust-logo.png", height=100>
+</div>
+</div>
+</section>
+
+
+
+<section><h4>Resumen</h4>
+<ul>
+<li>Todos los científicos hoy en día tienen que programar.
+<li>Programación es la realización de un <i>algoritmo</i>.
+<li>Hay muchos lenguajes de programación, y cada uno tiene sus ventajas y desventajas.
+<li>Los lenguajes más comunes en la ciencia de datos son: <span style="color:blue">Python</span> y <span style="color:red">R</span>.
+<li>En simulaciones numéricas se usa: <span style="color:green">C/C++</span> y <span style="color:red">Fortran</span>.
+<li>Siempre hay nuevas opciones para la computación científica: <span style="color:green">Cython</span>, <span style="color:purple">Julia</span>, <span style="color:brown">Rust</span>, etc.
+</ul>
+</section>
+
+
+			</div>
+		</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"></script>
+
+<script>
+
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                transition: 'slide',
+
+                math: {
+		                mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js',
+                        //mathjax: '/home/graeme/Documents/talks/reveal.js/MathJax-2.7.3/MathJax.js',
+		                config: 'TeX-AMS_HTML-full', // See http://docs.mathjax.org/en/latest/config-files.html
+		                // pass other options into `MathJax.Hub.Config()`
+		                TeX: { Macros: { RR: "{\\bf R}" } }
+	                  },
+
+				dependencies: [
+					{ src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad();}}
+				]
+			});
+</script>
+<!--
+require(
+    {
+      // it makes sense to wait a little bit when you are loading
+      // reveal from a cdn in a slow connection environment
+      waitSeconds: 15
+    },
+    [
+      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
+    ],
+
+    function(head, Reveal){
+
+        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+
+            transition: "slide",
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js' } ]
+        });
+
+        var update = function(event){
+          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
+            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
+          }
+        };
+
+        Reveal.addEventListener('slidechanged', update);
+
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
+
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
+
+    }
+
+);-->
+</script>
+	</body>
+</html>
