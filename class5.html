@@ -214,7 +214,6 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <div class="col">
 <ul>
 <li>Un proceso lanza multiples <i>threads</i> (hilos) de ejecución.</li>
-<li>Cada hilo tiene un bloque exclusivo de memoria (en el bloque del <i>proceso</i>).</li>
 <li>Cada procesador (core) ejecuta un subconjunto de los hilos.</li>
 <li>Ya que todos los hilos tienen acceso al bloque de memoria "global" del proceso, tiene sentido usar memoria <i>compartida</i> para procesamiento multi-hilo.</li>
 </ul>
