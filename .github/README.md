@@ -1,6 +1,8 @@
 # Introducción a las Menciones - Módulo Computación Científica
 
-El modulo consiste en 6 clases, las cuales pueden ser vistas online.
+El modulo consiste en 6 clases, las cuales pueden visualizarse online.
+
+[Pagina principal de clases](https://crisbh.github.io/intro_menciones/clases.html)
 
 ## Listado de clases
 
