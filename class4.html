@@ -421,16 +421,19 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <section>
 <section><h4>Un problema no resuelto de la informática</h4>
-<p>Un punto entre paréntesis:  hay un problema muy interesante y sin resolución todavía en la informática que está relacionado con complejidad algorítmica.</p>
+<p>Un punto entre paréntesis: existe un problema muy interesante y sin resolución todavía en la informática que está
+    relacionado con complejidad algorítmica.</p>
 <blockquote class="fragment">
 <p>¿$P = NP$?</p>
-<p>¿Es posible resolver <i>rápidamente</i> cualquier problema cuyo solución se puede comprobar <i>rápidamente</i> (en tiempo "polinomial")?</p>
+<p>¿Es posible resolver <i>rápidamente</i> cualquier problema cuya solución se puede comprobar <i>rápidamente</i> (en
+    tiempo "polinomial")?</p>
 </blockquote>
 </section>
 
 <section><h4>Un problema no resuelto de la informática</h4>
 <ul>
-<li>Acuerdense que hay muchos algoritmos posibles para resolver un cierto problema. Quizás algunos tendrán complejidad baja (son "rápidos") y otros tendrán complejidad alta (son "lentos").</li>
+<li>Acuerdense que hay muchos algoritmos posibles para resolver un cierto problema. Quizás algunos tendrán complejidad
+    baja (son "rápidos") y otros tendrán complejidad alta (son "lentos").</li>
 <li>La naturaleza del problema dictará si algoritmos "rápidos" existen.</li>
 </ul>
 </section>
@@ -554,7 +557,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <section><h4>Precisión de la máquina</h4>
 <ul>
 <li>El grado de precisión que uno puede obtener en una variable se llama la <span style="color:blue">precisión de la máquina</span> (<i>machine precision</i>), $\epsilon$.</li>
-<li>No importa el programa que escribimos, ni el algoritmo que usamos, NUNCA calcularemos valores a una precisión mayor que la precisión de la máquina.</li>
+<li>No importa el programa que escribamos, ni el algoritmo que usamos, <b>nunca</b> calcularemos valores a una precisión mayor que la precisión de la máquina.</li>
 <li>Notese que algunos lenguajes permiten control en la cantidad de memoria asignada a variables de distintos tipos, y por eso podemos obtener valores muy pequeños para $\epsilon$ (es decir, precisión extremadamente alta).</li>
 </ul>
 <p>Precisión doble: $\epsilon = 2^{-53} \approx 1,11 \times 10^{-16}$.</p>
@@ -572,8 +575,9 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <ul>
 <li>La constante gravitacional en unidades SI: $6,67408 \times 10^{-11}$ m$^3$ kg$^{-1}$ $s^{-2}$.</li>
 <li>La masa solar en unidades SI: $2 \times 10^{30}$ kg.</li>
-<li>El septimo dígito del resultado de la multiplicación será un número de magnitud $10^{13}$!</li>
-<li>Este número podría ser suficientemente grande para modificar otros números en el cálculo y introducir errores.</li>
+<li>Al multiplicar ambas cantidades, el septimo dígito (último
+                        digito válido en precisión simple) del resultado será un número de magnitud $10^{13}$!</li>
+<li>Este número podría ser suficientemente grande para modificar otros números en el cálculo e introducir errores.</li>
 </ul>
 </section>
 
@@ -588,39 +592,29 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <ul>
 <li>Por las mismas razones, hay fracciones que no se puede representar exactamente en <span style="color:red">binario</span>.</li>
 <li>Un ejemplo común es el número $0.1$ (una representación <i>exacta</i> de $1/10$ en el sistema decimal).</li>
-<li>En binario, este tiene la representación $0.000110011001100110011\ldots$. Por lo tanto, NUNCA tendremos el valor $0.1$ representado EXACTAMENTE en el computador - siempre habrá un error del tamaño de la precisión de la máquina.</li>
+<li>En binario, este tiene la representación $0.000110011001100110011\ldots$.
+                        Por lo tanto, <b>nunca</b> tendremos el valor $0.1$
+                        representado <b>exactamente</b> en el computador - siempre habrá un error del tamaño de la precisión de la máquina.</li>
 </ul>
 </section>
 
 <section><h4>Resumen</h4>
-<div class="container">
-<div class="col">
 <ul>
-<li> Los algoritmos son las <span style="color:red">longanizas</span> del <span style="color:blue">choripan</span> que es la computación científica.</li>
 <li> Algoritmos son procesos estructurados diseñados para resolver un problema especifico.</li>
 <li> El primer paso, en cualquier tarea computacional, es pensar sobre el algoritmo, diseñarlo y planificarlo.</li>
-</ul>
-</div>
-<div class="col">
-<img src="class4_images/choripan1.jpg">
-</div>
-</div>
-</section>
-
-<section><h4>Resumen</h4>
-<ul>
 <li>La implementación de un algorítmo es un <span style="color:blue">programa</span>.</li>
 <li>Un algoritmo bueno es <i>rápido</i> y <i>preciso</i>.</li>
-<li>La complejidad algorítmica: como se escala su tiempo de ejecución con la cantidad de datos que usamos como entrada al algoritmo.</li>
+<li>La complejidad algorítmica: como escala su tiempo de ejecución con la cantidad de datos que usamos como entrada al
+    algoritmo.</li>
 </ul>
 <p>$\Rightarrow$ Notación O-grande (Big-O), $\mathcal{O}$.</p>
 </section>
 
 <section><h4>Resumen</h4>
 <ul>
-<li>La exactitúd de los algoritmos está afectado por la precisión de las variables.</li>
-<li>Casi todos los números que están guardados en el computador tienen un cierto nivel de imprecisión.</li>
-<li>Siempre debemos estar consciente de eso cuando escribimos programas.</li>
+<li>La exactitud de los algoritmos está afectada por la precisión de las variables.</li>
+<li>Casi todos los números que se representan en el computador tienen un cierto nivel de imprecisión.</li>
+<li>Siempre debemos estar consciente de esto cuando escribimos programas.</li>
 </ul>
 </section>
 
