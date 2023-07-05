@@ -433,17 +433,20 @@
             <section>
                 <h4>Python</h4>
                 <p>
-                <pre class="python"><code>import numpy as np
-                        def suma(a,n):
-                        suma = 0
-                        for i in range(n):
-                        for j in range(n):
-                        suma += a[i,j]
-                        return suma
-                        n = 100
-                        b = np.random((n,n))
-                        resultado = suma(b,n)
-                        print(resultado)</code></pre>
+                <pre class="python">
+                <code>import numpy as np
+
+def suma(a,n):
+    suma = 0
+    for i in range(n):
+        for j in range(n):
+            suma += a[i,j]
+    return suma
+
+n = 100
+b = np.random((n,n))
+resultado = suma(b,n)
+print(resultado)</code></pre>
                 </p>
             </section>
 
@@ -469,22 +472,23 @@
             <section>
                 <h4>C</h4>
                 <p>
-                <pre><code>#include&ltstdio.h&gt
-                        #include&ltstdlib.h&gt
+                <pre>
+<code>#include&ltstdio.h&gt
+#include&ltstdlib.h&gt
 
-                        float suma(float** arr, int n);
-                        void random_array(float** arr, int n);
+float suma(float** arr, int n);
+void random_array(float** arr, int n);
 
-                        float suma(float** arr, int n){
-                        float suma = 0;
-                        int i,j;
-                        for (i=0; i &lt n; i++){
-                        for (j=0; j &lt n; j++){
-                        suma += arr[i][j];
-                        }
-                        }
-                        return suma;
-                        }
+float suma(float** arr, int n){
+    float suma = 0;
+    int i,j;
+    for (i=0; i &lt n; i++){
+        for (j=0; j &lt n; j++){
+            suma += arr[i][j];
+        }
+    }
+    return suma;
+}
 
                         void random_array(float** arr, int n){
                         int i, j;
@@ -612,14 +616,17 @@
             <section>
                 <h4>Dos lenguajes más especializados</h4>
                 <ul>
-                    <li><b>R</b>: de gran utilidad para el análisis estadístico de datos. Es muy popular en las ciencias
-                        biológicas, y la <i>ciencia de datos</i> en general.</li>
+                    <li><b>Wolfram</b>: Lenguaje empleado por el software
+                            <i>Mathematica</i>. Popular en la física teórica
+                            debido a sus capacidades de cálculo simbólico. Hay que
+                            pagar licencia.</li>
                     <li><b>IDL</b>: Interactive Data Language. Se usa bastante en astronomía, ciencias atmosféricas y
                         imagen médica. Hay que pagar para la licencia.</li>
                 </ul>
                 <div class="container">
                     <div class="col">
-                        <img src="class3_images/R-Programming.png" , height=250>
+                        <img
+                        src="class3_images/Wolfram_Language_Logo_2016.png" , height=250>
                     </div>
                     <div class="col">
                         <img src="class3_images/idl.jpg" , height=250>
