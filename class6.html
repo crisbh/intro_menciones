@@ -13341,12 +13341,13 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Parametrizaciones">Parametrizaciones<a class="anchor-link" href="#Parametrizaciones">&#182;</a></h4><p>Ejemplo de formación de estrellas:</p>
 <ul>
-<li>La simulación tiene una malla con muchas células (como en el ejemplo de una simulación del clima que vimos antes).</li>
+<li>La simulación tiene una malla con muchas celdas (como en el ejemplo de una simulación del clima que vimos antes).</li>
 </ul>
 <p><img src="class6_images/grid.png" alt=""></p>
 <ul>
-<li>El tamaño físico de cada célula es mucho mayor que el tamaño de una estrella.</li>
-<li>Entonces, podemos ocupar los valores de la <strong>densidad</strong> del gas en cada célula para ver si las estrellas se forman o no:</li>
+<li>El tamaño físico de cada celda es mucho mayor que el tamaño de una estrella.</li>
+<li>Entonces, podemos ocupar los valores de la <strong>densidad</strong> del gas
+                    en cada celda para ver si las estrellas se forman o no:</li>
 </ul>
 
 </div>
@@ -13640,7 +13641,12 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Parametrizaciones-en-simulaciones-del-clima/tiempo">Parametrizaciones en simulaciones del clima/tiempo<a class="anchor-link" href="#Parametrizaciones-en-simulaciones-del-clima/tiempo">&#182;</a></h4><p>Las simulaciones del clima/tiempo no tienen una resolución infinita. Por lo tanto, hay procesos físicos y químicos que ocurren a escalas menores que el tamaño de cada célula de la malla.</p>
+<h4 id="Parametrizaciones-en-simulaciones-del-clima/tiempo">Parametrizaciones en
+                  simulaciones del clima/tiempo<a class="anchor-link"
+                    href="#Parametrizaciones-en-simulaciones-del-clima/tiempo">&#182;</a></h4><p>Las
+                  simulaciones del clima/tiempo no tienen una resolución
+                  infinita. Por lo tanto, hay procesos físicos y químicos que
+                  ocurren a escalas menores que el tamaño de cada celda de la malla.</p>
 <p>Entonces, tenemos que representar muchos procesos físicos/químicos con <em>parametrizaciones</em> como vimos en el caso de una simulación cosmológica.</p>
 
 </div>
@@ -13658,10 +13664,10 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Un ejemplo de un proceso fundamental para el clima que no se puede representar explicitamente en la simulación es la formación de nubes.</p>
-<p>Si la simulación tiene células de área $100$ km$^2$, este es mucho mayor que el tamaño de una nube.</p>
-<p>Por ende, para determinar si hay nubes dentro de una célula en cada momento de la simulación, hay que usar una aproximación. Por ejemplo:</p>
+<p>Si la simulación tiene celdas de área $100$ km$^2$, este es mucho mayor que el tamaño de una nube.</p>
+<p>Por ende, para determinar si hay nubes dentro de una celda en cada momento de la simulación, hay que usar una aproximación. Por ejemplo:</p>
 <p>$\phi &gt; \phi_N$</p>
-<p>Es decir, hay nubes en la célula cuando la humedad relativa $\phi$ es mayor que un cierto valor $\phi_N$.</p>
+<p>Es decir, hay nubes en la celda cuando la humedad relativa $\phi$ es mayor que un cierto valor $\phi_N$.</p>
 
 </div>
 </div>
@@ -13801,7 +13807,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Automata-celular">Automata celular<a class="anchor-link" href="#Automata-celular">&#182;</a></h4><p>Una área importante del estudio de sistemas complejos es el área de automata celular.</p>
-<p>Estos son sistemas muy simples: una cuadricula de células, donde cada célula puede ser "viva" o "muerta". Su estado depende del estado de sus células vecinas.</p>
+<p>Estos son sistemas muy simples: una cuadricula de celdas (células), donde cada célula puede ser "viva" o "muerta". Su estado depende del estado de sus células vecinas.</p>
 <p>Un ejemplo muy famoso de estos tipos de sistemas es el "Juego de la Vida" (<em>Game of Life</em>) del matemático John Conway.</p>
 
 </div>
