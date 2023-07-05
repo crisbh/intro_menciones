@@ -476,9 +476,6 @@ print(resultado)</code></pre>
 <code>#include&ltstdio.h&gt
 #include&ltstdlib.h&gt
 
-float suma(float** arr, int n);
-void random_array(float** arr, int n);
-
 float suma(float** arr, int n){
     float suma = 0;
     int i,j;
@@ -490,34 +487,34 @@ float suma(float** arr, int n){
     return suma;
 }
 
-                        void random_array(float** arr, int n){
-                        int i, j;
-                        srand(time(NULL));
-                        for(i=0; i &lt n; i++){
-                        for(j=0; j &lt n; j++){
-                        arr[i][j] = (float)rand()/(float)RAND_MAX;
-                        }
-                        }
-                        }
+void random_array(float** arr, int n){
+    int i, j;
+    srand(time(NULL));
+    for(i=0; i &lt n; i++){
+        for(j=0; j &lt n; j++){
+            arr[i][j] = (float)rand()/(float)RAND_MAX;
+        }
+    }
+}
 
-                        int main(){
-                        int n = 100, i;
-                        float **b;
-                        float resultado;
+int main(){
+    int n = 100, i;
+    float **b;
+    float resultado;
 
-                        b = malloc(n * sizeof *b);
-                        for (i=0; i &lt n; i++){
-                        b[i] = malloc(n * sizeof *b[i]);
-                        }
-                        random_array(b, n);
-                        resultado = suma(b, n);
-                        printf("%f\n",resultado);
+    b = malloc(n * sizeof *b);
+    for (i=0; i &lt n; i++){
+        b[i] = malloc(n * sizeof *b[i]);
+    }
+random_array(b, n);
+resultado = suma(b, n);
+printf("%f\n",resultado);
 
-                        for (i=0; i &lt n; i++){
-                        free(b[i]);
-                        }
-                        free(b);
-                        }</code></pre>
+for (i=0; i &lt n; i++){
+    free(b[i]);
+}
+free(b);
+}</code></pre>
                 </p>
             </section>
 
