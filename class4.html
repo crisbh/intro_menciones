@@ -243,7 +243,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <ul>
 <li>¿Cómo sabemos que el algoritmo que hemos diseñado es la "mejor" solución?</li>
 <li>¿Qué significaría "mejor" en este caso?</li>
-<li>Típicamente significa el más preciso y el más rápido.</li>
+<li>Típicamente significa el <b>más preciso </b>y el <b>más rápido</b>.</li>
 <li>Precisión es normalmente el primer aspecto de un algoritmo que verificamos.</li>
 <li>Calcular la rapidez de un algoritmo es un problema desafiante. ¿Cómo podemos comparar la rapidez de dos algoritmos?</li>
 </ul>
@@ -251,16 +251,17 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <section><h4>Determinando la rapidez de un algoritmo</h4>
 <ul>
-<li>Recuerde que un algoritmo es independiente de los medios utilizados para implementarlo.</li>
+<li>Recordar que un algoritmo es independiente de los medios utilizados para implementarlo.</li>
 <li>Este significa que el algoritmo es independiente del computador que usamos y el lenguaje de programación.</li>
-<li>Por lo tanto, tenemos que caracterizar la "rapidez" de un algoritmo en una manera que no refiere a la velocidad del procesador, el número de procesadores, si usamos Python o C, etc.</li>
+<li>Por lo tanto, podemos caracterizar la "rapidez" de un algoritmo en una manera que no refiere a la velocidad del
+    procesador, el número de procesadores, si usamos Python o C, etc.</li>
 </ul>
 </section>
 
 <section><h4>Complejidad algorítmica</h4>
 <ul>
-<li>En la computación la rapidez de un algoritmo se define en terminos de su "complejidad".</li>
-<li>Determinamos la complejidad de un algoritmo por la consideración del número de pasos que el algoritmo tiene que ejecutar para completar su tarea.</li>
+<li>En la computación la rapidez de un algoritmo se define en términos de su "complejidad".</li>
+<li>Determinamos la complejidad de un algoritmo por la consideración del <b>número de pasos</b> que el algoritmo tiene que ejecutar para completar su tarea.</li>
 </ul>
 </section>
 
@@ -302,6 +303,9 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <section><h4>Complejidad algorítmica: N-cuerpos</h4>
 <ul>
+                    <li>El problema de N-cuerpos consiste en un sistema de N
+                        partículas sujetas a la acción de su propia gravedad
+                        (como el Sistema Solar).</li>
 <li>Fuerzas $\Rightarrow$ aceleraciones $\Rightarrow$ velocidades.</li>
 <li>Se puede actualizar las posiciones de las partículas con sus velocidades: el sistema se evoluciona en el tiempo.</li>
 </ul>
@@ -368,7 +372,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <section><h4>Complejidad algorítmica: notación O grande</h4>
 <ul>
-<li>La complejidad del algoritmo está dado simplemente por contar el número de pares únicos!</li>
+<li>La complejidad del algoritmo está dada simplemente por contar el número de pares únicos!</li>
 <li>Expresamos la complejidad en notación "Big-O" (O grande): $\mathcal{O}$.</li>
 </ul>
 </section>
@@ -425,8 +429,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     relacionado con complejidad algorítmica.</p>
 <blockquote class="fragment">
 <p>¿$P = NP$?</p>
-<p>¿Es posible resolver <i>rápidamente</i> cualquier problema cuya solución se puede comprobar <i>rápidamente</i> (en
+<p>¿Dado un problema, el cual es posible de <b>verificar</b> su solución
+    <i>rápidamente</i>: es posible también <b>resolverlo</b> <i>rápidamente</i> (en
+    tiempo "polinomial")?
+</p>
+<!--
+    <p>¿Es posible resolver <i>rápidamente</i> cualquier problema cuya solución se puede comprobar <i>rápidamente</i> (en
     tiempo "polinomial")?</p>
+                            -->
 </blockquote>
 </section>
 
@@ -500,8 +510,8 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <section><h3>Precisión</h3></section>
 
 <section><h4>Precisión en la computación</h4>
-<p>Estamos todos acostumbrados a calcular cosas en una calculadora (o en el telefono) y confiar en el resultado. Pero, de hecho, los computadores nunca son perfectamente precisos.</p>
-<p>$\Rightarrow$ Tienen una memoria finíta</p>
+<p>Estamos todos acostumbrados a calcular cosas en una calculadora (o en el teléfono) y confiar en el resultado. Pero, de hecho, los computadores nunca son perfectamente precisos.</p>
+<p>$\Rightarrow$ Tienen una memoria finita</p>
 <p>$\Rightarrow$ Utilizan números binarios.</p>
 </section>
 
@@ -530,8 +540,10 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <section><h4>Estándar para números de punto flotante</h4>
 <ul>
-<li>Hay un estandar en la informática, que se llama IEEE754, que define como guardar un número de punto flotante en la memoria de un computador.</li>
-<li>En Python hay un total de $64$ bits para guardar un <i>float</i>. De estos, $1$ bit es para el signo (+/-), $11$ bits son para el exponente, y $52$ bits son para el significando (mantisa, coeficiente).</li>
+<li>Existe un estandar en la informática, llamado IEEE754, que define como guardar un número de punto flotante en la
+    memoria de un computador.</li>
+<li>En Python hay un total de $64$ bits para guardar un <i>float</i>. De estos, $1$ bit es para el signo (+/-), $11$
+    bits son para el exponente, y $52$ bits son para el significando (fracción, mantisa, coeficiente).</li>
 </ul>
 <img src="class4_images/double_float.png">
 </section>
@@ -544,20 +556,27 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <img src="class4_images/double_float.png">
 </section>
 
-<section><h4>Precisión de numeros de punto flotante</h4>
+<section><h4>Precisión de números de punto flotante</h4>
 <ul>
 <li>Entonces, todos los números de punto flotante en un computador están truncados.</li>
 <li>En la mayoría de los lenguajes hay <i>floats</i> de precisión-simple (<i>single-precision</i>) y precisión-doble (<i>double-precision</i>).</li>
 <li>Precisión-simple: $32$ bits. Precisión-doble: $64$ bits.</li>
-<li>Es importante saber cual se ocupa, porque determina la precisión numérica del algoritmo.</li>
 </ul>
 <img src="class4_images/single_float.png">
+<ul>
+<li>Es importante saber cual se ocupa, ya que determina la precisión numérica del algoritmo.</li>
+                    <li>Ojo: no siempre es más conveniente utilizar
+                        Precisión-doble, ya que requiere el doble de memoria que
+                    Precisión-simple.</li>
+</ul>
 </section>
 
 <section><h4>Precisión de la máquina</h4>
 <ul>
 <li>El grado de precisión que uno puede obtener en una variable se llama la <span style="color:blue">precisión de la máquina</span> (<i>machine precision</i>), $\epsilon$.</li>
 <li>No importa el programa que escribamos, ni el algoritmo que usamos, <b>nunca</b> calcularemos valores a una precisión mayor que la precisión de la máquina.</li>
+                    <li>Las arquitecturas de computadores modernos son de
+                        64-bits.</li>
 <li>Notese que algunos lenguajes permiten control en la cantidad de memoria asignada a variables de distintos tipos, y por eso podemos obtener valores muy pequeños para $\epsilon$ (es decir, precisión extremadamente alta).</li>
 </ul>
 <p>Precisión doble: $\epsilon = 2^{-53} \approx 1,11 \times 10^{-16}$.</p>
@@ -565,7 +584,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <section><h4>El problema de precisión finita</h4>
 <ul>
-<li>Ejemplo: multiplicamos un número muy pequeño por un número muy grande, usando precisión-simple: el <i>significando</i> del número tendrá $23$ bits.</li>
+<li>Ejemplo: si multiplicamos un número muy pequeño por un número muy grande, usando precisión-simple: el <i>significando</i> del número tendrá $23$ bits.</li>
 <li>Estos $23$ bits corresponden a $7-8$ dígitos decimales (depende del número).</li>
 <li>El septimo u octavo dígito en la representación decimal del número será incorrecto (por el truncamiento del número).</li>
 </ul>
@@ -573,6 +592,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <section><h4>El problema de precisión finita</h4>
 <ul>
+                    <li>Dicha situación podría aparecer al realizar el siguiente cálculo:</li>
 <li>La constante gravitacional en unidades SI: $6,67408 \times 10^{-11}$ m$^3$ kg$^{-1}$ $s^{-2}$.</li>
 <li>La masa solar en unidades SI: $2 \times 10^{30}$ kg.</li>
 <li>Al multiplicar ambas cantidades, el septimo dígito (último
@@ -583,7 +603,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <section><h4>Números que no se puede representar exactamente en binario</h4>
 <ul>
-<li>Otro problema: hay algunos números que no podemos representar exactamente en el sistema binario.</li>
+<li>Otro problema: existen números que no podemos representar exactamente en el sistema binario.</li>
 <li>En el sistema decimal, no se puede representar $1/3$ exactamente (es igual a $0.3333333\ldots$).</li>
 </ul>
 </section>
