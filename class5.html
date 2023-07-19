@@ -260,7 +260,8 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <section><h4>Simulaciones del clima</h4>
 <ul>
-<li>Típicamente la malla computacional tendrá $1.5$ millones de puntos (celda de área $100$ km$^2$, $30$ tapas en la atmósfera).</li>
+<li>Típicamente la malla computacional tendrá $1.5$ millones de puntos (celda de
+                            área $100$ km$^2$, $30$ capas de la atmósfera).</li>
 <li>La simulación tiene que calcular el estado de la atmósfera en cada uno de estos puntos para $100$ años (de tiempo en la simulación), en intervalos de $30$ minutos.</li>
 </ul>
 <p>$\Rightarrow$ $1.7$ millones de pasos en el tiempo...</p>
@@ -302,7 +303,9 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <section><h4>Proceso de correr la simulación en paralelo</h4>
 <ol>
 <li>Se ejecuta el programa que hace la simulación: el primer proceso, que corre en uno de los procesadores.</li>
-<li>El proceso $1$ divida la malla en sub-mallas. Esta división parece fácil, pero puede ser muy difícil encontrar la división que es la más eficiente (primer gran desafio del paralelismo).</li>
+<li>El proceso $1$ divida la malla en sub-mallas. Esta división parece fácil,
+                            pero puede ser muy difícil encontrar la división que
+                            es la más eficiente (<b>primer gran desafio</b> del paralelismo).</li>
 <li>$49$ otros procesos están lanzados (cada uno en un procesador diferente) para hacer los cálculos en la sub-malla asignada.</li>
 </ol>
 <div class="container">
@@ -321,7 +324,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <section><h4>La ventaja de correr la simulación en paralelo</h4>
 <ul>
 <li>Hemos dividido el trabajo entre $50$ procesadores.</li>
-<li>En principio la simulación debería ejecutarse $50$ veces más rápido.</li>
+<li>Si la división fue óptima, en principio la simulación debería ejecutarse $50$ veces más rápido.</li>
 <li>Entonces, terminará en $14$ horas, en vez de $30$ días!</li>
 </ul>
 </section>
@@ -337,7 +340,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <section><h4>Comunicación</h4>
 <ul>
-<li>El segundo gran desafio del paralelismo: comunicación entre los procesos/hilos.</li>
+<li>El <b>segundo gran desafio </b> del paralelismo: comunicación entre los procesos/hilos.</li>
 <li>En este ejemplo, podemos escribir en el programa que cada proceso tiene que compartir los resultados en el borde de la sub-malla con todas las sub-mallas vecinas, en cada paso del tiempo.</li>
 <li>Típicamente eso se hace con librerías específicas para el paralelismo (MPI, OpenMP, etc.)</li>
 <li>Hay <i>lenguajes</i> de programación paralela que intentan simplificar la parte de comunicación (e.g. Co-array Fortran, Parallel C, Chapel, etc.)</li>
@@ -380,7 +383,6 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <li>Hay simulaciones muy avanzadas de cosmología o del clima que usan miles de procesadores, y tardan meses en terminar.</li>
 </ul>
 </section>
--->
 
 <section><h4>Paralelismo Multi-hilo</h4>
 <p>Vamos a ver el ejemplo de procesamiento de imagenes: una tarea que utiliza paralelismo multi-hilo.</p>
@@ -415,6 +417,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 </div>
 </div>
 </section>
+-->
 
 <section><h4>Arquitectura de memoria compartida</h4>
 <ul>
@@ -579,9 +582,11 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 <ul>
 <li>La rapidez de un <i>core</i> no está creciendo mucho actualmente, pero hoy en día los CPUs tienen muchos.</li>
 <li>Por lo tanto, hay que saber como diseñar algoritmos paralelos.</li>
-<li>Hay dos métodos principales: <i>multiprocess</i> (memoria distribuida) y <i>multithread</i> (memoria compartida).</li>
-<li>Los GPUs están disñados para <i>multithread</i>.</li>
-<li>En el área de computación científica la programación paralela es conocimiento requerido!</li>
+<li>Hay dos métodos principales: <i>multi-proceso</i> (memoria distribuida) y
+                            <i>multi-hilo</i> (memoria compartida).</li>
+<li>Los GPUs están disñados para <i>multi-hilo</i>.</li>
+<li>En el área de computación científica la programación paralela es
+                            conocimiento esencial!</li>
 </ul>
 </section>
 
