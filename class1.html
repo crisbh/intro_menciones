@@ -1,43 +1,43 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
 
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>Intro Menciones I: Clase 1</title>
+    <title>Intro Menciones I: Clase 1</title>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/white.css" id="theme">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/css/zenburn.css">
+    <!-- General and theme style sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/css/zenburn.css">
 
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
 
-</script>
+    </script>
 
-<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
 <![endif]-->
 
-<!-- Loading the mathjax macro -->
-<!-- Load mathjax -->
+    <!-- Loading the mathjax macro -->
+    <!-- Load mathjax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
@@ -59,491 +59,612 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     </script>
     <!-- End of mathjax configuration -->
 
-<!-- Get Font-awesome from cdn -->
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">-->
+    <!-- Get Font-awesome from cdn -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">-->
 
 
-        <style type="text/css">
-            .container{
-                        display: flex;
-                      }
-            .col{
-                      flex: 1;
-                }
-            .reveal section p {
-                      display: inline-block;
-                      font-size: 0.6em;
-                      line-height: 1.2em;
-                      vertical-align: top;
-                      text-align: left;
-            }
-            .reveal section li {
-                      font-size: 0.6em;
-            }
-            .reveal section td {
-                      font-size: 0.6em;
-            }
-            .reveal section img {
-                      border: none;
-            }
-        </style>
-
-	</head>
-	<body>
-			<div class="reveal">
-			<div class="slides">
-
-                <section><h3>Introducción a las menciones - módulo Computación Científica</h3>
-                         <h4>Prof. Cristian Barrera Hinojosa</h4>
-                         <h5>cristian.barrera@uv.cl</h5>
-                </section>
-
-<section><h4>Módulo Computación Científica</h4>
-<p>Contenido: un resumen breve de los temas que pueden estudiar en la mención.</p>
-<p>Evaluación: una prueba de selección multiple y cálculos cortos al final del módulo.</p>
-</section>
-
-<section><h3>La licenciatura y las menciones</h3>
-<figure>
-<img src="class1_images/malla.png">
-</figure>
-</section>
-
-<section><h4>La malla de la mención</h4>
-<figure>
-<img src="class1_images/malla_mencion.png">
-</figure>
-</section>
-
-<section><h4>La malla de la mención</h4>
-<figure>
-<img src="class1_images/malla_pt1.png">
-</figure>
-</section>
-
-<section><h4>Unix, Redes y Programación</h4>
-<div class="container">
-<div class="col">
-<img src="class1_images/linux.png">
-</div>
-<div class="col">
-<img src="class1_images/c_code.png">
-</div>
-</div>
-<p>Lenguaje: C</p>
-</section>
-
-<section><h4>La malla de la mención</h4>
-<figure>
-<img src="class1_images/malla_pt2.png">
-</figure>
-</section>
-
-<section><h4>Métodos numéricos</h4>
-<div class="container">
-<div class="col">
-<img src="class1_images/root_finding.png">
-</div>
-<div class="col">
-<img src="class1_images/finite_difference.png">
-</div>
-</div>
-<p>Lenguaje: C</p>
-</section>
-
-<section><h4>La malla de la mención</h4>
-<figure>
-<img src="class1_images/malla_pt3.png">
-</figure>
-</section>
-
-<section><h4>Bases de datos y visualización</h4>
-<div class="container">
-<div class="col">
-<img src="class1_images/database.jpg">
-</div>
-<div class="col">
-<img src="class1_images/sql.jpg">
-</div>
-</div>
-<p>Lenguaje: Python</p>
-</section>
-
-<section><h4>La malla de la mención</h4>
-<figure>
-<img src="class1_images/malla_pt4.png">
-</figure>
-</section>
-
-<section><h4>Programación paralela</h4>
-<div class="container">
-<div class="col">
-<img src="class1_images/mnist_ann.png">
-</div>
-<div class="col">
-<img src="class1_images/neural_network.png">
-<img src="class1_images/supercomputer.png">
-</div>
-</div>
-<p>Lenguaje: C</p>
-</section>
-
-<section><h4>Inteligencia artificial (machine learning)</h4>
-<div class="container">
-<div class="col">
-<img src="class1_images/svm.png">
-</div>
-<div class="col">
-<img src="class1_images/gauss_mixe.png">
-</div>
-</div>
-<p>Lenguaje: Python</p>
-</section>
-
-<section><h4>La malla de la mención</h4>
-<figure>
-<img src="class1_images/malla_pt5.png">
-</figure>
-</section>
-
-<section><h4>Programación GPU</h4>
-<div class="container">
-<div class="col">
-<img src="class1_images/cuda.png" width=300>
-</div>
-<div class="col">
-<img src="class1_images/gpu_nbody.png">
-</div>
-</div>
-<p>Lenguaje: C/CUDA</p>
-</section>
-
-<section><h3>¿Por qué estudiar la mención en computación científica?</h3></section>
-
-<section><h4>Ciencia y computación</h4>
-<p>La imagen clásica de un astrónomo</p>
-<figure>
-<img src="class1_images/astronomer.jpg">
-</figure>
-</section>
-
-<section><h4>Ciencia y computación</h4>
-<p>La realidad moderna</p>
-<figure>
-<img src="class1_images/astronomo_001.jpg">
-</figure>
-</section>
-
-<section><h4>Ciencia y computación</h4>
-<p>A veces los meteorólogos trabajan así...</p>
-<figure>
-<img src="class1_images/climate_scientist.jpg">
-</figure>
-</section>
-
-<section><h4>Ciencia y computación</h4>
-<p>Es mucho más común que trabajan así</p>
-<figure>
-<img src="class1_images/meteorologist.jpg">
-</figure>
-</section>
-
-<section><h4>Ciencia y computación</h4>
-<p>Aunque los físicos siguen usando el pizzarón...</p>
-<figure>
-<img src="class1_images/physicist.jpg">
-</figure>
-</section>
-
-<section><h4>Ciencia y computación</h4>
-<p>...hoy en día usan los computadores para los cálculos más complejos</p>
-<figure>
-<img src="class1_images/mathematica_example.png">
-</figure>
-</section>
-
-<section><h4>Ciencia y computación</h4>
-<p>La ciencia, hoy en día, es computacional</p>
-<figure>
-<img src="class1_images/scientific_computing.jpeg">
-</figure>
-</section>
-
-<section><h3>La computación fuera del mundo científico</h3></section>
-
-<section><h4>Nuestro mundo digital</h4>
-<p>Internet, redes sociales, smartphones, tablets, "internet of things"</p>
-<figure>
-<img src="class1_images/digital_world.jpg">
-</figure>
-</section>
-
-<section><h4>Nuestra economía digital</h4>
-<p>En 2018, las empresas más grandes del mundo (en capitalización bursátil) eran:</p>
-<p><ul><li> 1) Apple</li>
-       <li> 2) Alphabet (dueño de Google)</li>
-       <li> 3) Microsoft</li>
-       <li> 4) Amazon</li>
-       <li> ... </li>
-       <li> 8) Facebook</li></ul></p>
-<p class="fragment">3 de estas empresas no existieron antes del Internet, y <font color="red">ningúno</font> existió antes de los computadores modernos!</p>
-</section>
-
-<section><h3>Datos masivos (Big Data)</h3></section>
-
-<section><h4>Datos, datos y más datos</h4>
-<figure>
-<img src="class1_images/minuto-internet.jpg" width=400>
-<figcaption style="font-size:20px">En 2013...</figcaption>
-</figure>
-</section>
-
-<section><h4>Datos masivos en la ciencia</h4>
-<p>Los experimentos científicos también están generando muchos datos hoy en día</p>
-<div class="container">
-<div class="col">
-<img src="class1_images/lhc.jpg" height=200>
-</div>
-<div class="col">
-<img src="class1_images/lsst.jpg" height=200>
-</div>
-<div class="col">
-<img src="class1_images/elt.jpg" height=200>
-</div>
-</div>
-<ul><li>LHC: 25 GB/segundo</li>
-    <li>LSST: 15 TB/noche</li>
-    <li>E-ELT: 8 TB "cubo de datos" (una imágen) del instrumento MICADO (IFU)</li></ul>
-<p class="fragment">El procesamiento de tantos datos (limpiar, analizar, etc.) es <font color="red">imposible</font> en la manera "tradicional" (manual)...</p>
-</section>
-
-<section><h3>Machine Learning:</h3> 
-<p>Algorítmos que "aprenden" por si mismo. (Aprendizaje de máquina)</p>
-<p>Una parte del campo de Inteligencia Artificial (IA)</p>
-<p>Son algorítmos (programas) que resuelven problemas que, tradicionalmente, eran más faciles para los humanos.</p>
-</section>
-
-<section><h4>Ejemplo: internet</h4>
-<p>Instagram, Facebook, Netflix, YouTube...</p> 
-<p>Todos utilizan algorítmos de <i>machine learning</i> que filtran lo que ves en tu <i>feed</i> o las recomendaciones que recibes.</p>
-<p>El problema es que los algorítmos eligen contenido que aumenta el tiempo de uso del sitio...</p>
-</section>
-
-
-<section><h4>Ejemplo: vehículos autónomos</h4>
-<img src="class1_images/driverless.jpg">
-</section>
-
-<section><h4>Ejemplo: reconocimiento facial</h4>
-<img src="class1_images/facial_recognition.jpg">
-</section>
-
-<section><h4>Ejemplo: reconocimiento de emociones</h4>
-<img src="class1_images/kim_emotion.png">
-</section>
-
-<section><h4>Ejemplo: <i>trading</i> algorítmico</h4>
-<img src="class1_images/algorithmic_trading.jpg">
-</section>
-
-<section><h4>Ejemplo: diagnosticos medicos</h4>
-<img src="class1_images/ai_medical.jpg">
-</section>
-
-
-<section><h4>Generación de contenido por IA</h4>
-<p><ul><li>Música</li>
-<li>Arte</li>
-<li>Videos (<i>deepfakes</i>)</li>
-<li>Texto</li>
-<li>...</li></ul></p>
-</section>
-
-<section><h4>Acceso a los datos...</h4>
-<p>El análisis de datos es sólo una parte. También necesitamos bases de datos eficientes para <font color="red">guardar</font> y <font color="red">acceder</font> los datos en una manera útil (es decir, rapidamente). No queremos que sea necesario buscar cuidadosmente en <font color="red">todos</font> los datos para encontrar lo que necesitamos.</p>
-<img src="class1_images/databases.jpg">
-</section>
-
-<section><h4>Ciencia de datos</h4>
-<p>Necesitamos bases de datos que son eficientes, y métodos de análisis de datos masivos que son precisos y rápidos $\Rightarrow$ <font color="blue">ciencia de datos</font></p>
-<p>Un ramo de la ciencia que es muy nuevo, y muy interdisciplinario.</p>
-<img src="class1_images/cientificos-datos.jpg">
-</section>
-
-<section><h4>El trabajo de los científicos hoy en día</h4>
-<p>¿Qué necesita saber un científico hoy en día? Necesita saber...</p>
-<p><ul><li> ...sobre la ciencia de datos.</li>
-       <li> ...como organizar los datos, y como analizarlos.</li>
-       <li> ...los algoritmos que se puede aplicar para obtener resultados útiles, especialmente en el caso de tener datos que no caben en un computador (i.e. trabajar en remoto, y en paralelo).</li>
-       <li> ...cual algoritmo es el más apto para la tarea.</li>
-       <li> ...la mejor manera de presentar los datos y los resultados (i.e. la visualización de los datos).</li></ul></p>
-</section>
-
-<section><h4>Generando datos en simulaciones computacionales</h4>
-<p>Una gran parte de la computación científicia es la generación de datos con simulaciones computacionales.</p>
-<div class="container">
-<div class="col">
-<img src="class1_images/cosmo.jpg" height=300>
-<p>Cosmología</p>
-</div>
-<div class="col">
-<img src="class1_images/tornado.jpg" height=300>
-<p>Meteorología</p>
-</div>
-<div class="col">
-<img src="class1_images/qcd.jpg" height=300>
-<p>Física fundamental</p>
-</div>
-</div>
-</section>
-
-<section><h4>La utilidad de las simulaciones</h4>
-<p>Podemos aprovechar de los recursos computacionales que tenemos hoy en día para crear simulaciones de (por ejemplo):</p>
-<div class="container">
-<div class="col">
-<img src="class1_images/galaxy_sim.jpg" height=200>
-<p>Sistemas físicos</p>
-</div>
-<div class="col">
-<img src="class1_images/proteins.png" height=200>
-<p>Sistemas biológicos</p>
-</div>
-<div class="col">
-<img src="class1_images/brain_sim.jpg" height=200>
-<p>Sistemas neurológicos</p>
-</div>
-</div>
-<p>Las simulaciones son muy útiles cuando es imposible hacer experimentos con estos sistemas en el laboratorio. Es como hacer un experimento en el computador.</p>
-</section>
-
-<section><h4>La importancia de las simulaciones</h4>
-<img src="class1_images/pillars3.png" height=400>
-</section>
-
-<section><h4>Simulaciones en la física</h4>
-<figure>
-<img src="class1_images/bhs_grav_waves.jpg" height=400>
-</figure>
-<p>Agujeros negros</p>
-</section>
-
-<section><h4>Simulaciones en la física</h4>
-<figure>
-<img src="class1_images/cfd.jpg" height=400>
-</figure>
-<p>Dinámica de fluidos</p>
-</section>
-
-<section><h4>Simulaciones en la física</h4>
-<figure>
-<img src="class1_images/star_sims.jpg" height=400>
-</figure>
-<p>Estrellas</p>
-</section>
-
-<section><h4>Simulaciones en la física</h4>
-<figure>
-<img src="class1_images/qcd_image.jpg" height=400>
-</figure>
-<p>Física de partículas</p>
-</section>
-
-<section><h4>Simulaciones en la física</h4>
-<figure>
-<img src="class1_images/ocean_model.jpg" height=400>
-</figure>
-<p>Climatología</p>
-</section>
-
-<section><h3>La Mención</h3>
-<p>¿Que aprenderás en la mención?</p>
-<p><ul><li>La <font color="blue">programación</font> en varios lenguajes.</li>
-       <li>Técnicas para trabajar con <font color="blue">datos masivos</font>.</li>
-       <li>Como usar las herramientas de <i><font color="blue">machine learning</font></i> y <font color="blue">inteligencia artificial</font> en las ciencias físicas.</li>
-       <li>Métodos numéricos para implementar algoritmos de <i>machine learning</i> y para crear <font color="blue">simulaciones</font> en la física, ingeniería, etc.</li>
-       <li>Como programar en <font color="blue">paralela</font>, para trabajar con supercomputadores y GPUs.</li>
-       <li>Como crear <font color="blue">visualizaciones</font> profesionales de datos de simulaciones, observaciones, experimentos, etc.</li></ul></p>
-</section>
-
-<section><h3>Resumen</h3>
-<p><ul><li>La ciencia, hoy en día, es computacional.</li>
-       <li>Entonces, "computación científica" realmente significa: ¡ser un científico moderno!</li>
-       <li>En esta mención aprenderás las capacidades requeridas para acceder, procesar, analizar, visualizar y generar datos computacionalmente.</li></ul></p>
-</section>
-
-<section><h3>Resumen</h3>
-<p><ul><li>Estas capacidades son <font color="red">crucial</font> para trabajar en la astronomía, física, meteorología, e incluso para trabajo fuera de la academia.</li>
-       <li>Por lo tanto, esta mención, comparada con las otras, ofrece el gama más amplio de opciones para el trabajo después de graduarse: se puede trabajar en la ciencia, o se puede trabajar fuera de la academia en la industria.</li></ul></p>
-</section>
-
-<section><h3>Plan de los dos cursos</h3>
-<p><ul><li>Semestre I:</li>
-       <ul><li>teorías, conceptos, ejemplos</li></ul>
-       <li>Semestre II:</li>
-       <ul><li>proyectos, aplicaciones, clases de práctica</li></ul></ul></p>
-</section>
-
-
-			</div>
-		</div>
-
-<script>
-
-require(
-    {
-      // it makes sense to wait a little bit when you are loading
-      // reveal from a cdn in a slow connection environment
-      waitSeconds: 15
-    },
-    [
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
-    ],
-
-    function(head, Reveal){
-
-        // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-
-            transition: "slide",
-
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js" }
-            ]
-        });
-
-        var update = function(event){
-          if(MathJax.Hub.getAllJax(Reveal.getCurrentSlide())){
-            MathJax.Hub.Rerender(Reveal.getCurrentSlide());
-          }
-        };
-
-        Reveal.addEventListener('slidechanged', update);
-
-        function setScrollingSlide() {
-            var scroll = false
-            if (scroll === true) {
-              var h = $('.reveal').height() * 0.95;
-              $('section.present').find('section')
-                .filter(function() {
-                  return $(this).height() > h;
-                })
-                .css('height', 'calc(95vh)')
-                .css('overflow-y', 'scroll')
-                .css('margin-top', '20px');
-            }
+    <style type="text/css">
+        .container {
+            display: flex;
         }
 
-        // check and set the scrolling slide every time the slide change
-        Reveal.addEventListener('slidechanged', setScrollingSlide);
+        .col {
+            flex: 1;
+        }
 
-    }
+        .reveal section p {
+            display: inline-block;
+            font-size: 0.6em;
+            line-height: 1.2em;
+            vertical-align: top;
+            text-align: left;
+        }
 
-);
-</script>
-	</body>
+        .reveal section li {
+            font-size: 0.6em;
+        }
+
+        .reveal section td {
+            font-size: 0.6em;
+        }
+
+        .reveal section img {
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h3>Introducción a las menciones - módulo Computación Científica</h3>
+                <h4>Prof. Cristian Barrera Hinojosa</h4>
+                <h5>cristian.barrera@uv.cl</h5>
+            </section>
+
+            <section>
+                <h4>Módulo Computación Científica</h4>
+                <p>Contenido: un resumen breve de los temas que pueden estudiar en la mención.</p>
+                <p>Evaluación: una prueba de selección múltiple y cálculos cortos al final del módulo.</p>
+            </section>
+
+            <section>
+                <h3>La licenciatura y las menciones</h3>
+                <figure>
+                    <img src="class1_images/malla.png">
+                </figure>
+            </section>
+
+            <section>
+                <h4>La malla de la mención</h4>
+                <figure>
+                    <img src="class1_images/malla_mencion.png">
+                </figure>
+            </section>
+
+            <section>
+                <h4>La malla de la mención</h4>
+                <figure>
+                    <img src="class1_images/malla_pt1.png">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Unix, Redes y Programación</h4>
+                <div class="container">
+                    <div class="col">
+                        <img src="class1_images/linux.png">
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/c_code.png">
+                    </div>
+                </div>
+                <p>Lenguaje: C</p>
+            </section>
+
+            <section>
+                <h4>La malla de la mención</h4>
+                <figure>
+                    <img src="class1_images/malla_pt2.png">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Métodos numéricos</h4>
+                <div class="container">
+                    <div class="col">
+                        <img src="class1_images/root_finding.png">
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/finite_difference.png">
+                    </div>
+                </div>
+                <p>Lenguaje: C</p>
+            </section>
+
+            <section>
+                <h4>La malla de la mención</h4>
+                <figure>
+                    <img src="class1_images/malla_pt3.png">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Bases de datos y visualización</h4>
+                <div class="container">
+                    <div class="col">
+                        <img src="class1_images/database.jpg">
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/sql.jpg">
+                    </div>
+                </div>
+                <p>Lenguaje: Python</p>
+            </section>
+
+            <section>
+                <h4>La malla de la mención</h4>
+                <figure>
+                    <img src="class1_images/malla_pt4.png">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Programación paralela</h4>
+                <div class="container">
+                    <div class="col">
+                        <img src="class1_images/mnist_ann.png">
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/neural_network.png">
+                        <img src="class1_images/supercomputer.png">
+                    </div>
+                </div>
+                <p>Lenguaje: C</p>
+            </section>
+
+            <section>
+                <h4>Inteligencia artificial (machine learning)</h4>
+                <div class="container">
+                    <div class="col">
+                        <img src="class1_images/svm.png">
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/gauss_mixe.png">
+                    </div>
+                </div>
+                <p>Lenguaje: Python</p>
+            </section>
+
+            <section>
+                <h4>La malla de la mención</h4>
+                <figure>
+                    <img src="class1_images/malla_pt5.png">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Programación GPU</h4>
+                <div class="container">
+                    <div class="col">
+                        <img src="class1_images/cuda.png" width=300>
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/gpu_nbody.png">
+                    </div>
+                </div>
+                <p>Lenguaje: C/CUDA</p>
+            </section>
+
+            <section>
+                <h3>¿Por qué estudiar la mención en computación científica?</h3>
+            </section>
+
+            <section>
+                <h4>Ciencia y computación</h4>
+                <p>La imagen clásica de un astrónomo</p>
+                <figure>
+                    <img src="class1_images/astronomer.jpg">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Ciencia y computación</h4>
+                <p>La realidad moderna</p>
+                <figure>
+                    <img src="class1_images/astronomo_001.jpg">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Ciencia y computación</h4>
+                <p>A veces los meteorólogos trabajan así...</p>
+                <figure>
+                    <img src="class1_images/climate_scientist.jpg">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Ciencia y computación</h4>
+                <p>Es mucho más común que trabajen así</p>
+                <figure>
+                    <img src="class1_images/meteorologist.jpg">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Ciencia y computación</h4>
+                <p>Aunque los físicos siguen usando el pizarrón...</p>
+                <figure>
+                    <img src="class1_images/physicist.jpg">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Ciencia y computación</h4>
+                <p>...hoy en día usan los computadores para los cálculos más complejos</p>
+                <figure>
+                    <img src="class1_images/mathematica_example.png">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Ciencia y computación</h4>
+                <p>La ciencia, hoy en día, es computacional</p>
+                <figure>
+                    <img src="class1_images/scientific_computing.jpeg">
+                </figure>
+            </section>
+
+            <section>
+                <h3>La computación fuera del mundo científico</h3>
+            </section>
+
+            <section>
+                <h4>Nuestro mundo digital</h4>
+                <p>Internet, redes sociales, smartphones, tablets, "internet of things"</p>
+                <figure>
+                    <img src="class1_images/digital_world.jpg">
+                </figure>
+            </section>
+
+            <section>
+                <h4>Nuestra economía digital</h4>
+                <p>En 2018, las empresas más grandes del mundo (en capitalización bursátil) eran:</p>
+                <p>
+                <ul>
+                    <li> 1) Apple</li>
+                    <li> 2) Alphabet (dueño de Google)</li>
+                    <li> 3) Microsoft</li>
+                    <li> 4) Amazon</li>
+                    <li> ... </li>
+                    <li> 8) Facebook</li>
+                </ul>
+                </p>
+                <p class="fragment">3 de estas empresas no existían antes del Internet, y <font color="red">ninguna
+                    </font> existió antes de los computadores modernos!</p>
+            </section>
+
+            <section>
+                <h3>Datos masivos (Big Data)</h3>
+            </section>
+
+            <section>
+                <h4>Datos, datos y más datos</h4>
+                <figure>
+                    <img src="class1_images/minuto-internet.jpg" width=400>
+                    <figcaption style="font-size:20px">En 2013...</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h4>Datos masivos en la ciencia</h4>
+                <p>Los experimentos científicos también están generando muchos datos hoy en día</p>
+                <div class="container">
+                    <div class="col">
+                        <img src="class1_images/lhc.jpg" height=200>
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/lsst.jpg" height=200>
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/elt.jpg" height=200>
+                    </div>
+                </div>
+                <ul>
+                    <li>LHC: 25 GB/segundo</li>
+                    <li>LSST: 15 TB/noche</li>
+                    <li>E-ELT: 8 TB "cubo de datos" (una imagen) del instrumento MICADO (IFU)</li>
+                </ul>
+                <p class="fragment">El procesamiento de tantos datos (limpiar, analizar, etc.) es <font color="red">
+                        imposible</font> en la manera "tradicional" (manual)...</p>
+            </section>
+
+            <section>
+                <h3>Machine Learning:</h3>
+                <p>Algoritmos que "aprenden" por si mismo. (Aprendizaje de máquina)</p>
+                <p>Una parte del campo de Inteligencia Artificial (IA)</p>
+                <p>Son algoritmos (programas) que resuelven problemas que,
+                    tradicionalmente, eran más fáciles para los
+                    humanos.</p>
+            </section>
+
+            <section>
+                <h4>Ejemplo: internet</h4>
+                <p>Instagram, Facebook, Netflix, YouTube...</p>
+                <p>Todos utilizan algoritmos de <i>machine learning</i> que filtran lo que ves en tu <i>feed</i> o las
+                    recomendaciones que recibes.</p>
+                <p>El problema es que los algoritmos eligen contenido que aumenta el tiempo de uso del sitio...</p>
+            </section>
+
+
+            <section>
+                <h4>Ejemplo: vehículos autónomos</h4>
+                <img src="class1_images/driverless.jpg">
+            </section>
+
+            <section>
+                <h4>Ejemplo: reconocimiento facial</h4>
+                <img src="class1_images/facial_recognition.jpg">
+            </section>
+
+            <section>
+                <h4>Ejemplo: reconocimiento de emociones</h4>
+                <img src="class1_images/kim_emotion.png">
+            </section>
+
+            <section>
+                <h4>Ejemplo: <i>trading</i> algorítmico</h4>
+                <img src="class1_images/algorithmic_trading.jpg">
+            </section>
+
+            <section>
+                <h4>Ejemplo: diagnosticos medicos</h4>
+                <img src="class1_images/ai_medical.jpg">
+            </section>
+
+
+            <section>
+                <h4>Generación de contenido por IA</h4>
+                <p>
+                <ul>
+                    <li>Música</li>
+                    <li>Arte</li>
+                    <li>Videos (<i>deepfakes</i>)</li>
+                    <li>Texto</li>
+                    <li>...</li>
+                </ul>
+                </p>
+            </section>
+
+            <section>
+                <h4>Acceso a los datos...</h4>
+                <p>El análisis de datos es sólo una parte. También necesitamos bases de datos eficientes para <font
+                        color="red">guardar</font> y <font color="red">acceder</font> los datos en una manera útil (es
+                    decir, rápidamente). No queremos que sea necesario buscar
+                    cuidadosamente en <font color="red">todos
+                    </font> los datos para encontrar lo que necesitamos.</p>
+                <img src="class1_images/databases.jpg">
+            </section>
+
+            <section>
+                <h4>Ciencia de datos</h4>
+                <p>Necesitamos bases de datos que son eficientes, y métodos de análisis de datos masivos que son
+                    precisos y rápidos $\Rightarrow$ <font color="blue">ciencia de datos</font>
+                </p>
+                <p>Un ramo de la ciencia que es muy nuevo, y muy interdisciplinario.</p>
+                <img src="class1_images/cientificos-datos.jpg">
+            </section>
+
+            <section>
+                <h4>El trabajo de los científicos hoy en día</h4>
+                <p>¿Qué necesita saber un científico hoy en día? Necesita saber...</p>
+                <p>
+                <ul>
+                    <li> ...sobre la ciencia de datos.</li>
+                    <li> ...como organizar los datos, y como analizarlos.</li>
+                    <li> ...los algoritmos que se puede aplicar para obtener resultados útiles, especialmente en el caso
+                        de tener datos que no caben en un computador (i.e. trabajar en remoto, y en paralelo).</li>
+                    <li> ...cual algoritmo es el más apto para la tarea.</li>
+                    <li> ...la mejor manera de presentar los datos y los resultados (i.e. la visualización de los
+                        datos).</li>
+                </ul>
+                </p>
+            </section>
+
+            <section>
+                <h4>Generando datos en simulaciones computacionales</h4>
+                <p>Una gran parte de la computación científica es la generación de datos con simulaciones
+                    computacionales.</p>
+                <div class="container">
+                    <div class="col">
+                        <img src="class1_images/cosmo.jpg" height=300>
+                        <p>Cosmología</p>
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/tornado.jpg" height=300>
+                        <p>Meteorología</p>
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/qcd.jpg" height=300>
+                        <p>Física fundamental</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>La utilidad de las simulaciones</h4>
+                <p>Podemos aprovechar de los recursos computacionales que tenemos hoy en día para crear simulaciones de
+                    (por ejemplo):</p>
+                <div class="container">
+                    <div class="col">
+                        <img src="class1_images/galaxy_sim.jpg" height=200>
+                        <p>Sistemas físicos</p>
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/proteins.png" height=200>
+                        <p>Sistemas biológicos</p>
+                    </div>
+                    <div class="col">
+                        <img src="class1_images/brain_sim.jpg" height=200>
+                        <p>Sistemas neurológicos</p>
+                    </div>
+                </div>
+                <p>Las simulaciones son muy útiles cuando es imposible hacer experimentos con estos sistemas en el
+                    laboratorio. Es como hacer un experimento en el computador.</p>
+            </section>
+
+            <section>
+                <h4>La importancia de las simulaciones</h4>
+                <img src="class1_images/pillars3.png" height=400>
+            </section>
+
+            <section>
+                <h4>Simulaciones en la física</h4>
+                <figure>
+                    <img src="class1_images/bhs_grav_waves.jpg" height=400>
+                </figure>
+                <p>Agujeros negros</p>
+            </section>
+
+            <section>
+                <h4>Simulaciones en la física</h4>
+                <figure>
+                    <img src="class1_images/cfd.jpg" height=400>
+                </figure>
+                <p>Dinámica de fluidos</p>
+            </section>
+
+            <section>
+                <h4>Simulaciones en la física</h4>
+                <figure>
+                    <img src="class1_images/star_sims.jpg" height=400>
+                </figure>
+                <p>Estrellas</p>
+            </section>
+
+            <section>
+                <h4>Simulaciones en la física</h4>
+                <figure>
+                    <img src="class1_images/qcd_image.jpg" height=400>
+                </figure>
+                <p>Física de partículas</p>
+            </section>
+
+            <section>
+                <h4>Simulaciones en la física</h4>
+                <figure>
+                    <img src="class1_images/ocean_model.jpg" height=400>
+                </figure>
+                <p>Climatología</p>
+            </section>
+
+            <section>
+                <h3>La Mención</h3>
+                <p>¿Que aprenderás en la mención?</p>
+                <p>
+                <ul>
+                    <li>La <font color="blue">programación</font> en varios lenguajes.</li>
+                    <li>Técnicas para trabajar con <font color="blue">datos masivos</font>.</li>
+                    <li>Como usar las herramientas de <i>
+                            <font color="blue">machine learning</font>
+                        </i> y <font color="blue">inteligencia artificial</font> en las ciencias físicas.</li>
+                    <li>Métodos numéricos para implementar algoritmos de <i>machine learning</i> y para crear <font
+                            color="blue">simulaciones</font> en la física, ingeniería, etc.</li>
+                    <li>Como programar en <font color="blue">paralela</font>, para trabajar con supercomputadores y
+                        GPUs.</li>
+                    <li>Como crear <font color="blue">visualizaciones</font> profesionales de datos de simulaciones,
+                        observaciones, experimentos, etc.</li>
+                </ul>
+                </p>
+            </section>
+
+            <section>
+                <h3>Resumen</h3>
+                <p>
+                <ul>
+                    <li>La ciencia, hoy en día, es computacional.</li>
+                    <li>Entonces, "computación científica" realmente significa ser un científico moderno!</li>
+                    <li>En esta mención aprenderás las capacidades requeridas para acceder, procesar, analizar,
+                        visualizar y generar datos computacionalmente.</li>
+                </ul>
+                </p>
+            </section>
+
+            <section>
+                <h3>Resumen</h3>
+                <p>
+                <ul>
+                    <li>Estas capacidades son <font color="red">crucial</font> para trabajar en la astronomía, física,
+                        meteorología, e incluso para trabajo fuera de la academia.</li>
+                    <li>Por lo tanto, esta mención, comparada con las otras, ofrece el gama más amplio de opciones para
+                        el trabajo después de graduarse: se puede trabajar en la ciencia, o se puede trabajar fuera de
+                        la academia en la industria.</li>
+                </ul>
+                </p>
+            </section>
+
+            <section>
+                <h3>Plan de los dos cursos</h3>
+                <p>
+                <ul>
+                    <li>Semestre I:</li>
+                    <ul>
+                        <li>teorías, conceptos, ejemplos</li>
+                    </ul>
+                    <li>Semestre II:</li>
+                    <ul>
+                        <li>proyectos, aplicaciones, clases de práctica</li>
+                    </ul>
+                </ul>
+                </p>
+            </section>
+
+
+        </div>
+    </div>
+
+    <script>
+
+        require(
+            {
+                // it makes sense to wait a little bit when you are loading
+                // reveal from a cdn in a slow connection environment
+                waitSeconds: 15
+            },
+            [
+                "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
+            ],
+
+            function (head, Reveal) {
+
+                // Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
+                Reveal.initialize({
+                    controls: true,
+                    progress: true,
+                    history: true,
+
+                    transition: "slide",
+
+                    // Optional libraries used to extend on reveal.js
+                    dependencies: [
+                        {src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js"}
+                    ]
+                });
+
+                var update = function (event) {
+                    if (MathJax.Hub.getAllJax(Reveal.getCurrentSlide())) {
+                        MathJax.Hub.Rerender(Reveal.getCurrentSlide());
+                    }
+                };
+
+                Reveal.addEventListener('slidechanged', update);
+
+                function setScrollingSlide() {
+                    var scroll = false
+                    if (scroll === true) {
+                        var h = $('.reveal').height() * 0.95;
+                        $('section.present').find('section')
+                            .filter(function () {
+                                return $(this).height() > h;
+                            })
+                            .css('height', 'calc(95vh)')
+                            .css('overflow-y', 'scroll')
+                            .css('margin-top', '20px');
+                    }
+                }
+
+                // check and set the scrolling slide every time the slide change
+                Reveal.addEventListener('slidechanged', setScrollingSlide);
+
+            }
+
+        );
+    </script>
+</body>
+
 </html>
