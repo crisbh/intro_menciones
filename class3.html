@@ -111,7 +111,7 @@
                     <div class="col">
                         <ul>
                             <li>En la clase anterior aprendimos del <i>hardware</i> que necesitamos para computación
-                                científica</li>
+                                científica.</li>
                             <li>Ahora veremos como dar las instrucciones para hacer una tarea computacional: necesitamos
                                 <i>software</i>.
                             </li>
@@ -151,7 +151,7 @@
                         <ul>
                             <li>Un programa es un conjunto de instrucciones que dice al computador qué hacer, para
                                 llegar a un resultado.</li>
-                            <li>Un programa es una realización de un <i>algoritmo</i>.</li>
+                            <li>Un programa materializa un <i>algoritmo</i>.</li>
                         </ul>
                     </div>
                 </div>
@@ -226,8 +226,8 @@
                 <p>"Abstracción" se refiere a la "distancia" entre las instrucciones binarias que usa el computador y
                     los comandos escrito por el usuario en el programa.</p>
                 <ul>
-                    <li>Lenguajes de bajo nivel: poca abstracción.</li>
-                    <li>Lenguajes de alto nivel: mucha abstracción.</li>
+                    <li>Lenguajes de <span style="color:red">bajo nivel</span>: poca abstracción.</li>
+                    <li>Lenguajes de <span style="color:blue">alto nivel</span>: mucha abstracción.</li>
                 </ul>
             </section>
 
@@ -242,10 +242,10 @@
                 </ul>
                 <div class="container">
                     <div class="col">
-                        <img src="class3_images/binaryCode.png" , height=250>
+                        <img src="class3_images/binaryCode.png" , height=290>
                     </div>
                     <div class="col">
-                        <img src="class3_images/assembler.jpg" , height=250>
+                        <img src="class3_images/assembler.jpg" , height=300>
                     </div>
                 </div>
             </section>
@@ -284,7 +284,8 @@
                     <li><i>Interpretación</i>: usa un <span style="color:red">interprete</span> para procesar las
                         instrucciones del programa y traducirlas a código máquina línea por línea durante la ejecución.
                     </li>
-                    <li>Muy flexible, y podemos usar el interprete en "tiempo real" para dar comandos uno tras otro.
+                    <li>Ventaja: Muy flexible, y podemos usar el interprete en "tiempo real" para dar comandos uno tras
+                        otro.
                     </li>
                     <li>Desventaja: ejecución es lenta.</li>
                     <li><span style="color:blue">Python</span> es un lenguaje <i>interpretado</i>.</li>
@@ -337,10 +338,14 @@
                 <div class="container">
                     <div class="col">
                         <ul>
-                            <li>También se llama <i>programación imperativa</i>.</li>
+                            <li>Se basa crear e invocar <b>funciones</b>
+                                (también llamadas <i>procedimientos</i>) y alterar
+                                variables.</li>
                             <li>Las instrucciones están ejecutadas en el órden en que aparecen en el código.</li>
                             <li>Es el paradigma 'básico' y es bastante común en computación científica.</li>
-                            <li>Lenguajes que usan este paradigma: Python, C, Fortran</li>
+                            <li>También se llama <i>programación imperativa</i>.</li>
+                            <li>Lenguajes donde se utiliza este paradigma: Python, C,
+                                Fortran.</li>
                         </ul>
                     </div>
                     <div class="col">
@@ -354,11 +359,19 @@
                 <div class="container">
                     <div class="col">
                         <ul>
-                            <li>Los datos (variables) y las instrucciones están organizados en funciones.</li>
-                            <li>El trabajo del programa está hecho por cadenas de funciones.</li>
+                            <li>El programa se estructura <b>completamente</b> en términos de
+                                funciones.
+                            </li>
+                            <li> Las funciones solo evaluan "entradas" y
+                                entregan una salida, <b>sin modificar las
+                                    entradas</b> (igual que las funciones
+                                de la matemática).
+
+                            </li>
+                            <!-- <li>El trabajo del programa está hecho por cadenas de funciones.</li> -->
                             <li>Es un paradigma que está creciendo en popularidad, pero no es muy común en computación
                                 científica.</li>
-                            <li>Lenguajes: Scala, Haskell, Lisp</li>
+                            <li>Lenguajes: Scala, Haskell, Lisp.</li>
                         </ul>
                     </div>
                     <div class="col">
@@ -381,9 +394,9 @@
                             </li>
                             <li>La funcionalidad del programa viene de las "interacciones" de los objetos.</li>
                             <li>Es un paradigma muy común en programación
-                                profesional y también extremadamente útil en computación
+                                profesional así como en la computación
                                 científica.</li>
-                            <li>Lenguajes: Java, C++, Python</li>
+                            <li>Lenguajes: Java, C++, Python.</li>
                         </ul>
                     </div>
                     <div class="col">
@@ -421,12 +434,12 @@
                             <li>Es un lenguaje muy popular, utilizado por muchas organizaciones y en la academia. Es uno
                                 de los lenguajes más populares en <i>data science</i>.</li>
                             <li>Python apareció, por primera vez, en 1991, y
-                                    ahora es uno de los top 3 lenguajes de
-                                    programación más utilizado.</li>
+                                ahora es uno de los top 3 lenguajes de
+                                programación más utilizado.</li>
                         </ul>
                     </div>
                     <div class="col">
-                        <img src="class3_images/python.jpg">
+                        <img src="class3_images/python.jpg" , width="400">
                     </div>
                 </div>
             </section>
@@ -435,19 +448,22 @@
                 <h4>Python</h4>
                 <p>
                 <pre class="python">
-                <code>import numpy as np
+                    <code>
+                        import numpy as np
 
-def suma(a,n):
-    suma = 0
-    for i in range(n):
-        for j in range(n):
-            suma += a[i,j]
-    return suma
+                        def suma(a,n):
+                        suma = 0
+                        for i in range(n):
+                        for j in range(n):
+                        suma += a[i,j]
+                        return suma
 
-n = 100
-b = np.random.rand(n,n)
-resultado = suma(b,n)
-print(resultado)</code></pre>
+                        n = 100
+                        b = np.random.rand(n,n)
+                        resultado = suma(b,n)
+                        print(resultado)
+                    </code>
+                </pre>
                 </p>
             </section>
 
@@ -459,14 +475,16 @@ print(resultado)</code></pre>
                             <li>Propiedades: propósito general, <i>compilado</i>.</li>
                             <li>C es un lenguaje <i>imperativo</i>.</li>
                             <li>Diseñado para proporcionar acceso directo a las funciones basicas de la computadora
-                                (i.e. la memoria), y para tener una correspondencia cercana al código máquina. Se ha
-                                utilizado para escribir sistemas operativos (Windows, Mac, Linux).</li>
-                            <li>Apareció originalmente en 1972, y sigue siendo
-                                    uno de los lenguajes más utilizado en el mundo.</li>
+                                (i.e. la memoria), y para tener una correspondencia cercana al código máquina.
+                            <li> Se ha utilizado para escribir sistemas operativos (Windows, Mac, Linux).</li>
+                            </li>
+
+                            <li>Nació en 1972, y sigue siendo
+                                uno de los lenguajes más utilizado en el mundo.</li>
                         </ul>
                     </div>
                     <div class="col">
-                        <img src="class3_images/C.png">
+                        <img src="class3_images/C.png" , width="400">
                     </div>
                 </div>
             </section>
@@ -475,48 +493,52 @@ print(resultado)</code></pre>
                 <h4>C</h4>
                 <p>
                 <pre>
-<code>#include&ltstdio.h&gt
-#include&ltstdlib.h&gt
+                    <code>
+                        #include&ltstdio.h&gt
+                        #include&ltstdlib.h&gt
 
-float suma(float** arr, int n){
-    float suma = 0;
-    int i,j;
-    for (i=0; i &lt n; i++){
-        for (j=0; j &lt n; j++){
-            suma += arr[i][j];
-        }
-    }
-    return suma;
-}
+                        float suma(float** arr, int n){
+                        float suma = 0;
+                        int i,j;
 
-void random_array(float** arr, int n){
-    int i, j;
-    srand(time(NULL));
-    for(i=0; i &lt n; i++){
-        for(j=0; j &lt n; j++){
-            arr[i][j] = (float)rand()/(float)RAND_MAX;
-        }
-    }
-}
+                        for (i=0; i &lt n; i++){
+                        for (j=0; j &lt n; j++){
+                        suma += arr[i][j];
+                        }
+                        }
 
-int main(){
-    int n = 100, i;
-    float **b;
-    float resultado;
+                        return suma;
+                        }
 
-    b = malloc(n * sizeof *b);
-    for (i=0; i &lt n; i++){
-        b[i] = malloc(n * sizeof *b[i]);
-    }
-random_array(b, n);
-resultado = suma(b, n);
-printf("%f\n",resultado);
+                        void random_array(float** arr, int n){
+                        int i, j;
+                        srand(time(NULL));
+                        for(i=0; i &lt n; i++){
+                        for(j=0; j &lt n; j++){
+                        arr[i][j] = (float)rand()/(float)RAND_MAX;
+                        }
+                        }
+                        }
 
-for (i=0; i &lt n; i++){
-    free(b[i]);
-}
-free(b);
-}</code></pre>
+                        int main(){
+                        int n = 100, i;
+                        float **b;
+                        float resultado;
+
+                        b = malloc(n * sizeof *b);
+                        for (i=0; i &lt n; i++){
+                        b[i] = malloc(n * sizeof *b[i]);
+                        }
+                        random_array(b, n);
+                        resultado = suma(b, n);
+                        printf("%f\n",resultado);
+
+                        for (i=0; i &lt n; i++){
+                        free(b[i]);
+                        }
+                        free(b);
+                        }</code>
+                </pre>
                 </p>
             </section>
 
@@ -581,7 +603,7 @@ free(b);
                         Java pueda usarse en cualquier plataforma.</li>
                     <li>Ampliamente utilizado para desarrollar aplicaciones en el Internet de cliente-servidor.</li>
                     <li>Fue el lenguaje más utilizado en el
-                            mundo por muchos años, y sigue siendo muy popular.</li>
+                        mundo por muchos años, y sigue siendo muy popular.</li>
                 </ul>
                 <div class="container">
                     <div class="col">
@@ -617,17 +639,17 @@ free(b);
                 <h4>Dos lenguajes más especializados</h4>
                 <ul>
                     <li><b>Wolfram</b>: Lenguaje empleado por el software
-                            <i>Mathematica</i>. Popular en la física teórica
-                            debido a sus capacidades de cálculo simbólico.
-                            Requiere 
-                            pagar licencia.</li>
+                        <i>Mathematica</i>. Popular en la física teórica
+                        debido a sus capacidades de cálculo simbólico.
+                        Requiere
+                        pagar licencia.
+                    </li>
                     <li><b>IDL</b>: Interactive Data Language. Se usa bastante en astronomía, ciencias atmosféricas y
                         imagen médica. Requiere pagar licencia.</li>
                 </ul>
                 <div class="container">
                     <div class="col">
-                        <img
-                        src="class3_images/Wolfram_Language_Logo_2016.png" , height=250>
+                        <img src="class3_images/Wolfram_Language_Logo_2016.png" , height=250>
                     </div>
                     <div class="col">
                         <img src="class3_images/idl.jpg" , height=250>
