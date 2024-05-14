@@ -1,45 +1,45 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
 
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>Intro Menciones I: Clase 5</title>
+    <title>Intro Menciones I: Clase 5</title>
 
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
 
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/white.css" id="theme">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/css/zenburn.css">
-<!-- Theme used for syntax highlighting of code -->
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/css/monokai.css">-->
+    <!-- General and theme style sheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/lib/css/monokai.css">-->
 
-<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-<script>
-if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-}
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
 
-</script>
+    </script>
 
-<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
 <![endif]-->
 
-<!-- Loading the mathjax macro -->
-<!-- Load mathjax -->
+    <!-- Loading the mathjax macro -->
+    <!-- Load mathjax -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
@@ -61,309 +61,375 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     </script>
     <!-- End of mathjax configuration -->
 
-<!-- Get Font-awesome from cdn -->
-<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">-->
+    <!-- Get Font-awesome from cdn -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">-->
 
 
-        <style type="text/css">
-            .container{
-                        display: flex;
-                      }
-            .col{
-                      flex: 1;
-                }
-            .reveal section p {
-                      display: inline-block;
-                      font-size: 0.6em;
-                      line-height: 1.2em;
-                      vertical-align: top;
-                      text-align: left;
-            }
-            .reveal section li {
-                      font-size: 0.6em;
-            }
-            .reveal section td {
-                      font-size: 0.6em;
-            }
-            .reveal section img {
-                      border: none;
-            }
-            .reveal section figcaption {
-                      font-size: 0.6em;
-            }
-        </style>
+    <style type="text/css">
+        .container {
+            display: flex;
+        }
 
-	</head>
-	<body>
-			<div class="reveal">
-			<div class="slides">
+        .col {
+            flex: 1;
+        }
 
-<section><h3>Computación paralela y HPC</h3></section>
+        .reveal section p {
+            display: inline-block;
+            font-size: 0.6em;
+            line-height: 1.2em;
+            vertical-align: top;
+            text-align: left;
+        }
 
-<section><h4>La ley de Moore</h4>
-<img src="class5_images/moorelaw.png" height=400>
-</section>
+        .reveal section li {
+            font-size: 0.6em;
+        }
 
-<section><h4>Los límites físicos para los procesadores</h4>
-<img src="class5_images/integrated_circuit.jpg">
-</section>
+        .reveal section td {
+            font-size: 0.6em;
+        }
 
-<section><h4>Procesadores con multiples núcleos (cores)</h4>
-<div class="container">
-<div class="col">
-<img src="class5_images/intel_chip.png">
-</div>
-<div class="col">
-<img src="class5_images/intel_7.jpg">
-</div>
-</div>
-</section>
+        .reveal section img {
+            border: none;
+        }
 
-<section><h4>Clusters y supercomputadores</h4>
-<ul>
-<li>En el cluster del IFA, Kosmos, hay $\sim 500$ cores disponibles.</li>
-<li>En supercomputadores modernos típicamente hay miles y miles de cores (Guacolda-Leftraru tiene 5236 CPU cores).</li>
-<li>El computador Fugaku (en Japón) es el más poderoso en el mundo por ahora, con más que 7,6 millones de cores. (<a href="https://www.top500.org/">Top500</a>)</li>
-</ul>
-<div class="container">
-<div class="col">
-<figure>
-<img src="class5_images/kosmos.png" height=250>
-<figcaption>Kosmos (IFA)</figcaption>
-</figure>
-</div>
-<div class="col">
-<figure>
-<img src="class5_images/Leftraru.jpg" height=250>
-<figcaption>Guacolda-Leftraru (NLHPC/UC)</figcaption>
-</figure>
-</div>
-</div>
-</section>
+        .reveal section figcaption {
+            font-size: 0.6em;
+        }
+    </style>
 
-<section><h4>Paralelismo</h4>
-<img src="class5_images/serial.png">
-</section>
+</head>
 
-<section><h4>Paralelismo</h4>
-<img src="class5_images/parallelProblem.png">
-</section>
+<body>
+    <div class="reveal">
+        <div class="slides">
 
-<section><h4>La jerga del paralelismo</h4>
-<p><i>Proceso</i>: algo que se ejecuta en el sistema. Podría ser un browser, Skype, un videojuego, un terminal de Python, un script de Python, etc.</p>
-<img src="class5_images/taskManager.png">
-</section>
+            <section>
+                <h3>Computación paralela</h3>
+            </section>
 
-<section><h4>La jerga del paralelismo</h4>
-<p><i>Hilo</i> (Thread): un subproceso comenzado por algún proceso controlador. Por ejemplo, un script de Python podría usar varios <i>hilos</i> durante su ejecución.</p>
-<img src="class5_images/multithread.png" height=300>
-</section>
+            <section>
+                <h4>La ley de Moore</h4>
+                <img src="class5_images/moorelaw.png" height=400>
+            </section>
 
-<section><h4>La jerga del paralelismo</h4>
-<p><i>Memoria compartida</i>: una arquitectura donde cada unidad de procesamiento accede al mismo bloque de memoria global.</p>
-<img src="class5_images/shared_mem.png">
-</section>
+            <!-- <section> -->
+            <!--     <h4>Los límites físicos para los procesadores</h4> -->
+            <!--     <img src="class5_images/integrated_circuit.jpg"> -->
+            <!-- </section> -->
+            <!---->
+            <section>
+                <h4>Procesadores con multiples núcleos (cores)</h4>
+                <div class="container">
+                    <div class="col">
+                        <img src="class5_images/intel_chip.png">
+                    </div>
+                    <div class="col">
+                        <img src="class5_images/intel_7.jpg">
+                    </div>
+                </div>
+            </section>
 
-<section>
-    <h4>La jerga del paralelismo</h4>
-    <p><i>Memoria distribuida</i>: una arquitectura donde cada unidad de procesamiento tiene su propio bloque de
-        memoria.</p>
-    <p>Las unidades se comunican mediante una red (network).</p>
-    <img src="class5_images/distributed_mem.png">
-</section>
+            <section>
+                <h4>Clusters y supercomputadores</h4>
+                <ul>
+                    <li>En el cluster del IFA, Kosmos, hay $\sim 500$ cores disponibles.</li>
+                    <li>En supercomputadores modernos típicamente hay miles y miles de cores (Guacolda-Leftraru tiene
+                        5236 CPU cores).</li>
+                    <li>El computador Fugaku (en Japón) es el más poderoso en el mundo por ahora, con más que 7,6
+                        millones de cores. (<a href="https://www.top500.org/">Top500</a>)</li>
+                </ul>
+                <div class="container">
+                    <div class="col">
+                        <figure>
+                            <img src="class5_images/kosmos.png" height=250>
+                            <figcaption>Kosmos (IFA)</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <figure>
+                            <img src="class5_images/Leftraru.jpg" height=250>
+                            <figcaption>Guacolda-Leftraru (NLHPC/UChile)</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
 
-<section><h4>Tipos de paralelismo</h4>
-<p>Hay dos tipos principales de paralelismo:</p>
-<ul> 
-<li>Multiproceso: se divide el problema en varios procesos que comunican entre si.</li>
-<li>Multihilo (multithread): hay un proceso, que puede usar varios <i>threads</i> durante su ejecucion para trabajar en paralelo.
-<li>Muchos algorítmos para procesamiento paralelo ocupan una mezcla de los dos tipos.</li>
-<li>Hay una relación entre el tipo de paralelismo y la arquitectura de la memoria...</li>
-</ul>
-</section>
+            <section>
+                <h4>Programación Tradicional</h4>
+                <img src="class5_images/serial.png">
+            </section>
 
-<section><h4>Memoria para procesos</h4>
-<div class="container">
-<div class="col">
-<ul>
-<li>Un proceso: basicamente un programa que se ejecuta en el sistema.</li>
-<li>Cada proceso tiene acceso a la memoria que el sistema asigna.</li>
-<li>Típicamente el bloque de memoria asignada al proceso pertenece <i>exclusivamente</i> al proceso - los otros procesos en el sistema no lo pueden acceder.</li>
-</ul>
-</div>
-<div class="col">
-<img src="class5_images/process_memory.png">
-</div>
-</div>
-</section>
+            <section>
+                <h4>Programación en Paralelo</h4>
+                <img src="class5_images/parallelProblem.png">
+            </section>
 
-<section><h4>Paralelismo multi-proceso</h4>
-<div class="container">
-<div class="col">
-<ul>
-<li>Hay multiples "versiones" de un sólo programa (procesos multiples).</li>
-<li>Cada proceso corre en uno de los procesadores (cores).</li>
-<li>Ya que cada proceso tiene su bloque exclusivo de memoria, tiene sentido que este tipo de paralelismo se ocupa con <i>memoria distribuida</i>.</li>
-</ul>
-</div>
-<div class="col">
-<img src="class5_images/multiprocess.png">
-</div>
-</div>
-</section>
+            <section>
+                <h4>La jerga del paralelismo</h4>
+                <p><i>Proceso</i>: algo que se ejecuta en el sistema. Podría ser un browser, Skype, un videojuego, un
+                    terminal de Python, un script de Python, etc.</p>
+                <img src="class5_images/taskManager.png">
+            </section>
 
-<section><h4>Paralelismo multithread (multi-hilo)</h4>
-<div class="container">
-<div class="col">
-<ul>
-<li>Un proceso lanza multiples <i>threads</i> (hilos) de ejecución.</li>
-<li>Cada procesador (core) ejecuta un subconjunto de los hilos.</li>
-<li>Ya que todos los hilos tienen acceso al bloque de memoria "global" del proceso, tiene sentido usar memoria <i>compartida</i> para procesamiento multi-hilo.</li>
-</ul>
-</div>
-<div class="col">
-<img src="class5_images/multithread.png">
-</div>
-</div>
-</section>
+            <section>
+                <h4>La jerga del paralelismo</h4>
+                <p><i>Hilo</i> (Thread): un subproceso comenzado por algún proceso controlador. Por ejemplo, un script
+                    de Python podría usar varios <i>hilos</i> durante su ejecución.</p>
+                <img src="class5_images/multithread.png" height=300>
+            </section>
 
-<section><h4>Paralelismo mezclado</h4>
-<ul>
-<li>La mayoría de los supercomputadores hoy en día tienen las dos arquitecturas de memoria.</li>
-<li>Los cores están organizados en nodos (con memoria compartida). La memoria para los nodos está distribuida.</li>
-<li>De hecho, se puede correr cualquier tipo de proceso paralelo en cualquier tipo de arquitectura (pero posiblemente con menos eficiencia).</li>
-</ul>
-</section>
+            <section>
+                <h4>La jerga del paralelismo</h4>
+                <p><span style="color: blue;">Memoria compartida</span>: una arquitectura donde cada unidad de
+                    procesamiento accede al mismo bloque
+                    de memoria global.</p>
+                <img src="class5_images/shared_mem.png">
+            </section>
 
-<section><h4>Ejemplo: paralelismo multiproceso</h4>
-<p>Ahora vamos a ver un ejemplo de la idea de paralelismo multiproceso en una simulación del clima.</p>
-<img src="class5_images/ocean_model.jpg" height=400>
-</section>
+            <section>
+                <h4>La jerga del paralelismo</h4>
+                <p> <span style="color: red;">Memoria distribuida</span>: una arquitectura donde cada unidad de
+                    procesamiento tiene su propio
+                    bloque de
+                    memoria.</p>
+                <p>Las unidades se comunican mediante una red (network).</p>
+                <img src="class5_images/distributed_mem.png">
+            </section>
 
-<section><h4>Simulaciones del clima</h4>
-<div class="container">
-<div class="col">
-<ul>
-<li>En la simulación hay una malla esférica en $3D$.</li>
-<li>En cada "celda" de la malla el programa calcula presión, densidad, temperatura, etc.</li>
-<li>Las simulaciones modernas incluyen cálculos de procesos que ocurren a
-                                    escalas mucho menor que la escala de cada
-                                    celda.</li>
-<li>Veremos mucho más sobre simulaciones más tarde...</li>
-</ul>
-</div>
-<div class="col">
-<img src="class5_images/nwp.jpg">
-</div>
-</div>
-</section>
+            <section>
+                <h4>Tipos de paralelismo</h4>
+                <!-- <p>Hay dos tipos principales de paralelismo:</p> -->
+                <ul>
+                    <li><span style="color:red">Multiproceso</span>: se divide el problema en varios procesos que
+                        comunican entre si.</li>
+                    <li><span style="color:blue">Multihilo (multithread)</span>: hay un proceso, que puede usar varios
+                        <i>threads</i> durante su
+                        ejecucion para trabajar en paralelo.
+                    <li>Muchos algorítmos para procesamiento paralelo ocupan una mezcla de los dos tipos.</li>
+                    <li>Hay una relación entre el tipo de paralelismo y la arquitectura de la memoria...</li>
+                </ul>
+            </section>
 
-<section><h4>Simulaciones del clima</h4>
-<ul>
-<li>Típicamente la malla computacional tendrá $1.5$ millones de puntos (celda de
-                            área $100$ km$^2$, $30$ capas de la atmósfera).</li>
-<li>La simulación tiene que calcular el estado de la atmósfera en cada uno de estos puntos para $100$ años (de tiempo en la simulación), en intervalos de $30$ minutos.</li>
-</ul>
-<p>$\Rightarrow$ $1.7$ millones de pasos en el tiempo...</p>
-<p>$\Rightarrow$ $2.5 \times 10^{12}$ cálculos...</p>
-<ul>
-<li>Aún si cada cálculo demora $1$ microsegundo (optimista, dado la complejidad de las ecuaciones) la simulación demorará $\sim 30$ días corriendo en un procesador.</li>
-<li>Además, no estamos tomando en cuenta los requirimientos de memoria...</li>
-</ul>
-</section>
+            <section>
+                <h4>Memoria para procesos</h4>
+                <div class="container">
+                    <div class="col">
+                        <ul>
+                            <li>Un proceso: basicamente un programa que se ejecuta en el sistema.</li>
+                            <li>Cada proceso tiene acceso a la memoria que el sistema asigna.</li>
+                            <li>Típicamente el bloque de memoria asignada al proceso pertenece <i>exclusivamente</i> al
+                                proceso - los otros procesos en el sistema no lo pueden acceder.</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="class5_images/process_memory.png">
+                    </div>
+                </div>
+            </section>
 
-<section><h4>Simulaciones del clima</h4>
-<div class="container">
-<div class="col">
-<ul>
-<li>Para acelerar la simulación, usamos <i>paralelismo</i>.</li>
-<li>En el caso de paralelismo multi-proceso, tenemos varias copias del programa que hace la simulación, pero donde cada copia se ocupa de solamente una parte de la malla total.</li>
-</ul>
-</div>
-<div class="col">
-<img src="class5_images/nwp.jpg">
-</div>
-</div>
-</section>
+            <section>
+                <h4>Paralelismo multi-proceso</h4>
+                <div class="container">
+                    <div class="col">
+                        <ul>
+                            <li>Hay multiples "versiones" de un sólo programa (procesos multiples).</li>
+                            <li>Cada proceso corre en uno de los procesadores (cores).</li>
+                            <li>Ya que cada proceso tiene su bloque exclusivo de memoria, tiene sentido que este tipo de
+                                paralelismo se ocupa con <span style="color: red;">memoria distribuida</span>.</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="class5_images/multiprocess.png">
+                    </div>
+                </div>
+            </section>
 
-<section><h4>Simulaciones del clima</h4>
-<div class="container">
-<div class="col">
-<ul>
-<li>Por ejemplo, si usamos $50$ procesadores, podemos dividir la malla en $30.000$ puntos por procesador (y $1.7$ millones de pasos en el tiempo, como antes).</li>
-<li>Así que, cada procesador hace una tarea un poco menos exigente -  una división del trabajo.</li>
-</ul>
-</div>
-<div class="col">
-<img src="class5_images/nwp.jpg">
-</div>
-</div>
-</section>
+            <section>
+                <h4>Paralelismo multithread (multi-hilo)</h4>
+                <div class="container">
+                    <div class="col">
+                        <ul>
+                            <li>Un proceso lanza multiples <i>threads</i> (hilos) de ejecución.</li>
+                            <li>Cada procesador (core) ejecuta un subconjunto de los hilos.</li>
+                            <li>Ya que todos los hilos tienen acceso al bloque de memoria "global" del proceso, tiene
+                                sentido usar <span style="color: blue;">
+                                    memoria compartida</span> para procesamiento multi-hilo.</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="class5_images/multithread.png">
+                    </div>
+                </div>
+            </section>
 
-<section><h4>Proceso de correr la simulación en paralelo</h4>
-<ol>
-<li>Se ejecuta el programa que hace la simulación: el primer proceso, que corre en uno de los procesadores.</li>
-<li>El proceso $1$ divida la malla en sub-mallas. Esta división parece fácil,
-                            pero puede ser muy difícil encontrar la división que
-                            es la más eficiente (<b>primer gran desafio</b> del paralelismo).</li>
-<li>$49$ otros procesos están lanzados (cada uno en un procesador diferente) para hacer los cálculos en la sub-malla asignada.</li>
-</ol>
-<div class="container">
-<div class="col">
-<img src="class5_images/process1.png">
-</div>
-<div class="col">
-<img src="class5_images/process2.png">
-</div>
-<div class="col">
-<img src="class5_images/process3.png">
-</div>
-</div>
-</section>
+            <section>
+                <h4>Paralelismo mezclado</h4>
+                <ul>
+                    <li>La mayoría de los supercomputadores hoy en día tienen las dos arquitecturas de memoria.</li>
+                    <li>Los cores están organizados en nodos (con memoria compartida). La memoria para los nodos está
+                        distribuida.</li>
+                    <li>De hecho, se puede correr cualquier tipo de proceso paralelo en cualquier tipo de arquitectura
+                        (pero posiblemente con menos eficiencia).</li>
+                </ul>
+            </section>
 
-<section><h4>La ventaja de correr la simulación en paralelo</h4>
-<ul>
-<li>Hemos dividido el trabajo entre $50$ procesadores.</li>
-<li>Si la división fue óptima, en principio la simulación debería ejecutarse $50$ veces más rápido.</li>
-<li>Entonces, terminará en $14$ horas, en vez de $30$ días!</li>
-</ul>
-</section>
+            <section>
+                <h4>Ejemplo: paralelismo multiproceso</h4>
+                <p>Ahora vamos a ver un ejemplo de la idea de paralelismo multiproceso en una simulación del clima.</p>
+                <img src="class5_images/ocean_model.jpg" height=400>
+            </section>
 
-<section><h4>Comunicación</h4>
-<ul>
-<li>¡Ojo! Hemos olvidado algo MUY importante...</li>
-<li>Cada parte de la atmósfera está conectada con otras partes: no están aislados y el aire se mueve!</li>
-<li>Necesitamos comunicación entre los procesos para actualizar los valores en los bordes de las sub-mallas</li>
-</ul>
-<img src="class5_images/process4.png" height=300>
-</section>
+            <section>
+                <h4>Simulaciones del clima</h4>
+                <div class="container">
+                    <div class="col">
+                        <ul>
+                            <li>En la simulación hay una malla esférica en $3D$.</li>
+                            <li>En cada "celda" de la malla el programa calcula presión, densidad, temperatura, etc.
+                            </li>
+                            <li>Las simulaciones modernas incluyen cálculos de procesos que ocurren a
+                                escalas mucho menor que la escala de cada
+                                celda.</li>
+                            <li>Veremos mucho más sobre simulaciones más tarde...</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="class5_images/nwp.jpg">
+                    </div>
+                </div>
+            </section>
 
-<section><h4>Comunicación</h4>
-<ul>
-<li>El <b>segundo gran desafio </b> del paralelismo: comunicación entre los procesos/hilos.</li>
-<li>En este ejemplo, podemos escribir en el programa que cada proceso tiene que compartir los resultados en el borde de la sub-malla con todas las sub-mallas vecinas, en cada paso del tiempo.</li>
-<li>Típicamente eso se hace con librerías específicas para el paralelismo (MPI, OpenMP, etc.)</li>
-<li>Hay <i>lenguajes</i> de programación paralela que intentan simplificar la parte de comunicación (e.g. Co-array Fortran, Parallel C, Chapel, etc.)</li>
-<li>Mucho más sobre este en el curso de <i>Programación Paralela</i>!</li>
-</ul>
-</section>
+            <section>
+                <h4>Simulaciones del clima</h4>
+                <ul>
+                    <li>Típicamente la malla computacional tendrá $1.5$ millones de puntos (celda de
+                        área $100$ km$^2$, $30$ capas de la atmósfera).</li>
+                    <li>La simulación tiene que calcular el estado de la atmósfera en cada uno de estos puntos para
+                        $100$ años (de tiempo en la simulación), en intervalos de $30$ minutos.</li>
+                </ul>
+                <p>$\Rightarrow$ $1.7$ millones de pasos en el tiempo...</p>
+                <p>$\Rightarrow$ $2.5 \times 10^{12}$ cálculos...</p>
+                <ul>
+                    <li>Aún si cada cálculo demora $1$ microsegundo (optimista, dado la complejidad de las ecuaciones)
+                        la simulación demorará $\sim 30$ días corriendo en un procesador.</li>
+                    <li>Además, no estamos tomando en cuenta los requirimientos de memoria...</li>
+                </ul>
+            </section>
 
-<section><h4>El resto del proceso de correr la simulación en paralelo</h4>
-<ol>
-<li>Los resultados de todos los procesadores están reunidos en procesador $1$ por el proceso $1$ (usando comunicación entre los procesos).</li>
-<li>Luego, proceso $1$ puede guardar los resultados en un archivo en el disco duro.</li>
-</ol>
-<div class="container">
-<div class="col">
-<img src="class5_images/process5.png">
-</div>
-<div class="col">
-<img src="class5_images/process6.png">
-</div>
-</div>
-</section>
+            <section>
+                <h4>Simulaciones del clima</h4>
+                <div class="container">
+                    <div class="col">
+                        <ul>
+                            <li>Para acelerar la simulación, usamos <i>paralelismo</i>.</li>
+                            <li>En el caso de paralelismo multi-proceso, tenemos varias copias del programa que hace la
+                                simulación, pero donde cada copia se ocupa de solamente una parte de la malla total.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="class5_images/nwp.jpg">
+                    </div>
+                </div>
+            </section>
 
-<!--   
+            <section>
+                <h4>Simulaciones del clima</h4>
+                <div class="container">
+                    <div class="col">
+                        <ul>
+                            <li>Por ejemplo, si usamos $50$ procesadores, podemos dividir la malla en $30.000$ puntos
+                                por procesador (y $1.7$ millones de pasos en el tiempo, como antes).</li>
+                            <li>Así que, cada procesador hace una tarea un poco menos exigente - una división del
+                                trabajo.</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="class5_images/nwp.jpg">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>Proceso de correr la simulación en paralelo</h4>
+                <ol>
+                    <li>Se ejecuta el programa que hace la simulación: el primer proceso, que corre en uno de los
+                        procesadores.</li>
+                    <li>El proceso $1$ divida la malla en sub-mallas. Esta división parece fácil,
+                        pero puede ser muy difícil encontrar la división que
+                        es la más eficiente (<b>primer gran desafio</b> del paralelismo).</li>
+                    <li>$49$ otros procesos están lanzados (cada uno en un procesador diferente) para hacer los cálculos
+                        en la sub-malla asignada.</li>
+                </ol>
+                <div class="container">
+                    <div class="col">
+                        <img src="class5_images/process1.png">
+                    </div>
+                    <div class="col">
+                        <img src="class5_images/process2.png">
+                    </div>
+                    <div class="col">
+                        <img src="class5_images/process3.png">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>La ventaja de correr la simulación en paralelo</h4>
+                <ul>
+                    <li>Hemos dividido el trabajo entre $50$ procesadores.</li>
+                    <li>Si la división fue óptima, en principio la simulación debería ejecutarse $50$ veces más rápido.
+                    </li>
+                    <li>Entonces, terminará en $14$ horas, en vez de $30$ días!</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>Comunicación</h4>
+                <ul>
+                    <li>¡Ojo! Hemos olvidado algo MUY importante...</li>
+                    <li>Cada parte de la atmósfera está conectada con otras partes: no están aislados y el aire se
+                        mueve!</li>
+                    <li>Necesitamos comunicación entre los procesos para actualizar los valores en los bordes de las
+                        sub-mallas</li>
+                </ul>
+                <img src="class5_images/process4.png" height=300>
+            </section>
+
+            <section>
+                <h4>Comunicación</h4>
+                <ul>
+                    <li>El <b>segundo gran desafio </b> del paralelismo: comunicación entre los procesos/hilos.</li>
+                    <li>En este ejemplo, podemos escribir en el programa que cada proceso tiene que compartir los
+                        resultados en el borde de la sub-malla con todas las sub-mallas vecinas, en cada paso del
+                        tiempo.</li>
+                    <li>Típicamente eso se hace con librerías específicas para el paralelismo (MPI, OpenMP, etc.)</li>
+                    <li>Hay <i>lenguajes</i> de programación paralela que intentan simplificar la parte de comunicación
+                        (e.g. Co-array Fortran, Parallel C, Chapel, etc.)</li>
+                    <li>Mucho más sobre este en el curso de <i>Programación Paralela</i>!</li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>El resto del proceso de correr la simulación en paralelo</h4>
+                <ol>
+                    <li>Los resultados de todos los procesadores están reunidos en procesador $1$ por el proceso $1$
+                        (usando comunicación entre los procesos).</li>
+                    <li>Luego, proceso $1$ puede guardar los resultados en un archivo en el disco duro.</li>
+                </ol>
+                <div class="container">
+                    <div class="col">
+                        <img src="class5_images/process5.png">
+                    </div>
+                    <div class="col">
+                        <img src="class5_images/process6.png">
+                    </div>
+                </div>
+            </section>
+
+            <!--   
 <section><h4>El resto del proceso de correr la simulación en paralelo</h4>
 <div class="container">
 <div class="col">
@@ -376,7 +442,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 </section>
 -->
 
-<!--   
+            <!--   
 <section><h4>Simulaciones que usan paralelismo</h4>
 <ul>
 <li>En mi investigación uso simulaciones de cosmología/galaxias que utilizan este tipo de paralelismo multi-proceso.</li>
@@ -421,209 +487,273 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 </section>
 -->
 
-<section><h4>Arquitectura de memoria compartida</h4>
-<ul>
-<li>Los GPUs son diseñados para procesamiento multi-hilo.</li>
-<li>Contienen muchos "unidades de procesamiento" que no son muy poderosos, pero hay tantos que el cálculo en paralelo puede ser mucho más rápido.</li>
-<li>Hay software para simulaciones en la física hoy en día que aprovecha de los recursos de GPUs.</li>
-<li>El uso de los GPUs es muy común en <i>data science</i> e inteligencia artificial para modelos como <i>redes neuronales artificiales</i>. Estos modelos requieren muchos cálculos con matrices, y los GPUs son muy buenos en acelerar esos cálculos.</li>
-</ul>
-<div class="container">
-<div class="col">
-<img src="class5_images/nvidia_tesla.jpg" height=250>
-</div>
-</div>
-</section>
+            <!-- <section> -->
+            <!--     <h4>Arquitectura de memoria compartida</h4> -->
+            <!--     <ul> -->
+            <!--         <li>Los GPUs son diseñados para procesamiento multi-hilo.</li> -->
+            <!--         <li>Contienen muchos "unidades de procesamiento" que no son muy poderosos, pero hay tantos que el -->
+            <!--             cálculo en paralelo puede ser mucho más rápido.</li> -->
+            <!--         <li>Hay software para simulaciones en la física hoy en día que aprovecha de los recursos de GPUs. -->
+            <!--         </li> -->
+            <!--         <li>El uso de los GPUs es muy común en <i>data science</i> e inteligencia artificial para modelos -->
+            <!--             como <i>redes neuronales artificiales</i>. Estos modelos requieren muchos cálculos con matrices, -->
+            <!--             y los GPUs son muy buenos en acelerar esos cálculos.</li> -->
+            <!--     </ul> -->
+            <!--     <div class="container"> -->
+            <!--         <div class="col"> -->
+            <!--             <img src="class5_images/nvidia_tesla.jpg" height=250> -->
+            <!--         </div> -->
+            <!--     </div> -->
+            <!-- </section> -->
+            <!---->
+            <!-- <section> -->
+            <!--     <h4>Arquitectura de memoria compartida</h4> -->
+            <!--     <ul> -->
+            <!--         <li>Hay un "lenguaje" (de hecho, es un API) para programar GPUs de Nvidia que se llama <span -->
+            <!--                 style="color:red">CUDA</span>. Funciona con C, C++, Fortran.</li> -->
+            <!--         <li>Para los GPUs de AMD hay <span style="color:red">OpenCL</span> (que también funciona con -->
+            <!--             tarjetas de Nvidia).</li> -->
+            <!--         <li>La programación de GPUs corresponde al curso final de la mención.</li> -->
+            <!--     </ul> -->
+            <!--     <div class="container"> -->
+            <!--         <div class="col"> -->
+            <!--             <img src="class5_images/nvidia_tesla.jpg"> -->
+            <!--         </div> -->
+            <!--         <div class="col"> -->
+            <!--             <img src="class5_images/amd_gpu.jpg"> -->
+            <!--         </div> -->
+            <!--     </div> -->
+            <!-- </section> -->
+            <!---->
+            <!-- <section> -->
+            <!--     <h4>Ventajas y desventajas de GPUs</h4> -->
+            <!--     <ul> -->
+            <!--         <li>Ventaja: Ofrecen paralelimso "masivo" (cientos o miles de <i>cores</i> en un GPU) para una -->
+            <!--             fracción del costo de un cluster/supercomputador.</li> -->
+            <!--         <li>Desventaja: las unidades de procesamiento (cores) en un GPU no pueden hacer cálculos muy -->
+            <!--             complicados. Su conjunto de instrucciones (<i>instruction set</i>) no es tan grande como el de -->
+            <!--             un CPU.</li> -->
+            <!--         <li>Por lo tanto, no son muy aptos para cálculos muy complejos.</li> -->
+            <!--     </ul> -->
+            <!-- </section> -->
+            <!---->
+            <!-- <section> -->
+            <!--     <section> -->
+            <!--         <h3>Computación y el medio ambiente</h3> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>El medio ambiente</h4> -->
+            <!--         <ul> -->
+            <!--             <li>Con el crecimiento de poder computacional, el efecto en el medio ambiente del asociado -->
+            <!--                 consumo de energía es un tema muy importante.</li> -->
+            <!--             <li>Un programa con eficiencia baja tiene una consecuencia real: ¡gasta más energía!</li> -->
+            <!--         </ul> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>Eficiencia de los lenguajes de programación</h4> -->
+            <!--         <p>Algunos lenguajes son más eficientes que otros, porque el programa corre más rápidamente...</p> -->
+            <!--         <p><a href="https://thenewstack.io/which-programming-languages-use-the-least-electricity/">Eficiencia -->
+            <!--                 de lenguajes de programación</a></p> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>Green 500</h4> -->
+            <!--         <p>Hoy en día hay una lista de supercomputadores ordenados según su eficiencia en consumo de -->
+            <!--             energía:</p> -->
+            <!--         <p><a href="https://www.top500.org/lists/green500/">Green 500</a></p> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>Bitcoin</h4> -->
+            <!--         <p>Todos hemos escuchado de Bitcoin, pero ¿saben cómo funciona?</p> -->
+            <!--         <img src="class5_images/bitcoin.jpg" height=400> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>Bitcoin</h4> -->
+            <!--         <ul> -->
+            <!--             <li>La idea fundamental de Bitcoin es que no hay un banco central.</li> -->
+            <!--             <li>Hay que verificar que todas las transacciones de Bitcoin son legales y correctas. ¿Cómo -->
+            <!--                 hacerlo sin la "autoridad" de un banco central?</li> -->
+            <!--             <li>Antigüamente, las transacciones financieras de empresas estaban registrados en el <i>libro -->
+            <!--                     mayor</i>.</li> -->
+            <!--         </ul> -->
+            <!--         <img src="class5_images/ledger.png" height=350> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>El <i>libro mayor</i> de Bitcoin: <i>Blockchain</i></h4> -->
+            <!--         <div class="container"> -->
+            <!--             <div class="col"> -->
+            <!--                 <ul> -->
+            <!--                     <li>Cada vez que hay una transacción de bitcoin, hay un registro agregado al -->
+            <!--                         <i>blockchain</i>. -->
+            <!--                     </li> -->
+            <!--                     <li>Cada transacción corresponde a un bloque (<i>block</i>) y el registro de todas las -->
+            <!--                         transacciones corresponde a una cadena (<i>chain</i>) de bloques.</li> -->
+            <!--                     <li>El problema es, ¿cómo se puede asegurar que nadie ha cambiado el <i>blockchain</i> -->
+            <!--                         para inventar o eliminar una transacción?</li> -->
+            <!--                 </ul> -->
+            <!--             </div> -->
+            <!--             <div class="col"> -->
+            <!--                 <img src="class5_images/blockchain.webp"> -->
+            <!--             </div> -->
+            <!--         </div> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section>Primero, necesitamos el concepto de una función <i>hash</i></section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>La función <i>hash</i>.</h4> -->
+            <!--         <ul> -->
+            <!--             <li>Los datos (texto) de la transacción están pasados por una función muy no-lineal que se llama -->
+            <!--                 un <i>hash</i>. En el caso de bitcoin la función específica tiene el nombre <i>SHA-256</i>. -->
+            <!--             </li> -->
+            <!--             <li class="fragment">Esta función convierte todos los <i>bits</i> de información a un sólo -->
+            <!--                 número (en hexadecimal).</li> -->
+            <!--             <li class="fragment">El primer punto clave: el <i>hash</i> es imposible de invertir.</li> -->
+            <!--             <li class="fragment">Es muy fácil calcular el <i>hash</i>, pero imposible reconstruir la entrada -->
+            <!--                 de la función conociendo la salida.</li> -->
+            <!--         </ul> -->
+            <!--         <img src="class5_images/hash.png" height=200> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>Blockchain: verificando las transacciones</h4> -->
+            <!--         <ul> -->
+            <!--             <li>Primero, un número está agregado al final del <i>block</i>. Llamaremos este número el -->
+            <!--                 <b>número extra</b>. -->
+            <!--             </li> -->
+            <!--             <li class="fragment">El mismo <i>block</i> está dado como entrada al <i>hash</i></li> -->
+            <!--             <li class="fragment">El resultado está comparado con un valor objetivo (definido por el sistema -->
+            <!--                 de bitcoin).</li> -->
+            <!--         </ul> -->
+            <!--         <img src="class5_images/Proof-of-Work.png"> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>Blockchain: verificando las transacciones</h4> -->
+            <!--         <ul> -->
+            <!--             <li>Si el resultado es <span style="color:blue">menor</span> que el valor objetivo, el -->
+            <!--                 <i>block</i> está verificado y agregado al <i>blockchain</i>. -->
+            <!--             </li> -->
+            <!--             <li class="fragment">El computador que calculó exitosamente el resultado gana bitcoin como -->
+            <!--                 recompensa (<i>minería de bitcoin</i>).</li> -->
+            <!--             <li class="fragment">Si el resultado es <span style="color:red">mayor</span> que el valor -->
+            <!--                 objetivo, el número extra al final está incrementado por $1$, y el cálculo se repite otra -->
+            <!--                 vez.</li> -->
+            <!--         </ul> -->
+            <!--         <div class="container"> -->
+            <!--             <div class="col"> -->
+            <!--                 <img src="class5_images/hash_comparison.webp" height=300> -->
+            <!--             </div> -->
+            <!--         </div> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>Blockchain: verificando las transacciones</h4> -->
+            <!--         <ul> -->
+            <!--             <li>Es imposible predecir el resultado del <i>hash</i>, así que no se sabe antes de aplicar el -->
+            <!--                 <i>hash</i> si el resultado será menor o mayor del valor objetivo. -->
+            <!--             </li> -->
+            <!--             <li class="fragment">Además, por ser una función muy no-lineal, el resultado con $0$ como número -->
+            <!--                 extra será <b>completamente</b> diferente al resultado con $1$ como número extra.</li> -->
+            <!--             <li class="fragment">Por lo tanto, la única manera de "ganar el juego" es seguir incrementando -->
+            <!--                 el número extra y calculando el <i>hash</i>. Eventualmente el computador encontrará un -->
+            <!--                 número extra que resulta en un valor menor que el valor objetivo, y "ganas el juego".</li> -->
+            <!--         </ul> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>Blockchain: verificando las transacciones</h4> -->
+            <!--         <div class="container"> -->
+            <!--             <div class="col"> -->
+            <!--                 <ul> -->
+            <!--                     <li>Todo este proceso involucra números enormes $\Rightarrow$ los cálculos requieren -->
+            <!--                         mucha poder computacional $\Rightarrow$ mucha energía.</li> -->
+            <!--                     <li class="fragment">Se puede decir que el bitcoin deriva su valor monetario del costo -->
+            <!--                         de la electricidad para los computadores...</li> -->
+            <!--                     <li class="fragment">Pero es un gasto enorme de energía en cálculos que no sirven para -->
+            <!--                         nada!</li> -->
+            <!--                 </ul> -->
+            <!--             </div> -->
+            <!--             <div class="col"> -->
+            <!--                 <figure class="fragment"> -->
+            <!--                     <img src="class5_images/bitcoin_energy.png"> -->
+            <!--                 </figure> -->
+            <!--             </div> -->
+            <!--         </div> -->
+            <!--     </section> -->
+            <!---->
+            <!--     <section> -->
+            <!--         <h4>Blockchain: verificando las transacciones</h4> -->
+            <!--         <p>Después de la verificación de las transacciones, es muy difícil modificar el <i>blockchain</i>: -->
+            <!--         </p> -->
+            <!--         <ul> -->
+            <!--             <li>Se puede verificar los valores de <i>hash</i> de todos los blocks del blockchain en -->
+            <!--                 segundos.</li> -->
+            <!--             <li class="fragment">Modificar un <i>block</i> implicaría calcular un <i>hash</i> que es menor -->
+            <!--                 que el valor objetivo de nuevo, para el <i>block</i> modificado y <b>¡todos los siguientes -->
+            <!--                     <i>blocks</i> en el <i>blockchain</i>!</b></li> -->
+            <!--             <li class="fragment">El cálculo requerido es practiamente imposible.</li> -->
+            <!--         </ul> -->
+            <!--         <figure> -->
+            <!--             <img src="class5_images/blockchain.webp" height=250> -->
+            <!--         </figure> -->
+            <!--     </section> -->
+            <!---->
+            <!-- </section> -->
 
-<section><h4>Arquitectura de memoria compartida</h4>
-<ul>
-<li>Hay un "lenguaje" (de hecho, es un API) para programar GPUs de Nvidia que se llama <span style="color:red">CUDA</span>. Funciona con C, C++, Fortran.</li>
-<li>Para los GPUs de AMD hay <span style="color:red">OpenCL</span> (que también funciona con tarjetas de Nvidia).</li>
-<li>La programación de GPUs corresponde al curso final de la mención.</li>
-</ul>
-<div class="container">
-<div class="col">
-<img src="class5_images/nvidia_tesla.jpg">
-</div>
-<div class="col">
-<img src="class5_images/amd_gpu.jpg">
-</div>
-</div>
-</section>
-
-<section><h4>Ventajas y desventajas de GPUs</h4>
-<ul>
-<li>Ventaja: Ofrecen paralelimso "masivo" (cientos o miles de <i>cores</i> en un GPU) para una fracción del costo de un cluster/supercomputador.</li>
-<li>Desventaja: las unidades de procesamiento (cores) en un GPU no pueden hacer cálculos muy complicados. Su conjunto de instrucciones (<i>instruction set</i>) no es tan grande como el de un CPU.</li>
-<li>Por lo tanto, no son muy aptos para cálculos muy complejos.</li>
-</ul>
-</section>
-
-<section>
-<section><h3>Computación y el medio ambiente</h3></section>
-
-<section><h4>El medio ambiente</h4>
-<ul>
-<li>Con el crecimiento de poder computacional, el efecto en el medio ambiente del asociado consumo de energía es un tema muy importante.</li>
-<li>Un programa con eficiencia baja tiene una consecuencia real: ¡gasta más energía!</li>
-</ul>
-</section>
-
-<section><h4>Eficiencia de los lenguajes de programación</h4>
-<p>Algunos lenguajes son más eficientes que otros, porque el programa corre más rápidamente...</p>
-<p><a href="https://thenewstack.io/which-programming-languages-use-the-least-electricity/">Eficiencia de lenguajes de programación</a></p>
-</section>
-
-<section><h4>Green 500</h4>
-<p>Hoy en día hay una lista de supercomputadores ordenados según su eficiencia en consumo de energía:</p>
-<p><a href="https://www.top500.org/lists/green500/">Green 500</a></p>
-</section>
-
-<section><h4>Bitcoin</h4>
-<p>Todos hemos escuchado de Bitcoin, pero ¿saben cómo funciona?</p>
-<img src="class5_images/bitcoin.jpg" height=400>
-</section>
-
-<section><h4>Bitcoin</h4>
-<ul>
-<li>La idea fundamental de Bitcoin es que no hay un banco central.</li>
-<li>Hay que verificar que todas las transacciones de Bitcoin son legales y correctas. ¿Cómo hacerlo sin la "autoridad" de un banco central?</li>
-<li>Antigüamente, las transacciones financieras de empresas estaban registrados en el <i>libro mayor</i>.</li>
-</ul>
-<img src="class5_images/ledger.png" height=350>
-</section>
-
-<section><h4>El <i>libro mayor</i> de Bitcoin: <i>Blockchain</i></h4>
-<div class="container">
-<div class="col">
-<ul>
-<li>Cada vez que hay una transacción de bitcoin, hay un registro agregado al <i>blockchain</i>.</li>
-<li>Cada transacción corresponde a un bloque (<i>block</i>) y el registro de todas las transacciones corresponde a una cadena (<i>chain</i>) de bloques.</li>
-<li>El problema es, ¿cómo se puede asegurar que nadie ha cambiado el <i>blockchain</i> para inventar o eliminar una transacción?</li>
-</ul>
-</div>
-<div class="col">
-<img src="class5_images/blockchain.webp">
-</div>
-</div>
-</section>
-
-<section>Primero, necesitamos el concepto de una función <i>hash</i></section>
-
-<section><h4>La función <i>hash</i>.</h4>
-<ul>
-<li>Los datos (texto) de la transacción están pasados por una función muy no-lineal que se llama un <i>hash</i>. En el caso de bitcoin la función específica tiene el nombre <i>SHA-256</i>.</li>
-<li class="fragment">Esta función convierte todos los <i>bits</i> de información a un sólo número (en hexadecimal).</li>
-<li class="fragment">El primer punto clave: el <i>hash</i> es imposible de invertir.</li>
-<li class="fragment">Es muy fácil calcular el <i>hash</i>, pero imposible reconstruir la entrada de la función conociendo la salida.</li>
-</ul>
-<img src="class5_images/hash.png" height=200>
-</section>
-
-<section><h4>Blockchain: verificando las transacciones</h4>
-<ul>
-<li>Primero, un número está agregado al final del <i>block</i>. Llamaremos este número el <b>número extra</b>.</li>
-<li class="fragment">El mismo <i>block</i> está dado como entrada al <i>hash</i></li>
-<li class="fragment">El resultado está comparado con un valor objetivo (definido por el sistema de bitcoin).</li>
-</ul>
-<img src="class5_images/Proof-of-Work.png">
-</section>
-
-<section><h4>Blockchain: verificando las transacciones</h4>
-<ul>
-<li>Si el resultado es <span style="color:blue">menor</span> que el valor objetivo, el <i>block</i> está verificado y agregado al <i>blockchain</i>.</li>
-<li class="fragment">El computador que calculó exitosamente el resultado gana bitcoin como recompensa (<i>minería de bitcoin</i>).</li>
-<li class="fragment">Si el resultado es <span style="color:red">mayor</span> que el valor objetivo, el número extra al final está incrementado por $1$, y el cálculo se repite otra vez.</li>
-</ul>
-<div class="container">
-<div class="col">
-<img src="class5_images/hash_comparison.webp" height=300>
-</div>
-</div>
-</section>
-
-<section><h4>Blockchain: verificando las transacciones</h4>
-<ul>
-<li>Es imposible predecir el resultado del <i>hash</i>, así que no se sabe antes de aplicar el <i>hash</i> si el resultado será menor o mayor del valor objetivo.</li>
-<li class="fragment">Además, por ser una función muy no-lineal, el resultado con $0$ como número extra será <b>completamente</b> diferente al resultado con $1$ como número extra.</li>
-<li class="fragment">Por lo tanto, la única manera de "ganar el juego" es seguir incrementando el número extra y calculando el <i>hash</i>. Eventualmente el computador encontrará un número extra que resulta en un valor menor que el valor objetivo, y "ganas el juego".</li>
-</ul>
-</section>
-
-<section><h4>Blockchain: verificando las transacciones</h4>
-<div class="container">
-<div class="col">
-<ul>
-<li>Todo este proceso involucra números enormes $\Rightarrow$ los cálculos requieren mucha poder computacional $\Rightarrow$  mucha energía.</li>
-<li class="fragment">Se puede decir que el bitcoin deriva su valor monetario del costo de la electricidad para los computadores...</li>
-<li class="fragment">Pero es un gasto enorme de energía en cálculos que no sirven para nada!</li>
-</ul>
-</div>
-<div class="col">
-<figure class="fragment">
-<img src="class5_images/bitcoin_energy.png">
-</figure>
-</div>
-</div>
-</section>
-
-<section><h4>Blockchain: verificando las transacciones</h4>
-<p>Después de la verificación de las transacciones, es muy difícil modificar el <i>blockchain</i>:</p>
-<ul><li>Se puede verificar los valores de <i>hash</i> de todos los blocks del blockchain en segundos.</li>
-<li class="fragment">Modificar un <i>block</i> implicaría calcular un <i>hash</i> que es menor que el valor objetivo de nuevo, para el <i>block</i> modificado y <b>¡todos los siguientes <i>blocks</i> en el <i>blockchain</i>!</b></li>
-<li class="fragment">El cálculo requerido es practiamente imposible.</li>
-</ul>
-<figure>
-<img src="class5_images/blockchain.webp" height=250>
-</figure>
-</section>
-
-</section>
-
-<section><h4>Resumen</h4>
-<ul>
-<li>La rapidez de un <i>core</i> no está creciendo mucho actualmente, pero hoy en día los CPUs tienen muchos.</li>
-<li>Por lo tanto, hay que saber como diseñar algoritmos paralelos.</li>
-<li>Hay dos métodos principales: <i>multi-proceso</i> (memoria distribuida) y
-                            <i>multi-hilo</i> (memoria compartida).</li>
-<li>Los GPUs están disñados para <i>multi-hilo</i>.</li>
-<li>En el área de computación científica la programación paralela es
-                            conocimiento esencial!</li>
-</ul>
-</section>
+            <section>
+                <h4>Resumen</h4>
+                <ul>
+                    <li>La rapidez de un <i>core</i> no está creciendo mucho actualmente, pero hoy en día los CPUs
+                        tienen muchos.</li>
+                    <li>Por lo tanto, hay que saber como diseñar algoritmos paralelos.</li>
+                    <li>Hay dos métodos principales: <i>multi-proceso</i> (memoria distribuida) y
+                        <i>multi-hilo</i> (memoria compartida).
+                    </li>
+                    <!-- <li>Los GPUs están disñados para <i>multi-hilo</i>.</li> -->
+                    <li>En el área de computación científica la programación paralela es
+                        conocimiento esencial!</li>
+                </ul>
+            </section>
 
 
-			</div>
-		</div>
+        </div>
+    </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"></script>
 
-<script>
+    <script>
 
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-                controls: true,
-                progress: true,
-                history: true,
-                transition: 'slide',
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            transition: 'slide',
 
-                math: {
-		                mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js',
-                        //mathjax: '/home/graeme/Documents/talks/reveal.js/MathJax-2.7.3/MathJax.js',
-		                config: 'TeX-AMS_HTML-full', // See http://docs.mathjax.org/en/latest/config-files.html
-		                // pass other options into `MathJax.Hub.Config()`
-		                TeX: { Macros: { RR: "{\\bf R}" } }
-	                  },
+            math: {
+                mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js',
+                //mathjax: '/home/graeme/Documents/talks/reveal.js/MathJax-2.7.3/MathJax.js',
+                config: 'TeX-AMS_HTML-full', // See http://docs.mathjax.org/en/latest/config-files.html
+                // pass other options into `MathJax.Hub.Config()`
+                TeX: {Macros: {RR: "{\\bf R}"}}
+            },
 
-				dependencies: [
-					{ src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad();}}
-				]
-			});
-</script>
+            dependencies: [
+                {src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/highlight/highlight.js', async: true, callback: function () {hljs.initHighlightingOnLoad();}}
+            ]
+        });
+    </script>
 
-</script>
-	</body>
+    </script>
+</body>
+
 </html>
