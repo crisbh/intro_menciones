@@ -282,6 +282,12 @@
             </section>
 
             <section>
+                <h4>Ejemplo: paralelismo multiproceso</h4>
+                <p>Video de simulación del cambio climático:</p>
+                <iframe width="720" height="480" src="https://www.youtube.com/watch?v=3jbrfQZwoHA"></iframe>
+            </section>
+
+            <section>
                 <h4>Simulaciones del clima</h4>
                 <div class="container">
                     <div class="col">
@@ -353,7 +359,7 @@
             </section>
 
             <section>
-                <h4>Proceso de correr la simulación en paralelo</h4>
+                <h4>Pasos para correr la simulación en paralelo</h4>
                 <ol>
                     <li>Se ejecuta el programa que hace la simulación: el primer proceso, que corre en uno de los
                         procesadores.</li>
@@ -382,7 +388,7 @@
                     <li>Hemos dividido el trabajo entre $50$ procesadores.</li>
                     <li>Si la división fue óptima, en principio la simulación debería ejecutarse $50$ veces más rápido.
                     </li>
-                    <li>Entonces, terminará en $14$ horas, en vez de $30$ días!</li>
+                    <li>Entonces, <span: style="color: red;">terminará en $14$ horas, en vez de $30$ días!</span></li>
                 </ul>
             </section>
 
@@ -413,7 +419,7 @@
             </section>
 
             <section>
-                <h4>El resto del proceso de correr la simulación en paralelo</h4>
+                <h4>Para terminar de correr la simulación en paralelo</h4>
                 <ol>
                     <li>Los resultados de todos los procesadores están reunidos en procesador $1$ por el proceso $1$
                         (usando comunicación entre los procesos).</li>
@@ -716,7 +722,7 @@
                         <i>multi-hilo</i> (memoria compartida).
                     </li>
                     <!-- <li>Los GPUs están disñados para <i>multi-hilo</i>.</li> -->
-                    <li>En el área de computación científica la programación paralela es
+                    <li>En el área de computación científica, la programación paralela es
                         conocimiento esencial!</li>
                 </ul>
             </section>
