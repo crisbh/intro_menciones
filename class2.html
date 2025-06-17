@@ -100,7 +100,7 @@
         <div class="slides">
 
             <section>
-                <h3>Una breve historia de la computación</h3>
+                <h3>Evolución de la computación</h3>
             </section>
 
             <section>
@@ -270,7 +270,8 @@
                             <li>En su <i>tesis de Magister</i> demostró que
                                 <span style="color: blue;">
                                     una
-                                    secuencia de interruptores electricos pueden simular cualquier relación logica o
+                                    secuencia de interruptores electricos pueden
+                                        simular cualquier operación lógica o
                                     númerica.
                                 </span>
                             </li>
@@ -315,7 +316,7 @@
                         <ul>
                             <li>La "Máquina de Turing" consiste en un autómata que sigue un conjunto finito de
                                 instrucciones. </li>
-                            <li>Por ejemplo:
+                            <li class="fragment">Por ejemplo:
                                 "Si en el estado #5 el símbolo leído es un 0, entonces escribe
                                 un 1".
                             </li>
@@ -414,25 +415,29 @@
                 <h4>Avances tecnológicos</h4>
                 <ul>
                     <li>Todos los computadores usan <i>interruptores electrónicos</i>.
-                    <li>Colossus y ENIAC usaban <i>tubos de vacio</i>.
-                    <li>Estos fueron reemplazados por <i>transistores</i> en los 50 y los principios de los 60.
-                    <li>Circuitos integrados fueron desarrollados en los 70.
-                    <li>Finalmente, a mediados de los 70, el <span style="color:
+                    <li class="fragment">Colossus y ENIAC usaban <i>tubos de vacio</i>.
+                    <li class="fragment">Estos fueron reemplazados por <i>transistores</i> en los 50 y los principios de los 60.
+                    <li class="fragment">Circuitos integrados fueron desarrollados en los 70.
+                    <li class="fragment">Finalmente, a mediados de los 70, el <span style="color:
                             red;">microprocesador </span> fue desarrollado (que tiene <i>billones</i>
                         de transistores).
                 </ul>
                 <div class="container">
-                    <div class="col">
+                    <div class="col, fragment">
                         <img src="class2_images/vacuum_tubes.jpg" height=170>
+                            <p>Tubos de vacío</p>
                     </div>
-                    <div class="col">
+                    <div class="col, fragment">
                         <img src="class2_images/transistors.jpg" height=170>
+                            <p>Transistores</p>
                     </div>
-                    <div class="col">
+                    <div class="col, fragment">
                         <img src="class2_images/integrated_circuit.jpg" height=170>
+                            <p>Circuitos integrados</p>
                     </div>
-                    <div class="col">
+                    <div class="col, fragment">
                         <img src="class2_images/microprocessor.jpg" height=170>
+                            <p>Microprocesadores</p>
                     </div>
                 </div>
             </section>
@@ -478,13 +483,27 @@
                 <h4>La idea básica</h4>
                 <ul>
                     <li>Los computadores modernos son dispositivos que usan un
-                            número <b>muy muy</b> grande de pequeños
-                        interruptores electricos para hacer operaciones lógicas.</li>
+                            número <b>muy muy grande de pequeños
+                        interruptores electricos para hacer operaciones lógicas</b>.</li>
                     <li>No han cambiado su diseño fundamental desde los primeros
                             computadores programables, que fueron
                         desarrollados en los 40 y 50.</li>
                 </ul>
             </section>
+
+                <section>
+                <h4>¿Qué son las operaciones lógicas?</h4>
+                <p>Nos permiten <b>combinar distintas
+                        afirmaciones (u operaciones)</b>, y las podemos usar
+                        para tomar una desición.</p>
+                    <ul>
+                <li class="fragment">Si tengo tiempo <b>y</b> ganas, entonces vendré a clases.</li>
+                <li class="fragment">Si tengo dinero <b>o</b> me invitan, entonces saldré de fiesta.</li>
+                <li class="fragment">Si <b>no</b> llueve, entonces saldré en
+                            bicicleta.</li>
+                    </ul>
+                    
+                </section>
 
             <section>
                 <h4>¿Qué son las operaciones lógicas?</h4>
@@ -548,11 +567,11 @@
             <section>
                 <h4>Arquitectura de un computador</h4>
                 <ul>
-                    <li>Sabemos que podemos representar operaciones lógicas por circuítos electrónicos (<i>circuítos
+                    <li class="fragment">Sabemos que podemos representar operaciones lógicas por circuítos electrónicos (<i>circuítos
                             lógicos</i>).</li>
-                    <li>Además, podemos combinar estas operaciones lógicas para representar cualquier cálculo lógico (es
+                    <li class="fragment">Además, podemos combinar estas operaciones lógicas para representar cualquier cálculo lógico (es
                         decir, cualquier algoritmo bien diseñado).</li>
-                    <li>Entonces, un computador con millones y millones de circuítos lógicos en un <i>chip</i> de
+                    <li class="fragment">Entonces, un computador con millones y millones de circuítos lógicos en un <i>chip</i> de
                         silicio puede (en principio) calcular cualquier cosa.</li>
                 </ul>
             </section>
@@ -589,7 +608,7 @@
                 <h4>Arquitectura de von Neumann</h4>
                 <div class="container">
                     <div class="col">
-                        <p>John von Neumann fue un matemático húngaro que contribuyó a muchos áreas: en la matemática,
+                        <p>John von Neumann fue un matemático húngaro que contribuyó a muchas áreas: en la matemática,
                             la informática, la física y la estadística.</p>
                     </div>
                     <div class="col">
