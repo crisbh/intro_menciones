@@ -625,12 +625,14 @@
                     </div>
                     <div class="col">
                         <ul>
-                            <li>Unidad central de procesamiento (Central Processing Unit - CPU)</li>
-                            <li>Memoria principal (Random Access Memory - RAM)</li>
-                            <li>Dispositivos de entrada/salida</li>
-                            <li>Almacenamiento (disco de estado sólido - SSD o disco duro
-                                - HDD)</li>
+                            <li>Unidad central de procesamiento (Central
+                                    Processing Unit - <b>CPU</b>)</li>
+                            <li>Memoria principal (Random Access Memory - <b>RAM</b>)</li>
+                            <li>Almacenamiento (disco de estado sólido - <b>SSD</b> o disco duro
+                                - <b>HDD</b>)</li>
                             <li>Circuitos de comunicación (<i>bus</i>).</li>
+                            <li>Dispositivos de entrada/salida (Input/Output -
+                                    <b>I/O</b>)</li>
                         </ul>
                     </div>
                 </div>
@@ -646,24 +648,24 @@
                         <ul>
                             <li>Unidad de control: dirige el sistema para ejecutar instrucciones de programas
                                 almacenados.</li>
-                            <li>Unidad de aritmética/lógica: ejecuta instrucciones aritméticas y lógicas.</li>
+                            <li>Unidad de aritmética/lógica (ALU): ejecuta instrucciones aritméticas y lógicas.</li>
                             <li>Registros: áreas de almacenamiento temporal, controlados por la unidad de control.</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <section>
-                <h4>CPU: registros</h4>
-                <p>No son parte de la memoria normal. Son componentes adicionales muy rapidos. Hay varios tipos:</p>
-                <ul>
-                    <li>Acumulador: registro que recoge los resultados de cálculos.</li>
-                    <li>Registro de direcciones: almacena la <i>dirección en memoria</i> de una instrucción o datos.
-                    </li>
-                    <li>Registro de almacenamiento: almacena temporalmente datos tomados de la memoria o destinados a la
-                        memoria.</li>
-                </ul>
-            </section>
+            <!-- <section> -->
+            <!--     <h4>CPU: registros</h4> -->
+            <!--     <p>No son parte de la memoria normal. Son componentes adicionales muy rapidos. Hay varios tipos:</p> -->
+            <!--     <ul> -->
+            <!--         <li>Acumulador: registro que recoge los resultados de cálculos.</li> -->
+            <!--         <li>Registro de direcciones: almacena la <i>dirección en memoria</i> de una instrucción o datos. -->
+            <!--         </li> -->
+            <!--         <li>Registro de almacenamiento: almacena temporalmente datos tomados de la memoria o destinados a la -->
+            <!--             memoria.</li> -->
+            <!--     </ul> -->
+            <!-- </section> -->
 
             <section>
                 <h4>Memoria</h4>
@@ -671,8 +673,9 @@
                     <div class="col">
                         <p>RAM, la memoria principal, almacenamiento primario.</p>
                         <ul>
-                            <li>Solamente almacena datos utilizados por un programa de forma temporal.</li>
-                            <li>Los datos y las instrucciones se trasladadan
+                            <li class="fragment">Almacena datos utilizados por
+                                    un programa de forma <b>temporal</b>.</li>
+                            <li class="fragment">Los datos y las instrucciones se trasladadan
                                 desde un dispositivo de entrada o un SSD o disco
                                 duro a la memoria a través de la <i>unidad de control</i>.</li>
                         </ul>
@@ -684,13 +687,13 @@
             </section>
 
             <section>
-                <h4>Almacenamiento secundario</h4>
+                <h4>Almacenamiento secundario (Memoria Permanente)</h4>
                 <div class="container">
                     <div class="col">
                         <p>Disco de estado sólido, disco duro, DVD, cinta magnetica...</p>
                         <ul>
-                            <li>Almacenamiento permanente.</li>
-                            <li>Los datos y las instrucciones se guardan incluso cuando se apaga el computador.</li>
+                            <li class="fragment">Almacena datos de forma permanente.</li>
+                            <li class="fragment">Estos se guardan incluso cuando se apaga el computador.</li>
                         </ul>
                     </div>
                     <div class="col">
@@ -699,15 +702,28 @@
                 </div>
             </section>
 
+            <section>
+                <h4>Operación básica del computador</h4>
+                <ol>
+                    <li class="fragment">Tipicamente tenemos un programa
+                            <b>guardado</b> en el SSD o HDD (memoria secundaria).</li>
+                    <li class="fragment">Cuando ejecutamos el programa, <b>cargamos datos</b> a la memoria primaria (RAM).</li>
+                    <li class="fragment">El CPU luego <b>lee</b> los datos en RAM como instrucciones para <b>ejecutar</b> el programa.</li>
+                    <li class="fragment">Las salidas de estas operaciones están guardados en RAM otra vez, o a veces guardamos los
+                        resultados permanentamente en el disco duro.</li>
+                </ol>
+            </section>
+
 
             <section>
-                <h3>Como funciona el computador</h3>
+                <h3>Como funciona el computador?</h3>
             </section>
 
             <section>
-                <h4>Números binarios</h4>
+                <h4>Los Números binarios</h4>
+                    <p>
                 Los computadores no usan números decimales, como nosotros, sino <span style="color: red">números
-                    binarios</span>.
+                    binarios</span>. </p>
             </section>
 
             <section>
@@ -715,7 +731,8 @@
                 <ul>
                     <li>El sistema <i>decimal</i> existía en la India hace al menos 1500 años.</li>
                     <li>Es un sistema de numeración posicional de base-10.</li>
-                    <li>Eso signifíca que las cantidades se representan utilizando las potencias del número diez.</li>
+                    <li>Es decir, las cantidades se representan utilizando las
+                            potencias del número 10.</li>
                     <li>La civilización Maya usaba un sistema de numeración de <i>base-20</i>!</li>
                 </ul>
                 <div class="container">
@@ -769,95 +786,52 @@
             <section>
                 <h4>Números binarios en la computación</h4>
                 <ul>
-                    <li>En el computador toda la información, procesamiento, etc. ocurre con números binarios.</li>
-                    <li>Se puede entender por qué, pensando en los interruptores eléctricos (que son los componentes
+                    <li>En el computador, toda la información, procesamiento,
+                            etc. ocurre utilizando números binarios.</li>
+                    <li class="fragment">Esto es compatible con los <b>interruptores eléctricos</b> (que son los componentes
                         básicos de los <i>chips</i>).</li>
-                    <li>Un interruptor tiene dos estados: encendido (<i>on</i>) o apagado (<i>off</i>).</li>
-                    <li>Este corresponde al sistema binario: $1$ corresponde a encendido, $0$ corresponde a apagado.
-                        Podemos combinar los estados de varios interruptores para formar números binarios más grandes.
-                    </li>
+                        <ul>
+                        <li class="fragment">Un interruptor tiene dos estados: encendido (<i>on</i>) o apagado (<i>off</i>).</li>
+                        <li class="fragment">$1$ corresponde a encendido, $0$ corresponde a apagado.</li>
+                        </ul>
+                        <li class="fragment">Podemos combinar los estados de varios interruptores para formar números binarios más grandes.</li>
                 </ul>
             </section>
+
+                <section>
+                    <h4>Números binarios e interruptores</h4>
+                        <img src="class2_images/binary_numbers_example.gif">
+                </section>
 
             <section>
                 <h4>Números binarios en la computación</h4>
                 <ul>
                     <li>Un solo $1$ o $0$, en jerga informática, se llama un <span style="color: red">bit</span>.</li>
-                    <li>Un conjunto de $8$ bits se conoce como un <span style="color: green">byte</span>.</li>
-                    <li>Un conjunto de $1024$ bytes se conoce como un <span style="color: blue">kilobyte</span>, etc.
-                    </li>
-                </ul>
-            </section>
-
-            <section>
-                <h4>El procesador central: CPU</h4>
-                <div class="container">
-                    <div class="col">
                         <ul>
-                            <li>El núcleo de un computador es su <span style="color: red">CPU: central processing
-                                    unit</span>.</li>
-                            <li>El CPU tiene números binarios (pulsos eléctricos) como entradas y otros números binarios
-                                como salidas, que se puede usar como nuevas entradas o guardados en la memoria.</li>
-                            <li>Se dice que el CPU ejecuta <i>instrucciones</i> (en forma de números binarios) que
-                                vienen de un programa.</li>
+                            <li class="fragment">Es la unidad de información más básica posible.</li>
                         </ul>
-                    </div>
-                    <div class="col">
-                        <img src="class2_images/intel_chip.png">
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h4>Ciclo de reloj (clock cycle)</h4>
-                <ul>
-                    <li>El reloj interno de un CPU sincroniza las operaciones, y marca el número de ciclos por segundo.
-                    </li>
-                    <li>Si un CPU tiene una <i>frecuencia</i> del reloj de $2,8$ Ghz, significa que
-                        éste ejecuta $2,8$ billones$^*$ de ciclos por segundo!</i>
-                </ul>
-                <p>$^*$: Notar que 1 billón "anglo" equivale a mil millones,
-                    i.e. $10^{9}$.</p>
-            </section>
-
-            <section>
-                <h4>Un ciclo de máquina (machine cycle)</h4>
-                <img src="class2_images/machinecycle.png" height=400>
-            </section>
-
-            <section>
-                <h4>Ciclo de reloj (clock cycle)</h4>
-                <p>Las <i>sub-instrucciones</i> que se ejecutan durante un <i>ciclo de máquina</i> demoran al menos un
-                    <i>ciclo de reloj (clock cycle)</i>.
-                </p>
-                <img src="class2_images/ciclo_reloj.png">
-            </section>
-
-
-            <section>
-                <h4>Ejecución de un programa</h4>
-                <div class="container">
-                    <div class="col">
+                    <li class="fragment">Un conjunto de $8$ bits se conoce como un <span style="color: green">byte</span>.</li>
                         <ul>
-                            <li>Un programa entero puede consistir de miles y miles de instrucciones.</li>
-                            <li>Como discutimos, los CPUs modernos pueden ejecutar millones de instrucciones por
-                                segundo.</li>
-                            <li>Además, pueden usar algunos trucos para poder a ejecutar varias instrucciones a la
-                                vez.</li>
+                            <li class="fragment">Es una unidad más 'práctica' de
+                                información.</li>
                         </ul>
-                    </div>
-                    <div class="col">
-                        <img src="class2_images/codigomaquina.jpg">
-                    </div>
-                </div>
+                    <li class="fragment">Se suele hablar más del <span
+                            style="color: green">byte</span> y múltiplos de
+                            este:</li>
+                        <ul>
+                            <li class="fragment">Por ejemplo: un conjunto de $1024$ bytes se conoce como un <span style="color: blue">kilobyte</span>.</li>
+                        </ul>
+                </ul>
+                    <p class="fragment">La información en el computador está codificada en
+                        términos de bits/bytes.</p>
             </section>
 
             <section>
                 <h4>La memoria</h4>
                 <ul>
-                    <li>Es necesario guardar las instrucciones antes de mandarlas al CPU. También necesitamos guardar
-                        las salidas del CPU.</li>
-                    <li>Por eso, necesitamos <span style="color:red">memoria</span>.</li>
+                    <!-- <li>Es necesario guardar las instrucciones antes de mandarlas al CPU. También necesitamos guardar -->
+                    <!--     las salidas del CPU.</li> -->
+                    <!-- <li>Por eso, necesitamos <span style="color:red">memoria</span>.</li> -->
                     <li>Como vimos antes, un computador tiene dos tipos principales de memoria:</li>
                     <ul>
                         <li>Memoria primaria: RAM</li>
@@ -901,17 +875,81 @@
                 </div>
             </section>
 
+
             <section>
-                <h4>Operación básica del computador</h4>
-                <ol>
-                    <li>Tipicamente tenemos un programa en el SSD o HDD (memoria secundaria).</li>
-                    <li>Cuando ejecutamos el programa, <b>cargamos datos</b> a la memoria primaria (RAM).</li>
-                    <li>El CPU luego <b>lee</b> los datos en RAM como
-                        instrucciones para <b>ejecutar</b> el programa.</li>
-                    <li>Las salidas de estas operaciones están guardados en RAM otra vez, o a veces guardamos los
-                        resultados permanentamente en el disco duro.</li>
-                </ol>
+                <h4>Ejecución de un programa</h4>
+                <div class="container">
+                    <div class="col">
+                        <ul>
+                            <li class="fragment">Para ejecutarse, un programa debe ser
+                                    <b>procesado</b> (leído) desde la memoria,
+                                    por el <b>CPU</b>.</li>
+                            <li class="fragment">Un programa entero puede consistir de miles y miles de instrucciones.</li>
+                            <li class="fragment">Como discutimos, los CPUs modernos pueden ejecutar millones de instrucciones por
+                                segundo.</li>
+                            <!-- <li>Además, pueden usar algunos trucos para poder a ejecutar varias instrucciones a la -->
+                            <!--     vez.</li> -->
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="class2_images/codigomaquina.jpg">
+                    </div>
+                </div>
             </section>
+
+                <section>
+                        <h4>Ejecución de un programa</h4>
+                        <img src="class2_images/cpu-memory-flow-diagram.png">
+                </section>
+
+            <section>
+                <h4>El procesador central: CPU</h4>
+                <div class="container">
+                    <div class="col">
+                        <ul>
+                            <li>El núcleo de un computador es su <span style="color: red">CPU: central processing
+                                    unit</span>.</li>
+                            <li>El CPU recibe números binarios (pulsos
+                                    eléctricos) como entradas y entrega otros números binarios
+                                como salidas, que se puede usar como nuevas entradas o guardados en la memoria.</li>
+                            <li>Se dice que el CPU ejecuta <i>instrucciones</i> (en forma de números binarios) que
+                                vienen de un programa.</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="class2_images/intel_chip.png">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h4>Ciclo de reloj (clock cycle)</h4>
+                <ul>
+                    <li>El reloj interno de un CPU sincroniza las operaciones, y
+                            marca el número de <b>ciclos por segundo</b>.</li>
+                    <li class="fragment">En cada ciclo, el CPU lee y procesa una cierta cantidad
+                        de instrucciones.</li>
+                    <li class="fragment">Si un CPU tiene una <i>frecuencia</i> del reloj de $2,8$ Ghz, significa que
+                        éste ejecuta $2,8$ billones$^*$ de ciclos por segundo!</i>
+                </ul>
+                <p class="fragment">$^*$: Notar que 1 billón "anglo" equivale a mil millones,
+                    i.e. $10^{9}$.</p>
+            </section>
+
+            <!-- <section> -->
+            <!--     <h4>Un ciclo de máquina (machine cycle)</h4> -->
+            <!--     <img src="class2_images/machinecycle.png" height=400> -->
+            <!-- </section> -->
+            <!---->
+            <!-- <section> -->
+            <!--     <h4>Ciclo de reloj (clock cycle)</h4> -->
+            <!--     <p>Las <i>sub-instrucciones</i> que se ejecutan durante un <i>ciclo de máquina</i> demoran al menos un -->
+            <!--         <i>ciclo de reloj (clock cycle)</i>. -->
+            <!--     </p> -->
+            <!--     <img src="class2_images/ciclo_reloj.png"> -->
+            <!-- </section> -->
+
+
 
             <section>
                 <h3>¿El futuro?</h3>
@@ -1000,14 +1038,18 @@
                 <div class="container">
                     <div class="col">
                         <ul>
-                            <li>La desaceleración de la Ley de Moore se puede combatir con el uso de varios
-                                procesadores:
-                                <i>paralelismo</i>. Los supercomputadores hoy en día tienen miles de procesadores.
-                            <li> Hoy en día, incluso
+                            <li>La desaceleración de la Ley de Moore se puede
+                                    combatir con el uso de muchos 
+                                procesadores trabajando simultáneamente:
+                                <i>paralelismo</i>. </li>
+                                    <ul>
+                                        <li>Hablaremos más sobre la computación
+                                        en paralelo próximamente.</li>
+                                    </ul>
+                            <li>Hoy en día, incluso
                                 las laptops y desktops tienen procesadores multinúcleo (<i>multicore</i>).
                             </li>
                         </ul>
-                        </p>
                     </div>
                     <div class="col">
                         <img src="class2_images/supercomputer.jpg">
@@ -1015,110 +1057,110 @@
                 </div>
             </section>
 
-            <section>
-                <h3>Computación en paralelo</h3>
-            </section>
-
-            <section>
-                <h4>Computación en serie</h4>
-                <div class="container">
-                    <div class="col">
-                        <ul>
-                            <li>Tradicionalmente un algoritmo se implementa como un flujo en serie de instrucciones.
-                            </li>
-                            <li>Las instrucciones se ejecutan en una unidad central de procesamiento.</li>
-                            <li>Sólo puede ejecutarse una instrucción a la vez.</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <img src="class2_images/serialProblem.gif">
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h4>Computación en paralelo</h4>
-                <div class="container">
-                    <div class="col">
-                        <ul>
-                            <li>Utiliza simultáneamente <span style="color: red;">múltiples </span> elementos de
-                                procesamiento.</li>
-                            <li>Necesita la separación del problema (y el algoritmo) en partes independientes.</li>
-                            <li>Cada elemento de procesamiento <b>ejecuta su parte </b> del algoritmo de manera
-                                simultánea con
-                                los otros.</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <img src="class2_images/parallelProblem.gif">
-                    </div>
-                </div>
-            </section>
-
-
-            <section>
-                <h4>Computación en paralelo</h4>
-                <div class="container">
-                    <div class="col">
-                        <ul>
-                            <li>Los elementos de procesamiento pueden ser:</li>
-                            <ul>
-                                <li>Núcleos individuales en procesadores
-                                    multinúcleos.</li>
-                                <li>Procesadores individuales en múltiples
-                                    computadores.</li>
-                            </ul>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <img src="class2_images/parallelProblem.gif">
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h4>Arquitecturas</h4>
-                <div class="container">
-                    <div class="col">
-                        <img src="class2_images/supercompu.jpeg" height=350>
-                    </div>
-                    <div class="col">
-                        <img src="class2_images/cluster_back.jpg" height=350>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h4>Arquitecturas</h4>
-                <div class="container">
-                    <div class="col">
-                        <figure>
-                            <img src="class2_images/coprocessor.png" height=300>
-                            <caption>
-                                <p>Coprocesadores (Intel Xeon Phi)</p>
-                            </caption>
-                        </figure>
-                    </div>
-                    <div class="col">
-                        <figure>
-                            <img src="class2_images/nvidia_tesla.jpg" height=300>
-                            <caption>
-                                <p>NVIDIA tarjeta gráfica (con GPU)</p>
-                            </caption>
-                        </figure>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h4>Coprocesador</h4>
-                <img src="class2_images/xeon_phi.jpg">
-            </section>
-
-            <section>
-                <h4>GPU</h4>
-                <img src="class2_images/nvidia_arc_big.png" height=400>
-            </section>
+            <!-- <section> -->
+            <!--     <h3>Computación en paralelo</h3> -->
+            <!-- </section> -->
+            <!---->
+            <!-- <section> -->
+            <!--     <h4>Computación en serie</h4> -->
+            <!--     <div class="container"> -->
+            <!--         <div class="col"> -->
+            <!--             <ul> -->
+            <!--                 <li>Tradicionalmente un algoritmo se implementa como un flujo en serie de instrucciones. -->
+            <!--                 </li> -->
+            <!--                 <li>Las instrucciones se ejecutan en una unidad central de procesamiento.</li> -->
+            <!--                 <li>Sólo puede ejecutarse una instrucción a la vez.</li> -->
+            <!--             </ul> -->
+            <!--         </div> -->
+            <!--         <div class="col"> -->
+            <!--             <img src="class2_images/serialProblem.gif"> -->
+            <!--         </div> -->
+            <!--     </div> -->
+            <!-- </section> -->
+            <!---->
+            <!-- <section> -->
+            <!--     <h4>Computación en paralelo</h4> -->
+            <!--     <div class="container"> -->
+            <!--         <div class="col"> -->
+            <!--             <ul> -->
+            <!--                 <li>Utiliza simultáneamente <span style="color: red;">múltiples </span> elementos de -->
+            <!--                     procesamiento.</li> -->
+            <!--                 <li>Necesita la separación del problema (y el algoritmo) en partes independientes.</li> -->
+            <!--                 <li>Cada elemento de procesamiento <b>ejecuta su parte </b> del algoritmo de manera -->
+            <!--                     simultánea con -->
+            <!--                     los otros.</li> -->
+            <!--             </ul> -->
+            <!--         </div> -->
+            <!--         <div class="col"> -->
+            <!--             <img src="class2_images/parallelProblem.gif"> -->
+            <!--         </div> -->
+            <!--     </div> -->
+            <!-- </section> -->
+            <!---->
+            <!---->
+            <!-- <section> -->
+            <!--     <h4>Computación en paralelo</h4> -->
+            <!--     <div class="container"> -->
+            <!--         <div class="col"> -->
+            <!--             <ul> -->
+            <!--                 <li>Los elementos de procesamiento pueden ser:</li> -->
+            <!--                 <ul> -->
+            <!--                     <li>Núcleos individuales en procesadores -->
+            <!--                         multinúcleos.</li> -->
+            <!--                     <li>Procesadores individuales en múltiples -->
+            <!--                         computadores.</li> -->
+            <!--                 </ul> -->
+            <!--             </ul> -->
+            <!--         </div> -->
+            <!--         <div class="col"> -->
+            <!--             <img src="class2_images/parallelProblem.gif"> -->
+            <!--         </div> -->
+            <!--     </div> -->
+            <!-- </section> -->
+            <!---->
+            <!-- <section> -->
+            <!--     <h4>Arquitecturas</h4> -->
+            <!--     <div class="container"> -->
+            <!--         <div class="col"> -->
+            <!--             <img src="class2_images/supercompu.jpeg" height=350> -->
+            <!--         </div> -->
+            <!--         <div class="col"> -->
+            <!--             <img src="class2_images/cluster_back.jpg" height=350> -->
+            <!--         </div> -->
+            <!--     </div> -->
+            <!-- </section> -->
+            <!---->
+            <!-- <section> -->
+            <!--     <h4>Arquitecturas</h4> -->
+            <!--     <div class="container"> -->
+            <!--         <div class="col"> -->
+            <!--             <figure> -->
+            <!--                 <img src="class2_images/coprocessor.png" height=300> -->
+            <!--                 <caption> -->
+            <!--                     <p>Coprocesadores (Intel Xeon Phi)</p> -->
+            <!--                 </caption> -->
+            <!--             </figure> -->
+            <!--         </div> -->
+            <!--         <div class="col"> -->
+            <!--             <figure> -->
+            <!--                 <img src="class2_images/nvidia_tesla.jpg" height=300> -->
+            <!--                 <caption> -->
+            <!--                     <p>NVIDIA tarjeta gráfica (con GPU)</p> -->
+            <!--                 </caption> -->
+            <!--             </figure> -->
+            <!--         </div> -->
+            <!--     </div> -->
+            <!-- </section> -->
+            <!---->
+            <!-- <section> -->
+            <!--     <h4>Coprocesador</h4> -->
+            <!--     <img src="class2_images/xeon_phi.jpg"> -->
+            <!-- </section> -->
+            <!---->
+            <!-- <section> -->
+            <!--     <h4>GPU</h4> -->
+            <!--     <img src="class2_images/nvidia_arc_big.png" height=400> -->
+            <!-- </section> -->
 
             <section>
                 <h4>Resumen</h4>
