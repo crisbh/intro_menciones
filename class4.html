@@ -113,11 +113,15 @@
                 <h4>¿Qué es un algoritmo?</h4>
                 <div class="container">
                     <div class="col">
-                        <p>Como vimos en la clase anterior, un algoritmo es como una receta: un conjunto de
-                            instrucciones para completar una tarea.</p>
+                            <ul>
+                                <li>Como vimos en la clase anterior, un algoritmo es como una receta: un conjunto de
+                                    instrucciones para completar una tarea. </li>
+                                <li>Lo que el algoritmo <i>hace</i> no depende del lenguaje de
+                                    programación (idioma).</li>
+                            </ul>
                     </div>
                     <div class="col">
-                        <img src="class4_images/receta1.png" height=300>
+                        <img src="class4_images/receta1.png" height=500>
                     </div>
                 </div>
             </section>
@@ -126,9 +130,9 @@
                 <h4>¿Qué es un algoritmo?</h4>
                 <p>
                 <ul>
-                    <li>Es un conjunto prescrito de instrucciones o reglas bien
-                        definidas, cuyo fin es obtener una
-                        solución.
+                    <li>Es un conjunto prescrito de instrucciones o pasos bien
+                        definidos, cuyo fin es obtener una
+                        solución o resultado.
                     </li>
                     <li>La
                         palabra viene del nombre del matemático, Mohammed ibn-Musa al-Khwarizmi, que formaba parte de la
@@ -148,7 +152,8 @@
                     <li>Los algoritmos son independientes de los medios utilizados para completar la tarea.</li>
                     <li>El mismo algoritmo podría implementarse con lapiz y papel, un computador, un abaco, etc.</li>
                     <li>Por lo tanto, son independientes del <i>lenguaje de programación</i> que usamos.</li>
-                    <li>Un programa de computador es simplemente una implementación o realización de un algoritmo.</li>
+                    <li>Un programa de computador es simplemente una
+                            implementación (o <i>realización</i>) de un algoritmo.</li>
                 </ul>
             </section>
 
@@ -188,6 +193,11 @@
                 <ul>
                     <li>La precisión del resultado y la rapidez en obtenerla dependen del algoritmo usado.</li>
                     <li>Si el algoritmo está diseñado mal, el problema será mucho más difícil de resolver.</li>
+                    <li>En general, evaluamos un algoritmo en términos de:</li>
+                        <ul>
+                            <li><b>Precisión</b> del resultado obtenido.</li>
+                            <li><b>Rapidez</b> para obtener el resultado.</li>
+                        </ul>
                 </ul>
             </section>
 
@@ -205,16 +215,18 @@
 
             <section>
                 <h4>Diseño del algoritmo</h4>
+                <div class="container">
+                    <div class="col">
                 <ul>
                     <li>Lista de instrucciones</li>
                     <li>Diagrama de flujo</li>
-                    <li>Pseudo-código</li>
                 </ul>
-                <div class="container">
-                    <div class="col">
                         <img src="class4_images/algoritmo1.png" height=300>
                     </div>
                     <div class="col">
+                <ul>
+                    <li>Pseudo-código</li>
+                </ul>
                         <img src="class4_images/pseudocodigo.png" height=300>
                     </div>
                 </div>
@@ -228,7 +240,7 @@
                             <li> Dado un conjunto de números, queremos ordenarlos en orden ascendiente.
                             <li> ¿Cómo podemos hacer eso?
                         </ul>
-                    </div>
+</div>
                     <div class="col">
                         <img src="class4_images/numbers.jpg">
                     </div>
@@ -253,18 +265,34 @@
             </section>
 
             <section>
+                <h4>Un ejemplo: ordenar números</h4>
+                <div class="container">
+                    <div class="col">
+                            <p class="fragment">La opción más simple es ir
+                                tomando cada número de la lista y compararlo con
+                                todo el resto.</p>
+                            <p class="fragment">Sin embargo, existen formas más <b>rápidas</b>
+                                (con menos pasos) que nos llevaran al <b>mismo resultado</b>.</p>
+                    </div>
+                    <div class="col">
+                        <img src="class4_images/numbers.jpg">
+                    </div>
+                </div>
+            </section>
+
+            <section>
                 <h4>Un ejemplo de un algoritmo para ordenar números</h4>
                 <p>Una posible solución a este problema es el siguiente algoritmo (que se llama "quicksort"):</p>
                 <ol>
-                    <li>Elegir un elemento de la lista, que se llama el elemento <i>pivote</i>.</li>
-                    <li>Colocar todos los números menores que el elemento pivote a la izquierda, y todos los números
+                    <li class="fragment">Elegir un elemento de la lista, que se llama el elemento <i>pivote</i>.</li>
+                    <li class="fragment">Colocar todos los números menores que el elemento pivote a la izquierda, y todos los números
                         mayores a la derecha.</li>
-                    <li>Para cada una de estas sublistas, realizar los pasos (1) y (2), e igualmente para cada sublista
+                    <li class="fragment">Para cada una de estas sublistas, realizar los pasos (1) y (2), e igualmente para cada sublista
                         dentro de las sublistas, etc.</li>
-                    <li>Eventualmente las sublistas tendrán solamente $1$ elemento o ninguno, y estas sublistas estarán
+                    <li class="fragment">Eventualmente las sublistas tendrán solamente $1$ elemento o ninguno, y estas sublistas estarán
                         ordenadas por definición.</li>
                 </ol>
-                <p>$\Rightarrow$ Algoritmo <i>recursivo</i>.</p>
+                <p class="fragment">$\Rightarrow$ Algoritmo <i>recursivo</i>.</p>
             </section>
 
             <section>
@@ -477,17 +505,17 @@
             <section>
                 <h4>Complejidad algorítmica: notación O grande</h4>
                 <ul>
-                    <li>El algoritmo de N-cuerpos tiene una complejidad de $O(n^2)$.</li>
-                    <li>Si la implementación del algorítmo (i.e. el programa) demora $2$ segundos para $10$ partículas
+                    <li class="fragment">El algoritmo de N-cuerpos tiene una complejidad de $O(n^2)$.</li>
+                    <li class="fragment">Si la implementación del algorítmo (i.e. el programa) demora $2$ segundos para $10$ partículas
                         (i.e. $n=10$),</li>
                     <ul>
-                        <li> $t = cn^2$, $2 = c(10^2) \Rightarrow c = 0,02$.</li>
+                        <li class="fragment"> $t = cn^2$, $2 = c(10^2) \Rightarrow c = 0,02$.</li>
                     </ul>
-                    <li> El programa demorará aproximadamente $200$ segundos para $n = 100$ partículas.</li>
+                    <li class="fragment"> El programa demorará aproximadamente $200$ segundos para $n = 100$ partículas.</li>
                     <ul>
-                        <li>$t = cn^2$, $t = (0,02) \times (100^2) = 200$.</li>
+                        <li class="fragment">$t = cn^2$, $t = (0,02) \times (100^2) = 200$.</li>
                     </ul>
-                    <li>Este algoritmo, por lo tanto, <i>escala</i> muy mal: demora mucho más tiempo cuando
+                    <li class="fragment">Este algoritmo, por lo tanto, <i>escala</i> muy mal: demora mucho más tiempo cuando
                         aumentamos el número de partículas un poco.</li>
                 </ul>
             </section>
@@ -502,9 +530,9 @@
                 <ul>
                     <li>Ejemplo: si uno tiene un <i>software</i> para simulaciones de N-cuerpos, pero sin información de
                         su complejidad algoritmica.</li>
-                    <li>Quizás uno lo usa para simular un cúmulo de estrellas muy pequeña con $20$ partículas, y tarda
+                    <li>Quizás uno lo usa para simular un cúmulo de estrellas muy pequeño con $20$ partículas, y tarda
                         $1$ hora para completarse.</li>
-                    <li> Si el algoritmo tiene complejidad $\mathcal{O}(n^2)$ y uno intenta simular una galaxia con
+                    <li>Si el algoritmo tiene complejidad $\mathcal{O}(n^2)$ y uno intenta simular una galaxia con
                         200.000 partículas, se demorará...</li>
                     <ul>
                         <p class="fragment"><span style="color:red">11.000 años!</span></p>
