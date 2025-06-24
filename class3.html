@@ -250,13 +250,13 @@
                         (siguen inventándose continuamente).</li>
                 <li>Una clasificación básica de los lenguajes tiene que ver con su nivel de <i>abstracción</i>.</li>
                     </ul>
-                <img src="class3_images/abstraccion.png" height=500>
+                <img src="class3_images/abstraccion.png" class="fragment" height=500>
             </section>
 
             <section>
                 <h4>Abstracción</h4>
-                <p>"Abstracción" se refiere que tan "lejano" es un lenguaje de
-                        programación y las las instrucciones binarias que usa el computador.</p>
+                <p>"Abstracción" se refiere a que tan "lejano" es un lenguaje de
+                        programación y las instrucciones binarias que usa el computador.</p>
                 <ul>
                     <li>Lenguajes de <span style="color:red">bajo nivel</span>: poca abstracción.</li>
                     <li>Lenguajes de <span style="color:blue">alto nivel</span>: mucha abstracción.</li>
@@ -327,7 +327,8 @@
                             <li class="fragment">Ventaja: Muy flexible, y podemos usar el interprete en "tiempo real" para dar comandos uno tras
                                 otro.
                             </li>
-                            <li class="fragment">Desventaja: es un proceso lento.</li>
+                            <li class="fragment">Desventaja: hace que la
+                                ejecución del programa sea lenta.</li>
                         </ul>
                 <li class="fragment"><span style="color:blue">Python</span> es un lenguaje <i>interpretado</i>.</li>
                 </ul>
@@ -395,11 +396,11 @@
                         import numpy as np
 
                         def suma(a,n):
-                        suma = 0
-                        for i in range(n):
-                        for j in range(n):
-                        suma += a[i,j]
-                        return suma
+                            suma = 0
+                            for i in range(n):
+                                for j in range(n):
+                                    suma += a[i,j]
+                            return suma
 
                         n = 100
                         b = np.random.rand(n,n)
@@ -446,7 +447,7 @@
 
                         for (i=0; i &lt n; i++){
                             for (j=0; j &lt n; j++){
-                            suma += arr[i][j];
+                                suma += arr[i][j];
                             }
                         }
                         return suma;
@@ -489,7 +490,7 @@
                 <ul>
                     <li>Propiedades: propósito general, <i>compilado</i>.</li>
                     <li>C++ es una extensión de C, que incluye la capacidad de programación <i>orientada a objetos</i>
-                        (object-oriented programming) y <i>genérica</i> (generic programming).</li>
+                        (object-oriented programming).</li>
                     <li>Apareció originalmente en 1983, y ha sido ampliamente utilizado en el desarrollo de software
                         comercial.</li>
                 </ul>
@@ -507,7 +508,7 @@
                 <h4>Java</h4>
                 <ul>
                     <li>Propiedades: propósito general, <i>compilado</i>.</li>
-                    <li>Tiene una sintaxis similar a C++, aunque Java está completamente <i>orientada a objetos</i>.
+                    <li>Tiene una sintaxis similar a C++.
                     </li>
                     <li>Diseñado con el fin de obtener máxima <i>portabilidad</i>, i.e. para que un programa escrito en
                         Java pueda usarse en cualquier plataforma.</li>
@@ -547,22 +548,20 @@
 
             <section>
                 <h4>Dos lenguajes más especializados</h4>
-                <ul>
-                    <li><b>Wolfram</b>: Lenguaje empleado por el software
+                <div class="container">
+                    <div class="col">
+                    <p><b>Wolfram</b>: Lenguaje empleado por el software
                         <i>Mathematica</i>. Popular en la física teórica
                         debido a sus capacidades de cálculo simbólico.
                         Requiere
                         pagar licencia.
-                    </li>
-                    <li><b>IDL</b>: Interactive Data Language. Se usa bastante en astronomía, ciencias atmosféricas y
-                        imagen médica. Requiere pagar licencia.</li>
-                </ul>
-                <div class="container">
-                    <div class="col">
+                    </p>
                         <img src="class3_images/Wolfram_Language_Logo_2016.png" , height=250>
                     </div>
                     <div class="col">
-                        <img src="class3_images/idl.jpg" , height=250>
+                    <p><b>IDL</b>: Interactive Data Language. Se usa bastante en astronomía, ciencias atmosféricas y
+                                imagen médica. Requiere pagar licencia.</p>
+                        <img src="class3_images/idl.jpg" , width=350>
                     </div>
                 </div>
             </section>
