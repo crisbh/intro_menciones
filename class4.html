@@ -221,13 +221,14 @@
                     <li>Lista de instrucciones</li>
                     <li>Diagrama de flujo</li>
                 </ul>
-                        <img src="class4_images/algoritmo1.png" height=300>
+                        <img src="class4_images/algoritmo1.png" height=400>
                     </div>
                     <div class="col">
                 <ul>
-                    <li>Pseudo-código</li>
+                    <li class="fragment">Pseudo-código</li>
                 </ul>
-                        <img src="class4_images/pseudocodigo.png" height=300>
+                        <img src="class4_images/pseudocodigo.png"
+                                class="fragment" height=400>
                     </div>
                 </div>
             </section>
@@ -283,6 +284,7 @@
             <section>
                 <h4>Un ejemplo de un algoritmo para ordenar números</h4>
                 <p>Una posible solución a este problema es el siguiente algoritmo (que se llama "quicksort"):</p>
+                    <p class="fragment"><b>Algoritmo Quicksort</b></p>
                 <ol>
                     <li class="fragment">Elegir un elemento de la lista, que se llama el elemento <i>pivote</i>.</li>
                     <li class="fragment">Colocar todos los números menores que el elemento pivote a la izquierda, y todos los números
@@ -292,7 +294,7 @@
                     <li class="fragment">Eventualmente las sublistas tendrán solamente $1$ elemento o ninguno, y estas sublistas estarán
                         ordenadas por definición.</li>
                 </ol>
-                <p class="fragment">$\Rightarrow$ Algoritmo <i>recursivo</i>.</p>
+                <p class="fragment">$\Rightarrow$ se trata de un algoritmo <i>recursivo</i>.</p>
             </section>
 
             <section>
@@ -316,11 +318,11 @@
             <section>
                 <h4>Eligiendo el mejor algoritmo</h4>
                 <ul>
-                    <li>¿Cómo sabemos que el algoritmo que hemos diseñado es la "mejor" solución?</li>
-                    <li>¿Qué significaría "mejor" en este caso?</li>
-                    <li>Típicamente significa el <b>más preciso </b>y el <b>más rápido</b>.</li>
-                    <li>Precisión es normalmente el primer aspecto de un algoritmo que verificamos.</li>
-                    <li>Calcular la rapidez de un algoritmo es un problema desafiante. ¿Cómo podemos comparar la rapidez
+                    <li class="fragment">¿Cómo sabemos que el algoritmo que hemos diseñado es la "mejor" solución?</li>
+                    <li class="fragment">¿Qué significaría "mejor" en este caso?</li>
+                    <li class="fragment">Típicamente significa el <b>más preciso </b>y el <b>más rápido</b>.</li>
+                    <li class="fragment">Precisión es normalmente el primer aspecto de un algoritmo que verificamos.</li>
+                    <li class="fragment">Calcular la rapidez de un algoritmo es un problema desafiante. ¿Cómo podemos comparar la rapidez
                         de dos algoritmos?</li>
                 </ul>
             </section>
@@ -340,9 +342,14 @@
             <section>
                 <h4>Complejidad algorítmica</h4>
                 <ul>
-                    <li>En la computación la rapidez de un algoritmo se define en términos de su "complejidad".</li>
+                    <li>En la computación, la rapidez de un algoritmo se define
+                            en términos de su <i>complejidad algorítmica</i>.</li>
                     <li>Determinamos la complejidad de un algoritmo por la consideración del <b>número de pasos</b> que
                         el algoritmo tiene que ejecutar para completar su tarea.</li>
+                        <ul>
+                            <li>Algoritmos que requieran más pasos serán más
+                                lentos (mayor complejidad algorítmica).</li>
+                        </ul>
                 </ul>
             </section>
 
@@ -350,7 +357,7 @@
                 <h4>Complejidad algorítmica</h4>
                 <ul>
                     <li>Pero, ¿qué es un "paso" para un algoritmo?</li>
-                    <li>La definición exacta de lo que constituye un "paso" depende del algoritmo.</li>
+                    <!-- <li>La definición exacta de lo que constituye un "paso" depende del algoritmo.</li> -->
                     <li>NO es algo al nivel del procesador y sus ciclos de operación.</li>
                     <li>En el análisis de algoritmos, estamos pensando al nivel de los cálculos necesarios en el
                         algoritmo.</li>
@@ -365,12 +372,18 @@
             <section>
                 <h4>Complejidad algorítmica</h4>
                 <ul>
-                    <li>De hecho, estamos más interesados, cuando hablamos de complejidad, en como el algoritmo se
-                        <i>escala</i> cuando lo aplicamos a más datos.
+                    <li>La complejidad algorítmica nos dirá como el algoritmo <i>escala</i> cuando lo aplicamos a más datos.
                     </li>
                     <li>En el caso de "quicksort" queremos saber que tan rápido o lento es el algoritmo cuando lo
-                        aplicamos a una lista de $100$ elementos, comparado a $10$, o $1000000$ elementos comparado a
-                        $1000$, etc.</li>
+                        aplicamos a una lista de:</li>
+                            <ul>
+                               <li>$10$ elementos</li> 
+                               <li>$100$ elementos</li> 
+                               <li>$1000$ elementos</li> 
+                               <li>...</li> 
+                            </ul>
+                        <p>Por ejemplo, nos gustaría saber: ¿Cuantos pasos se requieren en el caso de $100$ vs
+                            $10$?</p>
                 </ul>
             </section>
 
