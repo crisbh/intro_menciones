@@ -328,6 +328,10 @@
             </section>
 
             <section>
+                <h3>Rapidez</h3>
+            </section>
+
+            <section>
                 <h4>Determinando la rapidez de un algoritmo</h4>
                 <ul>
                     <li>Recordar que un algoritmo es independiente de los medios utilizados para implementarlo.</li>
@@ -338,6 +342,7 @@
                         procesador, el número de procesadores, si usamos Python o C, etc.</li>
                 </ul>
             </section>
+
 
             <section>
                 <h4>Complejidad algorítmica</h4>
@@ -418,6 +423,25 @@
                 <img src="class4_images/nbody.jpg">
             </section>
 
+
+                <section>
+                <h4>Ejemplo: muchos planetas</h4>
+                    <iframe width="660" height="415"
+                      src="https://www.youtube.com/embed/fJxPgz37sUE"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                </section>
+
+                <section>
+                <h4>Ejemplo: formación de la Luna</h4>
+                    <iframe width="660" height="415"
+                      src="https://www.youtube.com/embed/6pxRDCJPn0k"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                </section>
+
             <section>
                 <h4>Complejidad algorítmica: N-cuerpos</h4>
                 <div class="container">
@@ -478,8 +502,9 @@
                             <li>Pero, estamos contando los mismos pares dos veces: el par $(3,5)$ es el mismo par como
                                 $(5,3)$.</li>
                             <li>Multiplicamos por $1/2$, para obtener el número final de pares <span
-                                    style="color:blue">únicos</span>: $\frac{1}{2}(n^2 - n)$.</li>
+                                    style="color:blue">únicos</span>: </li>
                         </ul>
+                                <p>$\frac{1}{2}(n^2 - n)$</p>
                     </div>
                     <div class="col">
                         <img src="class4_images/nbody_rot.jpg" height=500>
@@ -501,10 +526,10 @@
                     <div class="col">
                         <ul>
                             <li>El número de pares de $n$ partículas es $\frac{1}{2}(n^2 - n)$. Usamos el término del
-                                grado
-                                más alto del polinomio (sin preocuparnos por los coeficientes): $\mathcal{O}(n^2)$.
+                                <b>grado más alto</b> del polinomio (sin preocuparnos por los coeficientes). 
                             </li>
-                            <li>Este es porque este término crece más rápido con $n$ mayor que los otros, y el factor de
+                                <p>Complejidad algorítmica: $\mathcal{O}(n^2)$</p>
+                            <li>Lo anterior se debe a que este término es el que crece más rápido con $n$, y el factor de
                                 $1/2$ no es muy importante si $n$ es un número
                                 grande.</li>
                         </ul>
@@ -520,7 +545,7 @@
                 <ul>
                     <li class="fragment">El algoritmo de N-cuerpos tiene una complejidad de $O(n^2)$.</li>
                     <li class="fragment">Si la implementación del algorítmo (i.e. el programa) demora $2$ segundos para $10$ partículas
-                        (i.e. $n=10$),</li>
+                        (i.e. $n=10$):</li>
                     <ul>
                         <li class="fragment"> $t = cn^2$, $2 = c(10^2) \Rightarrow c = 0,02$.</li>
                     </ul>
@@ -541,8 +566,8 @@
             <section>
                 <h4>¿Por qué es importante saber la complejidad de un algoritmo?</h4>
                 <ul>
-                    <li>Ejemplo: si uno tiene un <i>software</i> para simulaciones de N-cuerpos, pero sin información de
-                        su complejidad algoritmica.</li>
+                    <li>Ejemplo: supongamos que tenemos un <i>software</i> para simulaciones de N-cuerpos, pero sin información de
+                        su complejidad algorítmica.</li>
                     <li>Quizás uno lo usa para simular un cúmulo de estrellas muy pequeño con $20$ partículas, y tarda
                         $1$ hora para completarse.</li>
                     <li>Si el algoritmo tiene complejidad $\mathcal{O}(n^2)$ y uno intenta simular una galaxia con
@@ -550,7 +575,7 @@
                     <ul>
                         <p class="fragment"><span style="color:red">11.000 años!</span></p>
                         <div>
-                            <p class="fragment">En qué momento se deja de esperar..?</p>
+                            <p class="fragment">¿En qué momento se deja de esperar?</p>
                         </div>
                     </ul>
             </section>
@@ -645,10 +670,15 @@
 
             <section>
                 <h4>Precisión en la computación</h4>
-                <p>Estamos todos acostumbrados a calcular cosas en una calculadora (o en el teléfono) y confiar en el
-                    resultado. Pero, de hecho, los computadores nunca son perfectamente precisos.</p>
-                <p>$\Rightarrow$ Tienen una memoria finita</p>
-                <p>$\Rightarrow$ Utilizan números binarios.</p>
+                    <ul>
+                        <li>Estamos todos acostumbrados a calcular cosas en una calculadora (o en el teléfono) y confiar en el
+                    resultado.</li>
+                        <li>Pero, de hecho, los computadores nunca son perfectamente precisos.</li>
+                        <ul>
+                            <li>Tienen una memoria finita.</li>
+                            <li>Utilizan números binarios.</li>
+                        </ul>
+                    </ul>
             </section>
 
             <section>
@@ -665,9 +695,9 @@
                 <h4>Memoria finita</h4>
                 <ul>
                     <li>No se puede escribir $\pi$ en ningún sistema de números (base-10, base-20, lo que sea) a una
-                        precisión arbitraria porque requeriría un número infinito de dígitos.</li>
-                    <li>Por lo tanto, cualquier cálculo en un computador que involucra $\pi$ tiene que ser (hasta cierto
-                        punto) inexacto porque el número está truncado.</li>
+                        precisión arbitraria porque requeriría un número <b>infinito de dígitos</b>.</li>
+                    <li class="fragment">Por lo tanto, cualquier cálculo en un computador que involucra $\pi$ tiene que ser (hasta cierto
+                        punto) inexacto porque el número <b>está truncado</b>.</li>
                 </ul>
             </section>
 
@@ -676,7 +706,7 @@
                 <ul>
                     <li>De hecho, la mayoría de los lenguajes de programación ponen límites en los tamaños de los
                         números que se puede guardar en una variable.</li>
-                    <li>En Python un <i>float</i> normal no puede ser mayor que $10^{308}$. ¿Por qué? Tiene que ver con
+                    <li class="fragment">En Python un número normal de tipo <i>float</i> no puede ser mayor que $10^{308}$. ¿Por qué? Tiene que ver con
                         como los computadores guardan números en binario.</li>
                 </ul>
             </section>
@@ -686,13 +716,18 @@
                 <ul>
                     <li>Existe un estandar en la informática, llamado IEEE754, que define como guardar un número de
                         punto flotante en la
-                        memoria de un computador.</li>
-                    <li>En Python hay un total de $64$ bits para guardar un <i>float</i>. De estos, $1$ bit es para el
-                        signo (+/-), $11$
-                        bits son para el exponente, y $52$ bits son para el significando (fracción, mantisa,
-                        coeficiente).</li>
+                        memoria de un computador. Se parece a la notación
+                            científica.</li>
+                    <p class="fragment">Ej: $-5492,0403 \implies -5,4920403\times10^{3}$</p>
+                    <li class="fragment">En Python hay un total de $64$ bits para guardar un
+                            <i>float</i>. De estos: </li>
+                        <ul>
+                        <li class="fragment">$1$ bit es para el signo (+/-)</li>
+                        <li class="fragment">$11$ bits son para el exponente</li>
+                        <li class="fragment">$52$ bits son para el significando (fracción, mantisa, coeficiente).</li>
+                        </ul>
                 </ul>
-                <img src="class4_images/double_float.png">
+                <img class="fragment" src="class4_images/double_float.png">
             </section>
 
             <section>
@@ -700,9 +735,9 @@
                 <ul>
                     <li>Con $11$ bits en el exponente, el rango de números decimales que se puede guardar es de $-1024$
                         a $1023$.</li>
-                    <li>$2^{1023}$ es aproximadamente $10^{308}$.</li>
+                    <li>$2^{1023}$ es aproximadamente $10^{308} \implies$ número
+                            más grande que puede usarse.</li>
                 </ul>
-                <img src="class4_images/double_float.png">
             </section>
 
             <section>
@@ -711,13 +746,13 @@
                     <li>Entonces, todos los números de punto flotante en un computador están truncados.</li>
                     <li>En la mayoría de los lenguajes hay <i>floats</i> de precisión-simple (<i>single-precision</i>) y
                         precisión-doble (<i>double-precision</i>).</li>
-                    <li>Precisión-simple: $32$ bits. Precisión-doble: $64$ bits.</li>
+                    <li>Precisión-doble: $64$ bits. Precisión-simple: $32$ bits:</li>
                 </ul>
                 <img src="class4_images/single_float.png">
                 <ul>
-                    <li>Es importante saber cual se ocupa, ya que determina la precisión numérica del algoritmo.</li>
-                    <li>Ojo: no siempre es más conveniente utilizar
-                        Precisión-doble, ya que requiere el doble de memoria que
+                    <li>Es importante saber cual se ocupa, ya que determina la precisión numérica.</li>
+                    <li class="fragment">Ojo: no siempre es más conveniente utilizar
+                        Precisión-doble, ya que requiere el <b>doble de memoria</b> que
                         Precisión-simple.</li>
                 </ul>
             </section>
@@ -726,7 +761,8 @@
                 <h4>Precisión de la máquina</h4>
                 <ul>
                     <li>El grado de precisión que uno puede obtener en una variable se llama la <span
-                            style="color:blue">precisión de la máquina</span> (<i>machine precision</i>), $\epsilon$.
+                            style="color:blue">precisión de la máquina</span>
+                            (<i>machine precision</i>), $\epsilon_{M}$.
                     </li>
                     <li>No importa el programa que escribamos, ni el algoritmo que usamos, <b>nunca</b> calcularemos
                         valores a una precisión mayor que la precisión de la máquina.</li>
@@ -736,7 +772,7 @@
                         distintos tipos, y por eso podemos obtener valores muy pequeños para $\epsilon$ (es decir,
                         precisión extremadamente alta).</li>
                 </ul>
-                <p>Precisión doble: $\epsilon = 2^{-53} \approx 1,11 \times 10^{-16}$.</p>
+                    <p>En Precisión Doble (64 bits): $\epsilon_{M} = 2^{-53} \approx 1,11 \times 10^{-16}$.</p>
             </section>
 
             <!-- <section> -->
@@ -750,20 +786,20 @@
             <!--     </ul> -->
             <!-- </section> -->
             <!---->
-            <section>
-                <h4>El problema de precisión finita</h4>
-                <ul>
-                    <li>Ejemplo: errores al multiplicar un número muy pequeño por otro muy
-                        grande:
-                    <li>La constante gravitacional en unidades SI: $6,67408 \times 10^{-11}$ m$^3$ kg$^{-1}$ $s^{-2}$.
-                    </li>
-                    <li>La masa solar en unidades SI: $2 \times 10^{30}$ kg.</li>
-                    <li>Al multiplicar ambas cantidades, el septimo dígito (último
-                        digito válido en precisión simple) del resultado será un número de magnitud $10^{13}$!</li>
-                    <li>Este número podría ser suficientemente grande para modificar otros números en el cálculo e
-                        introducir errores.</li>
-                </ul>
-            </section>
+            <!-- <section> -->
+            <!--     <h4>El problema de precisión finita</h4> -->
+            <!--     <ul> -->
+            <!--         <li>Ejemplo: errores al multiplicar un número muy pequeño por otro muy -->
+            <!--             grande: -->
+            <!--         <li>La constante gravitacional en unidades SI: $6,67408 \times 10^{-11}$ m$^3$ kg$^{-1}$ $s^{-2}$. -->
+            <!--         </li> -->
+            <!--         <li>La masa solar en unidades SI: $2 \times 10^{30}$ kg.</li> -->
+            <!--         <li>Al multiplicar ambas cantidades, el septimo dígito (último -->
+            <!--             digito válido en precisión simple) del resultado será un número de magnitud $10^{13}$!</li> -->
+            <!--         <li>Este número podría ser suficientemente grande para modificar otros números en el cálculo e -->
+            <!--             introducir errores.</li> -->
+            <!--     </ul> -->
+            <!-- </section> -->
 
             <section>
                 <h4>Números que no se puede representar exactamente en binario</h4>
@@ -782,20 +818,24 @@
                             style="color:red">binario</span>.</li>
                     <li>Un ejemplo común es el número $0.1$ (una representación <i>exacta</i> de $1/10$ en el sistema
                         decimal).</li>
-                    <li>En binario, este tiene la representación $0.000110011001100110011\ldots$.
-                        Por lo tanto, <b>nunca</b> tendremos el valor $0.1$
-                        representado <b>exactamente</b> en el computador - siempre habrá un error del tamaño de la
-                        precisión de la máquina.</li>
+                    <li>En binario, este tiene la representación $0.000110011001100110011\ldots$.</li>
+                        <ul>
+                            <li>Por lo tanto, <b>nunca</b> tendremos el valor $0.1$
+                        representado <b>exactamente</b> en el computador. Siempre habrá un error del tamaño de la
+                        precisión de la máquina ($\epsilon_M$).</li>
+                        </ul>
                 </ul>
             </section>
 
             <section>
                 <h4>Resumen</h4>
                 <ul>
-                    <li> Algoritmos son procesos estructurados diseñados para resolver un problema especifico.</li>
-                    <li> El primer paso, en cualquier tarea computacional, es pensar sobre el algoritmo, diseñarlo y
+                    <li>Algoritmos son procesos estructurados diseñados para
+                            resolver un problema específico.</li>
+                    <li>El primer paso, en cualquier tarea computacional, es pensar sobre el algoritmo, diseñarlo y
                         planificarlo.</li>
-                    <li>La implementación de un algorítmo es un <span style="color:blue">programa</span>.</li>
+                    <li>Un <span style="color:blue">programa</span> puede verse
+                            como la <i>implementación</i> de un algoritmo.</li>
                     <li>Un algoritmo bueno es <i>rápido</i> y <i>preciso</i>.</li>
                     <li>La complejidad algorítmica: como escala su tiempo de ejecución con la cantidad de datos que
                         usamos como entrada al
@@ -810,7 +850,8 @@
                     <li>La exactitud de los algoritmos está afectada por la precisión de las variables.</li>
                     <li>Casi todos los números que se representan en el computador tienen un cierto nivel de
                         imprecisión.</li>
-                    <li>Siempre debemos estar consciente de esto cuando escribimos programas.</li>
+                    <li>Debemos estar consciente de esto cuando escribimos
+                            programas y hacemos cálculos con el computador.</li>
                 </ul>
             </section>
 
