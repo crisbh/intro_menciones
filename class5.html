@@ -168,35 +168,61 @@
 
             <section>
                 <h4>La jerga del paralelismo</h4>
-                <p><i>Proceso</i>: algo que se ejecuta en el sistema. Podría ser un browser, Skype, un videojuego, un
-                    terminal de Python, un script de Python, etc.</p>
+                <p><i>Proceso</i>: algo que se ejecuta en el sistema. Podría ser
+                        un navegador, un videojuego, un script de Python, etc.</p>
                 <img src="class5_images/taskManager.png">
             </section>
 
             <section>
+                <h4>Memoria para procesos</h4>
+                <div class="container">
+                    <div class="col">
+                        <ul>
+                            <!-- <li>Un proceso: basicamente un programa que se ejecuta en el sistema.</li> -->
+                            <li>Cada proceso tiene acceso a la memoria que el sistema asigna.</li>
+                            <li>Típicamente, el bloque de memoria asignada al
+                                    proceso pertenece <b>exclusivamente</b> a
+                                    ese proceso.</li>
+                                <ul>
+                                    <li>Otros procesos en el sistema no lo
+                                        pueden acceder al mismo bloque de
+                                        memoria.</li>
+                                </ul>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <img src="class5_images/process_memory.png">
+                    </div>
+                </div>
+            </section>
+
+            <section>
                 <h4>La jerga del paralelismo</h4>
-                <p><i>Hilo</i> (Thread): un subproceso comenzado por algún proceso controlador. Por ejemplo, un script
-                    de Python podría usar varios <i>hilos</i> durante su ejecución.</p>
+                    <ul>
+                        <li><i>Hilo</i> (Thread): un <i>subproceso</i> comenzado
+                            por algún proceso controlador.</li>
+                        <li>Por ejemplo, un script de Python podría usar varios <i>hilos</i> durante su ejecución.</li>
+                    </ul>
                 <img src="class5_images/multithread.png" height=300>
             </section>
 
-            <section>
-                <h4>La jerga del paralelismo</h4>
-                <p><span style="color: blue;">Memoria compartida</span>: una arquitectura donde cada unidad de
-                    procesamiento accede al mismo bloque
-                    de memoria global.</p>
-                <img src="class5_images/shared_mem.png">
-            </section>
-
-            <section>
-                <h4>La jerga del paralelismo</h4>
-                <p> <span style="color: red;">Memoria distribuida</span>: una arquitectura donde cada unidad de
-                    procesamiento tiene su propio
-                    bloque de
-                    memoria.</p>
-                <p>Las unidades se comunican mediante una red (network).</p>
-                <img src="class5_images/distributed_mem.png">
-            </section>
+            <!-- <section> -->
+            <!--     <h4>La jerga del paralelismo</h4> -->
+            <!--     <p><span style="color: blue;">Memoria compartida</span>: una arquitectura donde cada unidad de -->
+            <!--         procesamiento accede al mismo bloque -->
+            <!--         de memoria global.</p> -->
+            <!--     <img src="class5_images/shared_mem.png"> -->
+            <!-- </section> -->
+            <!---->
+            <!-- <section> -->
+            <!--     <h4>La jerga del paralelismo</h4> -->
+            <!--     <p> <span style="color: red;">Memoria distribuida</span>: una arquitectura donde cada unidad de -->
+            <!--         procesamiento tiene su propio -->
+            <!--         bloque de -->
+            <!--         memoria.</p> -->
+            <!--     <p>Las unidades se comunican mediante una red (network).</p> -->
+            <!--     <img src="class5_images/distributed_mem.png"> -->
+            <!-- </section> -->
 
             <section>
                 <h4>Tipos de paralelismo</h4>
@@ -212,22 +238,6 @@
                 </ul>
             </section>
 
-            <section>
-                <h4>Memoria para procesos</h4>
-                <div class="container">
-                    <div class="col">
-                        <ul>
-                            <li>Un proceso: basicamente un programa que se ejecuta en el sistema.</li>
-                            <li>Cada proceso tiene acceso a la memoria que el sistema asigna.</li>
-                            <li>Típicamente el bloque de memoria asignada al proceso pertenece <i>exclusivamente</i> al
-                                proceso - los otros procesos en el sistema no lo pueden acceder.</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <img src="class5_images/process_memory.png">
-                    </div>
-                </div>
-            </section>
 
             <section>
                 <h4>Paralelismo multi-proceso</h4>
@@ -443,9 +453,9 @@
                 <h4>Comunicación</h4>
                 <ul>
                     <li>¡Ojo! Hemos olvidado algo MUY importante...</li>
-                    <li>Cada parte de la atmósfera está conectada con otras partes: no están aislados y el aire se
+                    <li>Cada parte de la atmósfera está conectada con otras partes: no están aisladas y el aire se
                         mueve!</li>
-                    <li>Necesitamos comunicación entre los procesos para actualizar los valores en los bordes de las
+                    <li>Luego, necesitamos comunicación entre los procesos para actualizar los valores en los bordes de las
                         sub-mallas</li>
                 </ul>
                 <img src="class5_images/process4.png" height=300>
@@ -458,10 +468,10 @@
                     <li>En este ejemplo, podemos escribir en el programa que cada proceso tiene que compartir los
                         resultados en el borde de la sub-malla con todas las sub-mallas vecinas, en cada paso del
                         tiempo.</li>
-                    <li>Típicamente eso se hace con librerías específicas para el paralelismo (MPI, OpenMP, etc.)</li>
-                    <li>Hay <i>lenguajes</i> de programación paralela que intentan simplificar la parte de comunicación
-                        (e.g. Co-array Fortran, Parallel C, Chapel, etc.)</li>
-                    <li>Mucho más sobre este en el curso de <i>Programación Paralela</i>!</li>
+                    <li>Típicamente se usan <i>librerías</i> específicas para el paralelismo (MPI, OpenMP, etc.)</li>
+                    <!-- <li>Hay <i>lenguajes</i> de programación paralela que intentan simplificar la parte de comunicación -->
+                    <!--     (e.g. Co-array Fortran, Parallel C, Chapel, etc.)</li> -->
+                    <!-- <li>Mucho más sobre este en el curso de <i>Programación Paralela</i>!</li> -->
                 </ul>
             </section>
 
