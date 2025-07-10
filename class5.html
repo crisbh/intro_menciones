@@ -179,7 +179,8 @@
                     <div class="col">
                         <ul>
                             <!-- <li>Un proceso: basicamente un programa que se ejecuta en el sistema.</li> -->
-                            <li>Cada proceso tiene acceso a la memoria que el sistema asigna.</li>
+                            <li>Cada proceso tiene acceso a la memoria que el
+                                    sistema operativo le asigna.</li>
                             <li>Típicamente, el bloque de memoria asignada al
                                     proceso pertenece <b>exclusivamente</b> a
                                     ese proceso.</li>
@@ -362,12 +363,13 @@
                     <div class="col">
                         <ul>
                             <li>En la simulación hay una malla esférica en $3D$.</li>
-                            <li>En cada "celda" de la malla el programa calcula presión, densidad, temperatura, etc.
+                            <li>En cada elemento ("celda") de la malla, el programa calcula presión, densidad, temperatura, etc.
                             </li>
-                            <li>Las simulaciones modernas incluyen cálculos de procesos que ocurren a
-                                escalas mucho menor que la escala de cada
-                                celda.</li>
-                            <li>Veremos mucho más sobre simulaciones más tarde...</li>
+                            <!-- <li>Las simulaciones modernas incluyen cálculos de procesos que ocurren a -->
+                            <!--     escalas mucho menor que la escala de cada -->
+                            <!--     celda.</li> -->
+                            <li>Veremos más sobre simulaciones durante la
+                                    próxima clase.</li>
                         </ul>
                     </div>
                     <div class="col">
@@ -379,17 +381,18 @@
             <section>
                 <h4>Simulaciones del clima</h4>
                 <ul>
-                    <li>Típicamente la malla computacional tendrá $1.5$ millones de puntos (celda de
+                    <li>Típicamente, la malla computacional tendrá $1.5$
+                            millones de elementos (celda de
                         área $100$ km$^2$, $30$ capas de la atmósfera).</li>
-                    <li>La simulación tiene que calcular el estado de la atmósfera en cada uno de estos puntos para
+                    <li class="fragment">La simulación tiene que calcular el estado de la atmósfera en cada uno de estos puntos para
                         $100$ años (de tiempo en la simulación), en intervalos de $30$ minutos.</li>
                 </ul>
-                <p>$\Rightarrow$ $1.7$ millones de pasos en el tiempo...</p>
-                <p>$\Rightarrow$ $2.5 \times 10^{12}$ cálculos...</p>
+                <p class="fragment">$\Rightarrow$ $1.7$ millones de pasos en el tiempo...</p>
+                <p class="fragment">$\Rightarrow$ $2.5 \times 10^{12}$ cálculos...</p>
                 <ul>
-                    <li>Aún si cada cálculo demora $1$ microsegundo (optimista, dado la complejidad de las ecuaciones)
+                    <li class="fragment">Aún si cada cálculo demora $1$ microsegundo (optimista, dado la complejidad de las ecuaciones)
                         la simulación demorará $\sim 30$ días corriendo en un procesador.</li>
-                    <li>Además, no estamos tomando en cuenta los requirimientos de memoria...</li>
+                    <!-- <li class="fragment">Además, no estamos tomando en cuenta los requirimientos de memoria...</li> -->
                 </ul>
             </section>
 
@@ -399,13 +402,18 @@
                     <div class="col">
                         <ul>
                             <li>Para acelerar la simulación, usamos <i>paralelismo</i>.</li>
-                            <li>En el caso de paralelismo multi-proceso, tenemos varias copias del programa que hace la
-                                simulación, pero donde cada copia se ocupa de solamente una parte de la malla total.
+                            <li>En el caso de paralelismo multi-proceso:</li>
+                                    <ul>
+                                    <li>Ejecutamos varias copias del programa que hace la
+                                simulación.</li>    
+                                        <li>Cada copia se ocupa de solamente una parte de la malla total.</li>
+                                    </ul>
+                                    
                             </li>
                         </ul>
                     </div>
                     <div class="col">
-                        <img src="class5_images/nwp.jpg">
+                        <img src="class5_images/nwp.jpg" width=400>
                     </div>
                 </div>
             </section>
@@ -415,14 +423,20 @@
                 <div class="container">
                     <div class="col">
                         <ul>
-                            <li>Por ejemplo, si usamos $50$ procesadores, podemos dividir la malla en $30.000$ puntos
-                                por procesador (y $1.7$ millones de pasos en el tiempo, como antes).</li>
-                            <li>Así que, cada procesador hace una tarea un poco menos exigente - una división del
-                                trabajo.</li>
+                            <li>Por ejemplo, si usamos $50$ procesos (cada uno a
+                                    cargo de un core/núcleo), podemos: </li>
+                                    <ul>
+                                       <li>Dividir la malla en $30.000$ puntos
+                                            por núcleo.</li> 
+                                    </ul>
+                                    
+                            <li>Así que, cada núcleo hace una tarea 
+                                    menos exigente -  hicimos una división del
+                                trabajo!</li>
                         </ul>
                     </div>
                     <div class="col">
-                        <img src="class5_images/nwp.jpg">
+                        <img src="class5_images/nwp.jpg" width=400>
                     </div>
                 </div>
             </section>
@@ -430,23 +444,30 @@
             <section>
                 <h4>Pasos para correr la simulación en paralelo</h4>
                 <ol>
-                    <li>Se ejecuta el programa que hace la simulación: el primer proceso, que corre en uno de los
-                        procesadores.</li>
-                    <li>El proceso $1$ divida la malla en sub-mallas. Esta división parece fácil,
-                        pero puede ser muy difícil encontrar la división que
-                        es la más eficiente (<b>primer gran desafio</b> del paralelismo).</li>
-                    <li>$49$ otros procesos están lanzados (cada uno en un procesador diferente) para hacer los cálculos
-                        en la sub-malla asignada.</li>
+                    <li class="fragment">Se ejecuta el programa de la
+                            simulación: el primer proceso.</li>
+                    <li class="fragment">Este proceso (número $1$) corre en uno
+                            de los núcleos y divide la
+                            malla en sub-mallas. 
+                            </li>
+                            <ul>
+                                <li class="fragment">Determinar cual división 
+                        es la más eficiente puede llegara ser muy dificil: este
+                                es el <b>primer gran desafio</b> del paralelismo.</li>
+                            </ul>
+                    <li class="fragment">Se lanzan otros $49$ procesos (cada uno
+                            en un núcleo diferente) para hacer los cálculos
+                        en su sub-malla asignada.</li>
                 </ol>
                 <div class="container">
                     <div class="col">
-                        <img src="class5_images/process1.png">
+                        <img src="class5_images/process1.png" class="fragment">
                     </div>
                     <div class="col">
-                        <img src="class5_images/process2.png">
+                        <img src="class5_images/process2.png" class="fragment">
                     </div>
                     <div class="col">
-                        <img src="class5_images/process3.png">
+                        <img src="class5_images/process3.png" class="fragment">
                     </div>
                 </div>
             </section>
@@ -455,7 +476,8 @@
                 <h4>La ventaja de correr la simulación en paralelo</h4>
                 <ul>
                     <li>Hemos dividido el trabajo entre $50$ procesadores.</li>
-                    <li>Si la división fue óptima, en principio la simulación debería ejecutarse $50$ veces más rápido.
+                    <li>Si la división fue óptima, esperaríamos que la
+                            simulación debería correr $50$ veces más rápido.
                     </li>
                     <li>Entonces, <span: style="color: red;">terminará en $14$ horas, en vez de $30$ días!</span></li>
                 </ul>
@@ -476,11 +498,13 @@
             <section>
                 <h4>Comunicación</h4>
                 <ul>
-                    <li>El <b>segundo gran desafio </b> del paralelismo: comunicación entre los procesos/hilos.</li>
-                    <li>En este ejemplo, podemos escribir en el programa que cada proceso tiene que compartir los
+                    <li class="fragment">Este es el <b>segundo gran desafio </b>
+                            del paralelismo: realizar de forma eficiente (y
+                            correcta) la comunicación entre los procesos/hilos.</li>
+                    <li class="fragment">En este ejemplo, podemos escribir en el programa que cada proceso tiene que compartir los
                         resultados en el borde de la sub-malla con todas las sub-mallas vecinas, en cada paso del
                         tiempo.</li>
-                    <li>Típicamente se usan <i>librerías</i> específicas para el paralelismo (MPI, OpenMP, etc.)</li>
+                    <li class="fragment">Típicamente se usan <i>librerías</i> específicas para el paralelismo (MPI, OpenMP, etc.)</li>
                     <!-- <li>Hay <i>lenguajes</i> de programación paralela que intentan simplificar la parte de comunicación -->
                     <!--     (e.g. Co-array Fortran, Parallel C, Chapel, etc.)</li> -->
                     <!-- <li>Mucho más sobre este en el curso de <i>Programación Paralela</i>!</li> -->
@@ -490,16 +514,17 @@
             <section>
                 <h4>Para terminar de correr la simulación en paralelo</h4>
                 <ol>
-                    <li>Los resultados de todos los procesadores están reunidos en procesador $1$ por el proceso $1$
+                    <li class="fragment">Los resultados de todos los núcleos se
+                            unen en en el proceso $1$
                         (usando comunicación entre los procesos).</li>
-                    <li>Luego, proceso $1$ puede guardar los resultados en un archivo en el disco duro.</li>
+                    <li class="fragment">Luego, el proceso $1$ puede guardar los resultados en un archivo en el disco duro.</li>
                 </ol>
                 <div class="container">
                     <div class="col">
-                        <img src="class5_images/process5.png">
+                        <img src="class5_images/process5.png" class="fragment">
                     </div>
                     <div class="col">
-                        <img src="class5_images/process6.png">
+                        <img src="class5_images/process6.png" class="fragment">
                     </div>
                 </div>
             </section>
