@@ -228,13 +228,15 @@
                 <h4>Tipos de paralelismo</h4>
                 <!-- <p>Hay dos tipos principales de paralelismo:</p> -->
                 <ul>
-                    <li><span style="color:red">Multiproceso</span>: se divide el problema en varios procesos que
+                    <li><span style="color:red">Multiproceso</span>: se divide
+                            el problema en <b>varios procesos</b> que
                         comunican entre si.</li>
-                    <li><span style="color:blue">Multihilo (multithread)</span>: hay un proceso, que puede usar varios
-                        <i>threads</i> durante su
+                    <li class="fragment"><span style="color:blue">Multihilo (multithread)</span>:
+                            hay <b>un</b> proceso, que puede usar varios
+                        <i>threads</i> (subprocesos) durante su
                         ejecucion para trabajar en paralelo.
-                    <li>Muchos algorítmos para procesamiento paralelo ocupan una mezcla de los dos tipos.</li>
-                    <li>Hay una relación entre el tipo de paralelismo y la arquitectura de la memoria...</li>
+                    <li class="fragment">Muchos algorítmos para procesamiento paralelo ocupan una mezcla de los dos tipos.</li>
+                    <li class="fragment">Hay una relación entre el tipo de paralelismo y la arquitectura de la memoria...</li>
                 </ul>
             </section>
 
@@ -244,10 +246,13 @@
                 <div class="container">
                     <div class="col">
                         <ul>
-                            <li>Hay multiples "versiones" de un sólo programa (procesos multiples).</li>
-                            <li>Cada proceso corre en uno de los procesadores (cores).</li>
-                            <li>Ya que cada proceso tiene su bloque exclusivo de memoria, tiene sentido que este tipo de
-                                paralelismo se ocupa con <span style="color: red;">memoria distribuida</span>.</li>
+                            <li>Hay múltiples "versiones" de un sólo programa
+                                    (procesos múltiples).</li>
+                            <li>Cada proceso corre en uno de los núcleos (cores).</li>
+                            <!-- <li>Ya que cada proceso tiene su bloque exclusivo de memoria, tiene sentido que este tipo de -->
+                            <!--     paralelismo se ocupa con <span style="color: red;">memoria distribuida</span>.</li> -->
+                            <li>Notar que cada proceso tiene su propio bloque
+                                    de memoria. Esto se denomina <span style="color: red;">memoria distribuida</span>.</li>
                         </ul>
                     </div>
                     <div class="col">
@@ -262,10 +267,17 @@
                     <div class="col">
                         <ul>
                             <li>Un proceso lanza multiples <i>threads</i> (hilos) de ejecución.</li>
+                                <ul>
+                                    <li>Se generan <b>subprocesos</b>.</li>
+                                </ul>
                             <li>Cada procesador (core) ejecuta un subconjunto de los hilos.</li>
-                            <li>Ya que todos los hilos tienen acceso al bloque de memoria "global" del proceso, tiene
-                                sentido usar <span style="color: blue;">
-                                    memoria compartida</span> para procesamiento multi-hilo.</li>
+                            <!-- <li>Ya que todos los hilos tienen acceso al bloque de memoria "global" del proceso, tiene -->
+                            <!--     sentido usar <span style="color: blue;"> -->
+                            <!--         memoria compartida</span> para procesamiento multi-hilo.</li> -->
+                            <li>En este caso, todos los hilos tienen
+                                    acceso al bloque de memoria "global" del
+                                    proceso principal, lo cual se denomina <span style="color: blue;">
+                                    memoria compartida</span>.</li>
                         </ul>
                     </div>
                     <div class="col">
@@ -274,20 +286,20 @@
                 </div>
             </section>
 
-            <section>
-                <h4>Paralelismo mezclado</h4>
-                <ul>
-                    <li>La mayoría de los supercomputadores hoy en día tienen las dos arquitecturas de memoria.</li>
-                    <li>Los cores están organizados en nodos (con memoria compartida). La memoria para los nodos está
-                        distribuida.</li>
-                    <li>De hecho, se puede correr cualquier tipo de proceso paralelo en cualquier tipo de arquitectura
-                        (pero posiblemente con menos eficiencia).</li>
-                </ul>
-            </section>
+            <!-- <section> -->
+            <!--     <h4>Paralelismo mezclado</h4> -->
+            <!--     <ul> -->
+            <!--         <li>La mayoría de los supercomputadores hoy en día tienen las dos arquitecturas de memoria.</li> -->
+            <!--         <li>Los cores están organizados en nodos (con memoria compartida). La memoria para los nodos está -->
+            <!--             distribuida.</li> -->
+            <!--         <li>De hecho, se puede correr cualquier tipo de proceso paralelo en cualquier tipo de arquitectura -->
+            <!--             (pero posiblemente con menos eficiencia).</li> -->
+            <!--     </ul> -->
+            <!-- </section> -->
 
             <section>
                 <h4>Ejemplo: paralelismo multiproceso</h4>
-                <p>Ahora vamos a ver un ejemplo de la idea de paralelismo multiproceso en una simulación del clima.</p>
+                <p>Ejemplo: paralelismo multiproceso en una simulación del clima.</p>
                 <img src="class5_images/ocean_model.jpg" height=400>
             </section>
             <section>
@@ -359,7 +371,7 @@
                         </ul>
                     </div>
                     <div class="col">
-                        <img src="class5_images/nwp.jpg">
+                        <img src="class5_images/nwp.jpg" width=400>
                     </div>
                 </div>
             </section>
