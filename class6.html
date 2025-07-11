@@ -16612,6 +16612,7 @@ Adapted from GitHub theme
 
 <body>
 
+    <!-- ACA COMIENZAN LAS SLIDES -->
 
   <div class="reveal">
     <div class="slides">
@@ -16682,6 +16683,8 @@ Adapted from GitHub theme
               <div class="text_cell_render border-box-sizing rendered_html">
                 <p>Por definición, la <b>Materia Oscura </b>no es visible. La única manera de entender como su presencia
                   contribuye a la evolución del Universo es por el uso de simulaciones computacionales.</p>
+                  <p>Influye en la formación de galaxias, cúmulos de galaxias,
+                    ...</p>
               </div>
             </div>
           </div>
@@ -16695,7 +16698,7 @@ Adapted from GitHub theme
             <div class="inner_cell">
               <div class="text_cell_render border-box-sizing rendered_html">
                 <p>Gracias a las simulaciones, hoy en día sabemos mucho más cómo se forma la <em>estructura</em> del
-                  Universo. Es decir, cómo se forman las galaxias y los cúmulos
+                  Universo. Es decir, como se forman y agrupan los cúmulos
                   de galaxias que podemos observar con los telescopios.</p>
                 <p><img src="class6_images/2df.jpg" alt=""></p>
 
@@ -16720,12 +16723,13 @@ Adapted from GitHub theme
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Comparación entre un <em>survey</em> de galaxias (2dF) y Millenium</td>
+                      <td>Comparación entre un <em>survey</em> de galaxias (2dF)
+                          y la simulación <i>Millenium</i></td>
                     </tr>
                   </tbody>
                 </table>
-                <p>Es importante acordar que esta simulación es solamente de la <strong>materia oscura</strong> no de
-                  las galaxias, que están hecho de <strong>baryones</strong> (materia visible).</p>
+                <!-- <p>Es importante que esta simulación es solamente de la <strong>materia oscura</strong> no de -->
+                <!--   las galaxias, que están hecho de <strong>baryones</strong> (materia visible).</p> -->
 
               </div>
             </div>
@@ -16757,73 +16761,78 @@ Adapted from GitHub theme
           </div>
         </section>
       </section>
-      <section>
-        <section>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
-                <p>Se puede incluir los baryones ("gas") en las simulaciones cosmológicas. Con la inclusión de gas, hay
-                  que incluir también los procesos físicos que afectan el gas:</p>
-                <ul>
-                  <li>Hidrodinámica</li>
-                  <li>Formación de etrellas</li>
-                  <li>Supernovae</li>
-                  <li><em>Feedback</em> (retroalimentación) de los agujeros negros supermasivos</li>
-                </ul>
-                <p>Las simulaciones cosmológicas no tienen la resolución para simular precisamente lo que ocurre a las
-                  escalas de las estrellas y agujeros negros. Así que, usan <em>parametrizaciones</em>.</p>
 
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-      <section>
-        <section>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
-                <h4 id="Parametrizaciones">Parametrizaciones<a class="anchor-link" href="#Parametrizaciones">&#182;</a>
-                </h4>
-                <p>Ejemplo de formación de estrellas:</p>
-                <ul>
-                  <li>La simulación tiene una malla con muchas celdas (como en el ejemplo de una simulación del clima
-                    que vimos antes).</li>
-                </ul>
-                <p><img src="class6_images/grid.png" alt=""></p>
-                <ul>
-                  <li>El tamaño físico de cada celda es mucho mayor que el tamaño de una estrella.</li>
-                  <li>Entonces, podemos utilizar algún tipo de criterio sobee la <strong>densidad</strong> del gas
-                    en cada celda para ver si las estrellas se forman o no:</li>
-                </ul>
+      <!-- <section> -->
+      <!--   <section> -->
+      <!--     <div class="cell border-box-sizing text_cell rendered"> -->
+      <!--       <div class="prompt input_prompt"> -->
+      <!--       </div> -->
+      <!--       <div class="inner_cell"> -->
+      <!--         <div class="text_cell_render border-box-sizing rendered_html"> -->
+      <!--           <p>Se puede incluir los baryones ("gas") en las simulaciones cosmológicas. Con la inclusión de gas, hay -->
+      <!--             que incluir también los procesos físicos que afectan el gas:</p> -->
+      <!--           <ul> -->
+      <!--             <li>Hidrodinámica</li> -->
+      <!--             <li>Formación de etrellas</li> -->
+      <!--             <li>Supernovae</li> -->
+      <!--             <li><em>Feedback</em> (retroalimentación) de los agujeros negros supermasivos</li> -->
+      <!--           </ul> -->
+      <!--           <p>Las simulaciones cosmológicas no tienen la resolución para simular precisamente lo que ocurre a las -->
+      <!--             escalas de las estrellas y agujeros negros. Así que, usan <em>parametrizaciones</em>.</p> -->
+      <!---->
+      <!--         </div> -->
+      <!--       </div> -->
+      <!--     </div> -->
+      <!--   </section> -->
+      <!-- </section> -->
+      <!---->
+      <!-- <section> -->
+      <!--   <section> -->
+      <!--     <div class="cell border-box-sizing text_cell rendered"> -->
+      <!--       <div class="prompt input_prompt"> -->
+      <!--       </div> -->
+      <!--       <div class="inner_cell"> -->
+      <!--         <div class="text_cell_render border-box-sizing rendered_html"> -->
+      <!--           <h4 id="Parametrizaciones">Parametrizaciones<a class="anchor-link" href="#Parametrizaciones">&#182;</a> -->
+      <!--           </h4> -->
+      <!--           <p>Ejemplo de formación de estrellas:</p> -->
+      <!--           <ul> -->
+      <!--             <li>La simulación tiene una malla con muchas celdas (como en el ejemplo de una simulación del clima -->
+      <!--               que vimos antes).</li> -->
+      <!--           </ul> -->
+      <!--           <p><img src="class6_images/grid.png" alt=""></p> -->
+      <!--           <ul> -->
+      <!--             <li>El tamaño físico de cada celda es mucho mayor que el tamaño de una estrella.</li> -->
+      <!--             <li>Entonces, podemos utilizar algún tipo de criterio sobee la <strong>densidad</strong> del gas -->
+      <!--               en cada celda para ver si las estrellas se forman o no:</li> -->
+      <!--           </ul> -->
+      <!---->
+      <!--         </div> -->
+      <!--       </div> -->
+      <!--     </div> -->
+      <!--   </section> -->
+      <!-- </section> -->
+      <!-- <section> -->
+      <!--   <section> -->
+      <!--     <div class="cell border-box-sizing text_cell rendered"> -->
+      <!--       <div class="prompt input_prompt"> -->
+      <!--       </div> -->
+      <!--       <div class="inner_cell"> -->
+      <!--         <div class="text_cell_render border-box-sizing rendered_html"> -->
+      <!--           <p>Por ejemplo: Si $\rho &gt; \rho_{\star}$ creamos una partícula nueva que representa $100$ estrellas. -->
+      <!--           </p> -->
+      <!--           <p>Lo que tenemos en este caso es una "receta" para crear nuevas estrellas en la simulaciones, pero es -->
+      <!--             una aproximación al proceso físico verdadero.</p> -->
+      <!--           <p>Las simulaciones cosmológicas modernas incluyen muchas "recetas" así.</p> -->
+      <!--           <p><img src="class6_images/gas_galaxy.png" alt=""></p> -->
+      <!--         </div> -->
+      <!--       </div> -->
+      <!--     </div> -->
+      <!--   </section> -->
+      <!-- </section> -->
 
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
-      <section>
-        <section>
-          <div class="cell border-box-sizing text_cell rendered">
-            <div class="prompt input_prompt">
-            </div>
-            <div class="inner_cell">
-              <div class="text_cell_render border-box-sizing rendered_html">
-                <p>Por ejemplo: Si $\rho &gt; \rho_{\star}$ creamos una partícula nueva que representa $100$ estrellas.
-                </p>
-                <p>Lo que tenemos en este caso es una "receta" para crear nuevas estrellas en la simulaciones, pero es
-                  una aproximación al proceso físico verdadero.</p>
-                <p>Las simulaciones cosmológicas modernas incluyen muchas "recetas" así.</p>
-                <p><img src="class6_images/gas_galaxy.png" alt=""></p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </section>
+
+
       <section>
         <section>
           <div class="cell border-box-sizing code_cell rendered">
